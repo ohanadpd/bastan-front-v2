@@ -1,0 +1,1937 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2025-01-30 12:53+0330\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: fa\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: cartList?.items?.length ?? 0
+#: src/components/cart/cart-content.tsx:58
+msgid "{0} قلم کالا"
+msgstr "{0} قلم کالا"
+
+#: src/components/careers/resume-form.tsx:561
+#: src/components/careers/resume-form.tsx:562
+msgid "09123456789"
+msgstr "09123456789"
+
+#: src/components/ui/image-zoom.tsx:92
+msgid "ESC برای بستن"
+msgstr "ESC برای بستن"
+
+#: src/components/careers/resume-form.tsx:682
+msgid "آپلود رزومه*"
+msgstr "آپلود رزومه*"
+
+#: src/components/careers/resume-form.tsx:644
+msgid "آخرین مقطع تحصیلی*"
+msgstr "آخرین مقطع تحصیلی*"
+
+#: src/components/ui/footer.tsx:83
+#: src/components/ui/address-card.tsx:37
+#: src/components/representatives/agency-card.tsx:67
+#: src/components/profile/order-card.tsx:56
+#: src/components/profile/address-form.tsx:139
+#: src/components/profile/address-form.tsx:147
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:93
+#: src/app/[lang]/profile/(profile)/addresses/page.tsx:14
+msgid "آدرس"
+msgstr "آدرس"
+
+#: src/components/profile/address-form.tsx:49
+msgid "آدرس الزامی است"
+msgstr "آدرس الزامی است"
+
+#: src/components/profile/address-form.tsx:68
+msgid "آدرس با موفقیت ذخیره شد."
+msgstr "آدرس با موفقیت ذخیره شد."
+
+#: src/components/profile/address-form.tsx:57
+msgid "آدرس با موفقیت ویرایش شد."
+msgstr "آدرس با موفقیت ویرایش شد."
+
+#: src/components/profile/address-form.tsx:48
+msgid "آدرس باید حداقل ۲ کاراکتر باشد"
+msgstr "آدرس باید حداقل ۲ کاراکتر باشد"
+
+#: src/app/[lang]/contact-us/page.tsx:61
+msgid "آدرس کارخانه"
+msgstr "آدرس کارخانه"
+
+#: src/components/ui/profile-button.tsx:105
+msgid "آدرس های من"
+msgstr "آدرس های من"
+
+#: src/components/cart/cart-submit-page.tsx:200
+msgid "آدرسی وجود ندارد!"
+msgstr "آدرسی وجود ندارد!"
+
+#: src/components/profile/delete-address-dialog.tsx:54
+msgid "آیا از حذف این آدرس مطمئن هستید؟"
+msgstr "آیا از حذف این آدرس مطمئن هستید؟"
+
+#: src/components/careers/resume-form.tsx:632
+msgid "اجاره ای"
+msgstr "اجاره ای"
+
+#: src/components/ui/navbar.tsx:89
+#: src/app/[lang]/news/[...slug]/page.tsx:56
+msgid "اخبار"
+msgstr "اخبار"
+
+#: src/components/auth/register-form.tsx:114
+msgid "ادامه"
+msgstr "ادامه"
+
+#: src/components/home/pages/home-style-3.tsx:131
+#: src/components/home/pages/home-style-2.tsx:110
+#: src/components/home/pages/home-style-1.tsx:96
+msgid "ارتباط با کارخانه..."
+msgstr "ارتباط با کارخانه..."
+
+#: src/components/ui/footer.tsx:62
+msgid "ارتباط با ما"
+msgstr "ارتباط با ما"
+
+#: src/components/representatives/apply-legal-form.tsx:359
+#: src/components/representatives/apply-form.tsx:257
+#: src/components/home/contact-from.tsx:118
+#: src/components/contact-us/contact-us-form.tsx:121
+msgid "ارسال"
+msgstr "ارسال"
+
+#: src/app/[lang]/careers/[...slug]/page.tsx:78
+#: src/app/[lang]/careers/[...slug]/page.tsx:99
+msgid "ارسال رزومه"
+msgstr "ارسال رزومه"
+
+#: src/components/careers/resume-form.tsx:890
+msgid "ارسال فرم"
+msgstr "ارسال فرم"
+
+#: src/components/products/filter.tsx:256
+msgid "از"
+msgstr "از"
+
+#: src/components/representatives/map-filter.tsx:115
+#: src/components/representatives/agency-card.tsx:58
+msgid "استان"
+msgstr "استان"
+
+#: src/components/products/add-to-card.tsx:54
+msgid "استعلام از کارخانه"
+msgstr "استعلام از کارخانه"
+
+#: src/components/careers/resume-form.tsx:205
+msgid "اطلاعات تحصیلی و شغلی"
+msgstr "اطلاعات تحصیلی و شغلی"
+
+#: src/app/[lang]/profile/(profile)/page.tsx:30
+msgid "اطلاعات حساب کاربری"
+msgstr "اطلاعات حساب کاربری"
+
+#: src/components/careers/resume-form.tsx:200
+msgid "اطلاعات شخصی"
+msgstr "اطلاعات شخصی"
+
+#: src/components/profile/user-info-form.tsx:53
+msgid "اطلاعات شما با خطا مواجه شد. لطفاً دوباره تلاش کنید."
+msgstr "اطلاعات شما با خطا مواجه شد. لطفاً دوباره تلاش کنید."
+
+#: src/components/representatives/apply-legal-form.tsx:103
+#: src/components/representatives/apply-form.tsx:75
+msgid "اطلاعات شما با موفقیت ارسال شد."
+msgstr "اطلاعات شما با موفقیت ارسال شد."
+
+#: src/components/profile/user-info-form.tsx:49
+msgid "اطلاعات شما با موفقیت ثبت شد"
+msgstr "اطلاعات شما با موفقیت ثبت شد"
+
+#: src/components/auth/complete-register.tsx:103
+msgid "اطلاعت خود را برای ثبت نام وارد کنید."
+msgstr "اطلاعت خود را برای ثبت نام وارد کنید."
+
+#: src/components/products/filter.tsx:338
+msgid "اعمال فیلتر"
+msgstr "اعمال فیلتر"
+
+#: src/app/[lang]/about-us/page.tsx:64
+msgid "افتخارات و دستاورد های کارخانه"
+msgstr "افتخارات و دستاورد های کارخانه"
+
+#: src/app/[lang]/profile/(profile)/addresses/new/page.tsx:12
+msgid "افزودن آدرس"
+msgstr "افزودن آدرس"
+
+#: src/components/cart/cart-submit-page.tsx:176
+#: src/app/[lang]/profile/(profile)/addresses/new/page.tsx:28
+msgid "افزودن آدرس جدید"
+msgstr "افزودن آدرس جدید"
+
+#: src/components/careers/resume-form.tsx:714
+msgid "افزودن دوره جدید"
+msgstr "افزودن دوره جدید"
+
+#: src/components/careers/resume-form.tsx:774
+msgid "افزودن سابقه کاری جدید"
+msgstr "افزودن سابقه کاری جدید"
+
+#: src/components/careers/resume-form.tsx:838
+#: src/components/careers/resume-form.tsx:839
+msgid "امکان ارایه گواهینامه دارید؟"
+msgstr "امکان ارایه گواهینامه دارید؟"
+
+#: src/components/cart/cart-submit-page.tsx:170
+msgid "انتخاب آدرس"
+msgstr "انتخاب آدرس"
+
+#: src/components/representatives/apply-legal-form.tsx:68
+#: src/components/representatives/apply-form.tsx:58
+msgid "انتخاب استان الزامی است"
+msgstr "انتخاب استان الزامی است"
+
+#: src/components/profile/address-form.tsx:156
+msgid "انتخاب به عنوان ادرس پیش فرض"
+msgstr "انتخاب به عنوان ادرس پیش فرض"
+
+#: src/components/representatives/apply-legal-form.tsx:70
+#: src/components/representatives/apply-form.tsx:60
+msgid "انتخاب شهر الزامی است"
+msgstr "انتخاب شهر الزامی است"
+
+#: src/components/profile/order-card.tsx:12
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:28
+msgid "انجام شده"
+msgstr "انجام شده"
+
+#: src/components/profile/delete-address-dialog.tsx:60
+msgid "انصراف"
+msgstr "انصراف"
+
+#: src/components/i18n-switcher.tsx:15
+#: src/components/i18n-switcher-mobile.tsx:13
+msgid "انگلیسی"
+msgstr "انگلیسی"
+
+#: src/components/ui/footer.tsx:75
+#: src/components/profile/user-info-form.tsx:137
+#: src/components/profile/user-info-form.tsx:143
+msgid "ایمیل"
+msgstr "ایمیل"
+
+#: src/components/careers/resume-form.tsx:756
+msgid "این دوره در فرم نهایی درج نخواهد شد"
+msgstr "این دوره در فرم نهایی درج نخواهد شد"
+
+#: src/components/careers/resume-form.tsx:851
+msgid "این سابقه کاری در فرم نهایی درج نخواهد شد"
+msgstr "این سابقه کاری در فرم نهایی درج نخواهد شد"
+
+#: src/app/[lang]/representatives/apply/page.tsx:57
+msgid "این فرصت برای شماست"
+msgstr "این فرصت برای شماست"
+
+#: src/components/home/pages/home-style-3.tsx:146
+#: src/components/home/pages/home-style-2.tsx:125
+#: src/components/home/pages/home-style-1.tsx:111
+msgid "با جدیدترین متد های طراحی کاشی"
+msgstr "با جدیدترین متد های طراحی کاشی"
+
+#: src/app/[lang]/contact-us/page.tsx:88
+msgid "با ما در ارتباط باشید"
+msgstr "با ما در ارتباط باشید"
+
+#: src/components/home/pages/home-style-3.tsx:126
+#: src/components/home/pages/home-style-2.tsx:105
+#: src/components/home/pages/home-style-1.tsx:91
+msgid "با ما در ارتباط بمانید"
+msgstr "با ما در ارتباط بمانید"
+
+#: src/components/profile/delete-address-dialog.tsx:32
+msgid "با موفقیت حذف شد."
+msgstr "با موفقیت حذف شد."
+
+#: src/components/ui/newsletter.tsx:31
+msgid "با موفقیت در خبرنامه عضو شدید"
+msgstr "با موفقیت در خبرنامه عضو شدید"
+
+#: src/components/auth/complete-register.tsx:76
+msgid "با موفقیت وارد شدید."
+msgstr "با موفقیت وارد شدید."
+
+#: src/app/[lang]/(payment)/payment/page.tsx:136
+msgid "بازگشت به صفحه اول سایت"
+msgstr "بازگشت به صفحه اول سایت"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:115
+msgid "بانک پرداخت"
+msgstr "بانک پرداخت"
+
+#: src/components/careers/resume-form.tsx:595
+msgid "برادر"
+msgstr "برادر"
+
+#: src/components/products/add-to-card.tsx:67
+msgid "برای استعلام تماس بگیرید"
+msgstr "برای استعلام تماس بگیرید"
+
+#: src/components/products/add-to-card.tsx:21
+msgid "برای افزودن به سبد خرید باید وارد حساب کاربری خود شوید."
+msgstr "برای افزودن به سبد خرید باید وارد حساب کاربری خود شوید."
+
+#: src/components/auth/forgot-password-form.tsx:64
+msgid "برای تغییر رمز عبور شماره موبایل خود را وارد کنید"
+msgstr "برای تغییر رمز عبور شماره موبایل خود را وارد کنید"
+
+#: src/components/auth/password-confirmation-form.tsx:83
+msgid "برای تغییر رمز عبور لطفا رمز عبور جدید را وارد کنید"
+msgstr "برای تغییر رمز عبور لطفا رمز عبور جدید را وارد کنید"
+
+#: src/components/auth/register-form.tsx:68
+msgid "برای ثبت نام شماره موبایل خود را وارد کنید"
+msgstr "برای ثبت نام شماره موبایل خود را وارد کنید"
+
+#: src/components/ui/newsletter.tsx:58
+msgid "برای عضویت در خبر نامه شماره موبایل خود را وارد کنید"
+msgstr "برای عضویت در خبر نامه شماره موبایل خود را وارد کنید"
+
+#: src/components/products/product-content.tsx:14
+#: src/components/products/overview-section.tsx:30
+#: src/components/products/overview-section.tsx:105
+msgid "بررسی اجمالی"
+msgstr "بررسی اجمالی"
+
+#: src/components/products/product-content.tsx:45
+msgid "بررسی اجمالی محصول"
+msgstr "بررسی اجمالی محصول"
+
+#: src/components/products/product-content.tsx:99
+#: src/components/products/filter.tsx:214
+#: src/app/[lang]/products/[...slug]/page.tsx:124
+msgid "برند"
+msgstr "برند"
+
+#: src/components/home/pages/home-style-2.tsx:37
+#: src/components/home/pages/home-style-1.tsx:36
+msgid "برند های ما"
+msgstr "برند های ما"
+
+#: src/components/ui/navbar.tsx:85
+msgid "بلاگ"
+msgstr "بلاگ"
+
+#: src/components/careers/resume-form.tsx:666
+#: src/components/careers/resume-form.tsx:842
+msgid "بله"
+msgstr "بله"
+
+#: src/components/products/add-to-card.tsx:29
+msgid "به سبد خرید اضافه شد."
+msgstr "به سبد خرید اضافه شد."
+
+#: src/components/careers/resume-form.tsx:821
+msgid "پاره وقت"
+msgstr "پاره وقت"
+
+#: src/components/cart/cart-submit-page.tsx:160
+msgid "پاکت"
+msgstr "پاکت"
+
+#: src/components/careers/resume-form.tsx:616
+msgid "پایان خدمت"
+msgstr "پایان خدمت"
+
+#: src/components/careers/resume-form.tsx:590
+msgid "پدر"
+msgstr "پدر"
+
+#: src/components/cart/cart-content.tsx:55
+msgid "پرداخت آنلاین"
+msgstr "پرداخت آنلاین"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:82
+msgid "پرداخت با موفقیت انجام شد"
+msgstr "پرداخت با موفقیت انجام شد"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:66
+msgid "پرداخت موفقیت آمیز بود"
+msgstr "پرداخت موفقیت آمیز بود"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:68
+#: src/app/[lang]/(payment)/payment/page.tsx:87
+msgid "پرداخت ناموفق بود"
+msgstr "پرداخت ناموفق بود"
+
+#: src/components/ui/profile-button.tsx:79
+#: src/app/[lang]/profile/(profile)/page.tsx:14
+msgid "پروفایل"
+msgstr "پروفایل"
+
+#: src/components/products/filter.tsx:270
+msgid "تا"
+msgstr "تا"
+
+#: src/components/careers/resume-form.tsx:568
+msgid "تاریخ تولد"
+msgstr "تاریخ تولد"
+
+#: src/components/careers/resume-form.tsx:44
+msgid "تاریخ تولد الزامی است"
+msgstr "تاریخ تولد الزامی است"
+
+#: src/components/profile/order-card.tsx:51
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:135
+msgid "تاریخ ثبت سفارش"
+msgstr "تاریخ ثبت سفارش"
+
+#: src/components/auth/verify-form.tsx:134
+#: src/app/[lang]/auth/verify/page.tsx:12
+msgid "تایید شماره موبایل"
+msgstr "تایید شماره موبایل"
+
+#: src/components/cart/cart-submit-page.tsx:253
+msgid "تایید کد تخفیف"
+msgstr "تایید کد تخفیف"
+
+#: src/components/cart/cart-submit-page.tsx:129
+#: src/components/cart/cart-submit-page.tsx:341
+#: src/components/cart/cart-content.tsx:46
+#: src/components/cart/cart-content.tsx:108
+msgid "تایید و ادامه"
+msgstr "تایید و ادامه"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:243
+msgid "تخفیف"
+msgstr "تخفیف"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:168
+msgid "تخفیف(ریال)"
+msgstr "تخفیف(ریال)"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:174
+msgid "تعداد"
+msgstr "تعداد"
+
+#: src/components/careers/resume-form.tsx:736
+msgid "تعداد ساعات"
+msgstr "تعداد ساعات"
+
+#: src/components/cart/cart-content.tsx:79
+msgid "تعداد کل اقلام"
+msgstr "تعداد کل اقلام"
+
+#: src/components/representatives/apply-legal-form.tsx:93
+msgid "تعیین حوزه فعالیت الزامی است"
+msgstr "تعیین حوزه فعالیت الزامی است"
+
+#: src/components/ui/profile-button.tsx:92
+#: src/components/auth/password-confirmation-form.tsx:78
+#: src/components/auth/password-confirmation-form.tsx:169
+#: src/app/[lang]/profile/(profile)/change-password/page.tsx:28
+msgid "تغییر رمز عبور"
+msgstr "تغییر رمز عبور"
+
+#: src/app/[lang]/profile/(profile)/change-password/page.tsx:12
+#: src/app/[lang]/auth/password-confirmation/page.tsx:16
+msgid "تغییر رمزعبور"
+msgstr "تغییر رمزعبور"
+
+#: src/components/careers/resume-form.tsx:674
+msgid "تک شیفت"
+msgstr "تک شیفت"
+
+#: src/components/auth/password-confirmation-form.tsx:128
+#: src/components/auth/complete-register.tsx:169
+msgid "تکرار رمز عبور"
+msgstr "تکرار رمز عبور"
+
+#: src/components/profile/change-password-form.tsx:41
+#: src/components/auth/password-confirmation-form.tsx:39
+#: src/components/auth/complete-register.tsx:49
+msgid "تکرار رمز عبور الزامی است"
+msgstr "تکرار رمز عبور الزامی است"
+
+#: src/components/profile/change-password-form.tsx:109
+msgid "تکرار رمز عبور جدید"
+msgstr "تکرار رمز عبور جدید"
+
+#: src/components/auth/complete-register.tsx:98
+msgid "تکمیل ثبت نام"
+msgstr "تکمیل ثبت نام"
+
+#: src/components/ui/footer.tsx:67
+#: src/components/representatives/agency-card.tsx:38
+msgid "تلفن تماس"
+msgstr "تلفن تماس"
+
+#: src/components/representatives/apply-legal-form.tsx:173
+#: src/components/representatives/apply-legal-form.tsx:179
+#: src/components/representatives/apply-form.tsx:145
+#: src/components/representatives/apply-form.tsx:151
+msgid "تلفن ثابت"
+msgstr "تلفن ثابت"
+
+#: src/components/representatives/apply-legal-form.tsx:66
+#: src/components/representatives/apply-form.tsx:56
+msgid "تلفن ثابت الزامی است"
+msgstr "تلفن ثابت الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:65
+#: src/components/representatives/apply-form.tsx:55
+msgid "تلفن ثابت معتبر نیست"
+msgstr "تلفن ثابت معتبر نیست"
+
+#: src/components/careers/resume-form.tsx:805
+#: src/components/careers/resume-form.tsx:806
+msgid "تلفن محل کار"
+msgstr "تلفن محل کار"
+
+#: src/components/ui/navbar.tsx:109
+#: src/app/[lang]/contact-us/page.tsx:54
+msgid "تماس با ما"
+msgstr "تماس با ما"
+
+#: src/components/careers/resume-form.tsx:820
+msgid "تمام وقت"
+msgstr "تمام وقت"
+
+#: src/components/representatives/apply-legal-form.tsx:336
+#: src/components/representatives/apply-form.tsx:234
+#: src/components/home/contact-from.tsx:102
+msgid "توضیحات"
+msgstr "توضیحات"
+
+#: src/components/home/contact-from.tsx:35
+msgid "توضیحات الزامی است"
+msgstr "توضیحات الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:72
+#: src/components/representatives/apply-form.tsx:62
+msgid "توضیحات باید حداقل ۱۰ کاراکتر باشد"
+msgstr "توضیحات باید حداقل ۱۰ کاراکتر باشد"
+
+#: src/components/representatives/apply-legal-form.tsx:345
+#: src/components/representatives/apply-form.tsx:243
+msgid "توضیحات خود را وارد کنید"
+msgstr "توضیحات خود را وارد کنید"
+
+#: src/components/cart/cart-submit-page.tsx:271
+msgid "توضیحات سفارش"
+msgstr "توضیحات سفارش"
+
+#: src/components/ui/profile-button.tsx:184
+#: src/components/auth/register-form.tsx:63
+#: src/components/auth/complete-register.tsx:210
+#: src/app/[lang]/auth/register-complete/page.tsx:12
+#: src/app/[lang]/auth/register/page.tsx:12
+msgid "ثبت نام"
+msgstr "ثبت نام"
+
+#: src/components/auth/verify-form.tsx:192
+#: src/components/auth/forgot-password-form.tsx:110
+msgid "ثبت و ادامه"
+msgstr "ثبت و ادامه"
+
+#. placeholder {0}: settings.name
+#: src/app/[lang]/news/page.tsx:84
+msgid "جدید ترین اخبار {0}"
+msgstr "جدید ترین اخبار {0}"
+
+#: src/app/[lang]/articles/page.tsx:82
+msgid "جدید ترین مقالات"
+msgstr "جدید ترین مقالات"
+
+#: src/app/[lang]/news/[...slug]/page.tsx:83
+#: src/app/[lang]/articles/[...slug]/page.tsx:92
+msgid "جدیدترین اخبار"
+msgstr "جدیدترین اخبار"
+
+#: src/app/[lang]/news/[...slug]/page.tsx:102
+#: src/app/[lang]/articles/[...slug]/page.tsx:111
+msgid "جدیدترین مقالات"
+msgstr "جدیدترین مقالات"
+
+#: src/components/profile/order-card.tsx:29
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:15
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:41
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:46
+msgid "جزییات سفارش"
+msgstr "جزییات سفارش"
+
+#: src/components/representatives/map-filter.tsx:159
+msgid "جست و جو"
+msgstr "جست و جو"
+
+#: src/components/representatives/map-wrapper.tsx:37
+msgid "جست و جو بین نمایندگان"
+msgstr "جست و جو بین نمایندگان"
+
+#: src/components/representatives/filter-agency-modal.tsx:19
+msgid "جست و جو بین نمایندگی ها"
+msgstr "جست و جو بین نمایندگی ها"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:235
+msgid "جمع کل اقلام"
+msgstr "جمع کل اقلام"
+
+#: src/app/[lang]/contact-us/page.tsx:93
+msgid "جهت ارتباط مستقیم با شرکت فرم زیر را تکمیل فرمایید"
+msgstr "جهت ارتباط مستقیم با شرکت فرم زیر را تکمیل فرمایید"
+
+#: src/components/home/contact-from.tsx:36
+msgid "حداقل ۱۰ کاراکتر وارد کنید"
+msgstr "حداقل ۱۰ کاراکتر وارد کنید"
+
+#: src/components/profile/delete-address-dialog.tsx:64
+msgid "حذف"
+msgstr "حذف"
+
+#: src/components/profile/delete-address-dialog.tsx:49
+msgid "حذف آدرس"
+msgstr "حذف آدرس"
+
+#: src/components/auth/login-form.tsx:178
+msgid "حساب کاربری ندارید؟ <0>ثبت نام</0> کنید"
+msgstr "حساب کاربری ندارید؟ <0>ثبت نام</0> کنید"
+
+#: src/components/careers/resume-form.tsx:832
+#: src/components/careers/resume-form.tsx:833
+msgid "حقوق در زمان قطع همکاری"
+msgstr "حقوق در زمان قطع همکاری"
+
+#: src/components/careers/resume-form.tsx:671
+msgid "حقوق درخواستی"
+msgstr "حقوق درخواستی"
+
+#: src/components/careers/resume-form.tsx:67
+msgid "حقوق درخواستی باید عدد باش"
+msgstr "حقوق درخواستی باید عدد باش"
+
+#: src/components/careers/resume-form.tsx:69
+msgid "حقوق درخواستی نمی‌تواند منفی باشد"
+msgstr "حقوق درخواستی نمی‌تواند منفی باشد"
+
+#: src/components/careers/resume-form.tsx:671
+msgid "حقوق مورد درخواست(تومان)*"
+msgstr "حقوق مورد درخواست(تومان)*"
+
+#: src/components/representatives/apply-legal-form.tsx:247
+#: src/components/representatives/apply-legal-form.tsx:253
+msgid "حوزه فعالیت"
+msgstr "حوزه فعالیت"
+
+#: src/components/ui/navbar.tsx:58
+#: src/components/products/detail-header.tsx:60
+#: src/app/[lang]/representatives/page.tsx:54
+#: src/app/[lang]/representatives/apply/page.tsx:47
+#: src/app/[lang]/products/page.tsx:92
+#: src/app/[lang]/products/[...slug]/page.tsx:77
+#: src/app/[lang]/news/page.tsx:74
+#: src/app/[lang]/news/[...slug]/page.tsx:53
+#: src/app/[lang]/contact-us/page.tsx:51
+#: src/app/[lang]/catalog/page.tsx:81
+#: src/app/[lang]/careers/page.tsx:56
+#: src/app/[lang]/careers/[...slug]/page.tsx:53
+#: src/app/[lang]/articles/page.tsx:72
+#: src/app/[lang]/articles/[...slug]/page.tsx:51
+#: src/app/[lang]/about-us/page.tsx:45
+msgid "خانه"
+msgstr "خانه"
+
+#: src/components/ui/profile-button.tsx:156
+msgid "خروج"
+msgstr "خروج"
+
+#. placeholder {0}: settings?.name || ""
+#: src/components/cart/cart-submit-page.tsx:335
+msgid "خریداز {0} به منزله تایید <0><1> قوانین و مقررات</1></0> سایت است"
+msgstr "خریداز {0} به منزله تایید <0><1> قوانین و مقررات</1></0> سایت است"
+
+#: src/components/profile/address-form.tsx:63
+#: src/components/profile/address-form.tsx:74
+msgid "خطا در ارسال اطلاعاعت."
+msgstr "خطا در ارسال اطلاعاعت."
+
+#: src/components/auth/forgot-password-form.tsx:49
+msgid "خطا در ارسال کد تایید. لطفا دوباره تلاش کنید."
+msgstr "خطا در ارسال کد تایید. لطفا دوباره تلاش کنید."
+
+#: src/components/cart/cart-submit-page.tsx:98
+msgid "خطا در انتفال به درگاه پرداخت!"
+msgstr "خطا در انتفال به درگاه پرداخت!"
+
+#: src/components/cart/cart-submit-page.tsx:102
+#: src/components/cart/cart-submit-page.tsx:108
+msgid "خطا در برقراری ارتباط"
+msgstr "خطا در برقراری ارتباط"
+
+#: src/components/auth/verify-form.tsx:68
+#: src/components/auth/verify-form.tsx:72
+msgid "خطا در تایید کد. لطفا دوباره تلاش کنید."
+msgstr "خطا در تایید کد. لطفا دوباره تلاش کنید."
+
+#: src/components/auth/password-confirmation-form.tsx:57
+#: src/components/auth/password-confirmation-form.tsx:64
+msgid "خطا در تغییر رمز عبور. لطفا دوباره تلاش کنید."
+msgstr "خطا در تغییر رمز عبور. لطفا دوباره تلاش کنید."
+
+#: src/components/auth/register-form.tsx:52
+msgid "خطا در ثبت نام. لطفا دوباره تلاش کنید."
+msgstr "خطا در ثبت نام. لطفا دوباره تلاش کنید."
+
+#: src/components/ui/newsletter.tsx:34
+#: src/components/ui/newsletter.tsx:38
+msgid "خطایی رخ داد. لطفاً دوباره تلاش کنید."
+msgstr "خطایی رخ داد. لطفاً دوباره تلاش کنید."
+
+#: src/components/representatives/apply-legal-form.tsx:105
+#: src/components/representatives/apply-form.tsx:77
+msgid "خطایی رخ داده است لطفا بعدا امتحان کنید!"
+msgstr "خطایی رخ داده است لطفا بعدا امتحان کنید!"
+
+#: src/components/careers/resume-form.tsx:487
+msgid "خطایی رخ داده است لطفا بعدا امتحان کنید."
+msgstr "خطایی رخ داده است لطفا بعدا امتحان کنید."
+
+#: src/components/products/add-to-card.tsx:32
+msgid "خطایی رخ داده است."
+msgstr "خطایی رخ داده است."
+
+#: src/components/cart/cart-submit-page.tsx:291
+#: src/components/cart/cart-content.tsx:72
+msgid "خلاصه سفارش"
+msgstr "خلاصه سفارش"
+
+#: src/components/careers/resume-form.tsx:594
+msgid "خواهر"
+msgstr "خواهر"
+
+#: src/components/careers/resume-form.tsx:667
+#: src/components/careers/resume-form.tsx:843
+msgid "خیر"
+msgstr "خیر"
+
+#. placeholder {0}: settings.name
+#: src/app/[lang]/news/page.tsx:89
+#: src/app/[lang]/articles/page.tsx:87
+msgid "در {0} چه اتفاقی می افتد؟"
+msgstr "در {0} چه اتفاقی می افتد؟"
+
+#: src/components/profile/order-card.tsx:14
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:30
+msgid "در حال ارسال"
+msgstr "در حال ارسال"
+
+#: src/components/representatives/apply-legal-form.tsx:357
+#: src/components/representatives/apply-form.tsx:255
+#: src/components/careers/resume-form.tsx:890
+msgid "در حال ارسال..."
+msgstr "در حال ارسال..."
+
+#: src/components/profile/order-card.tsx:11
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:27
+msgid "در حال پردازش"
+msgstr "در حال پردازش"
+
+#: src/components/auth/login-form.tsx:164
+msgid "در حال ورود..."
+msgstr "در حال ورود..."
+
+#: src/components/careers/resume-form.tsx:670
+#: src/components/careers/resume-form.tsx:670
+msgid "در صورت وجود عمل جراحی و یا نقض عضو نام ببرید"
+msgstr "در صورت وجود عمل جراحی و یا نقض عضو نام ببرید"
+
+#: src/app/[lang]/careers/[...slug]/page.tsx:71
+msgid "درباره این موقعیت شغلی"
+msgstr "درباره این موقعیت شغلی"
+
+#: src/components/ui/navbar.tsx:105
+#: src/app/[lang]/about-us/page.tsx:48
+msgid "درباره ما"
+msgstr "درباره ما"
+
+#: src/components/cart/cart-submit-page.tsx:94
+msgid "درحال انتقال به درگاه پرداخت..."
+msgstr "درحال انتقال به درگاه پرداخت..."
+
+#: src/components/contact-us/contact-us-form.tsx:99
+msgid "درخواست"
+msgstr "درخواست"
+
+#: src/components/contact-us/contact-us-form.tsx:36
+msgid "درخواست الزامی است"
+msgstr "درخواست الزامی است"
+
+#: src/components/profile/change-password-form.tsx:54
+msgid "درخواست با خطا مواجه شد. لطفا دوباره تلاش کنید."
+msgstr "درخواست با خطا مواجه شد. لطفا دوباره تلاش کنید."
+
+#: src/components/contact-us/contact-us-form.tsx:35
+msgid "درخواست باید حداقل ۱۰ کاراکتر باشد"
+msgstr "درخواست باید حداقل ۱۰ کاراکتر باشد"
+
+#: src/components/contact-us/contact-us-form.tsx:45
+msgid "درخواست شما با خطا مواجه شد. لطفاً دوباره تلاش کنید."
+msgstr "درخواست شما با خطا مواجه شد. لطفاً دوباره تلاش کنید."
+
+#: src/components/contact-us/contact-us-form.tsx:43
+msgid "درخواست شما با موفقیت ارسال شد"
+msgstr "درخواست شما با موفقیت ارسال شد"
+
+#: src/app/[lang]/representatives/apply/page.tsx:63
+msgid "درخواست نمایندگی"
+msgstr "درخواست نمایندگی"
+
+#: src/components/cart/cart-item.tsx:161
+msgid "درصد"
+msgstr "درصد"
+
+#: src/components/ui/navbar.tsx:79
+#: src/app/[lang]/representatives/apply/page.tsx:16
+#: src/app/[lang]/representatives/apply/page.tsx:38
+#: src/app/[lang]/representatives/apply/page.tsx:50
+msgid "دریافت نمایندگی"
+msgstr "دریافت نمایندگی"
+
+#: src/components/products/filter.tsx:186
+msgid "دسته بندی"
+msgstr "دسته بندی"
+
+#: src/components/products/overview-section.tsx:30
+#: src/components/products/overview-section.tsx:139
+msgid "دکور"
+msgstr "دکور"
+
+#: src/components/careers/resume-form.tsx:675
+msgid "دو شیفت"
+msgstr "دو شیفت"
+
+#: src/components/careers/resume-form.tsx:210
+#: src/components/careers/resume-form.tsx:708
+msgid "دوره‌های آموزشی"
+msgstr "دوره‌های آموزشی"
+
+#: src/components/careers/resume-form.tsx:710
+msgid "دوره‌های آموزشی اختیاری هستند. اگر عنوان دوره را خالی بگذارید، آن دوره در فرم نهایی درج نخواهد شد."
+msgstr "دوره‌های آموزشی اختیاری هستند. اگر عنوان دوره را خالی بگذارید، آن دوره در فرم نهایی درج نخواهد شد."
+
+#: src/components/careers/resume-form.tsx:596
+msgid "دوست"
+msgstr "دوست"
+
+#: src/components/careers/resume-form.tsx:649
+msgid "دیپلم"
+msgstr "دیپلم"
+
+#: src/components/home/hero-section-two.tsx:37
+#: src/components/home/hero-section-3.tsx:38
+msgid "دیدن محصولات"
+msgstr "دیدن محصولات"
+
+#: src/components/representatives/all-agency-modal.tsx:28
+msgid "دیدن همه نمایندگی ها"
+msgstr "دیدن همه نمایندگی ها"
+
+#: src/components/profile/address-form.tsx:165
+msgid "ذخیره"
+msgstr "ذخیره"
+
+#: src/components/profile/user-info-form.tsx:172
+#: src/components/profile/change-password-form.tsx:135
+msgid "ذخیره تغییرات"
+msgstr "ذخیره تغییرات"
+
+#: src/components/careers/resume-form.tsx:655
+msgid "رشته تحصیلی خود را وارد کنید"
+msgstr "رشته تحصیلی خود را وارد کنید"
+
+#: src/components/careers/resume-form.tsx:655
+msgid "رشته تحصیلی*"
+msgstr "رشته تحصیلی*"
+
+#: src/components/profile/change-password-form.tsx:70
+#: src/components/profile/change-password-form.tsx:77
+#: src/components/profile/change-password-form.tsx:97
+#: src/components/profile/change-password-form.tsx:116
+#: src/components/auth/login-form.tsx:126
+#: src/components/auth/complete-register.tsx:139
+msgid "رمز عبور"
+msgstr "رمز عبور"
+
+#: src/components/profile/change-password-form.tsx:39
+#: src/components/auth/password-confirmation-form.tsx:35
+#: src/components/auth/login-form.tsx:38
+#: src/components/auth/complete-register.tsx:45
+msgid "رمز عبور الزامی است"
+msgstr "رمز عبور الزامی است"
+
+#: src/components/auth/password-confirmation-form.tsx:52
+msgid "رمز عبور با موفقیت تغییر یافت!"
+msgstr "رمز عبور با موفقیت تغییر یافت!"
+
+#: src/components/profile/change-password-form.tsx:51
+msgid "رمز عبور با موفقیت تغییر یافت."
+msgstr "رمز عبور با موفقیت تغییر یافت."
+
+#: src/components/profile/change-password-form.tsx:38
+#: src/components/profile/change-password-form.tsx:44
+#: src/components/auth/password-confirmation-form.tsx:36
+#: src/components/auth/login-form.tsx:39
+#: src/components/auth/complete-register.tsx:46
+msgid "رمز عبور باید حداقل ۸ کاراکتر باشد"
+msgstr "رمز عبور باید حداقل ۸ کاراکتر باشد"
+
+#: src/components/auth/password-confirmation-form.tsx:37
+#: src/components/auth/login-form.tsx:40
+#: src/components/auth/complete-register.tsx:47
+msgid "رمز عبور باید حداکثر ۳۲ کاراکتر باشد"
+msgstr "رمز عبور باید حداکثر ۳۲ کاراکتر باشد"
+
+#: src/components/profile/change-password-form.tsx:90
+#: src/components/auth/password-confirmation-form.tsx:99
+msgid "رمز عبور جدید"
+msgstr "رمز عبور جدید"
+
+#: src/components/profile/change-password-form.tsx:45
+msgid "رمز عبور جدید الزامی است"
+msgstr "رمز عبور جدید الزامی است"
+
+#: src/components/auth/login-form.tsx:181
+msgid "رمز عبور را فراموش کرده اید؟"
+msgstr "رمز عبور را فراموش کرده اید؟"
+
+#: src/components/profile/change-password-form.tsx:42
+#: src/components/auth/password-confirmation-form.tsx:40
+#: src/components/auth/complete-register.tsx:50
+msgid "رمز عبور و تکرار آن باید یکسان باشند"
+msgstr "رمز عبور و تکرار آن باید یکسان باشند"
+
+#: src/components/careers/jalali-date-input.tsx:65
+msgid "روز"
+msgstr "روز"
+
+#: src/components/cart/cart-submit-page.tsx:210
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:111
+msgid "روش ارسال"
+msgstr "روش ارسال"
+
+#: src/components/profile/order-card.tsx:61
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:103
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:183
+msgid "روش پرداخت"
+msgstr "روش پرداخت"
+
+#: src/components/profile/order-card.tsx:67
+#: src/components/products/product-content.tsx:94
+#: src/components/products/filter.tsx:263
+#: src/components/products/filter.tsx:277
+#: src/components/cart/cart-submit-page.tsx:125
+#: src/components/cart/cart-submit-page.tsx:125
+#: src/components/cart/cart-submit-page.tsx:303
+#: src/components/cart/cart-submit-page.tsx:312
+#: src/components/cart/cart-submit-page.tsx:321
+#: src/components/cart/cart-submit-page.tsx:330
+#: src/components/cart/cart-submit-page.tsx:330
+#: src/components/cart/cart-item.tsx:144
+#: src/components/cart/cart-item.tsx:152
+#: src/components/cart/cart-item.tsx:169
+#: src/components/cart/cart-content.tsx:42
+#: src/components/cart/cart-content.tsx:93
+#: src/components/cart/cart-content.tsx:102
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:122
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:146
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:238
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:246
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:262
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:272
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:280
+#: src/app/[lang]/products/[...slug]/page.tsx:112
+#: src/app/[lang]/(payment)/payment/page.tsx:100
+msgid "ریال"
+msgstr "ریال"
+
+#: src/components/careers/resume-form.tsx:673
+msgid "زمان کاری"
+msgstr "زمان کاری"
+
+#: src/components/careers/resume-form.tsx:673
+msgid "زمان کاری*"
+msgstr "زمان کاری*"
+
+#: src/components/careers/resume-form.tsx:648
+msgid "زیر دیپلم / سیکل"
+msgstr "زیر دیپلم / سیکل"
+
+#: src/components/careers/resume-form.tsx:664
+msgid "سابقه بیماری"
+msgstr "سابقه بیماری"
+
+#: src/components/careers/resume-form.tsx:662
+msgid "سابقه بیماری دارید؟*"
+msgstr "سابقه بیماری دارید؟*"
+
+#: src/components/home/product-section.tsx:29
+#: src/components/careers/jalali-date-input.tsx:102
+msgid "سال"
+msgstr "سال"
+
+#: src/components/careers/resume-form.tsx:740
+msgid "سال اخذ"
+msgstr "سال اخذ"
+
+#: src/components/careers/resume-form.tsx:87
+msgid "سال برگزاری معتبر نیست"
+msgstr "سال برگزاری معتبر نیست"
+
+#: src/components/careers/resume-form.tsx:88
+msgid "سال برگزاری نمی‌تواند در آینده باشد"
+msgstr "سال برگزاری نمی‌تواند در آینده باشد"
+
+#: src/components/careers/resume-form.tsx:597
+msgid "سایر"
+msgstr "سایر"
+
+#: src/components/products/product-content.tsx:15
+#: src/components/products/product-content.tsx:56
+msgid "سایر فیس ها"
+msgstr "سایر فیس ها"
+
+#: src/app/[lang]/products/[...slug]/page.tsx:146
+msgid "سایز"
+msgstr "سایز"
+
+#: src/components/ui/profile-button.tsx:144
+#: src/app/[lang]/cart/page.tsx:14
+#: src/app/[lang]/cart/page.tsx:35
+msgid "سبد خرید"
+msgstr "سبد خرید"
+
+#. placeholder {0}: cartList.items.length
+#: src/components/cart/cart-submit-page.tsx:138
+msgid "سبد خرید شما ({0} قلم کالا)"
+msgstr "سبد خرید شما ({0} قلم کالا)"
+
+#: src/components/profile/order-card.tsx:24
+msgid "سفارش"
+msgstr "سفارش"
+
+#: src/components/ui/profile-button.tsx:131
+#: src/app/[lang]/profile/orders/page.tsx:14
+#: src/app/[lang]/profile/orders/page.tsx:32
+msgid "سفارشات"
+msgstr "سفارشات"
+
+#: src/components/representatives/apply-legal-form.tsx:233
+#: src/components/representatives/apply-legal-form.tsx:239
+msgid "سمت"
+msgstr "سمت"
+
+#: src/components/representatives/apply-legal-form.tsx:89
+msgid "سمت الزامی است"
+msgstr "سمت الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:88
+#: src/components/representatives/apply-legal-form.tsx:92
+msgid "سمت باید حداقل ۲ کاراکتر باشد"
+msgstr "سمت باید حداقل ۲ کاراکتر باشد"
+
+#: src/components/careers/resume-form.tsx:676
+msgid "سه شیفت"
+msgstr "سه شیفت"
+
+#: src/components/careers/resume-form.tsx:215
+#: src/components/careers/resume-form.tsx:768
+msgid "سوابق کاری"
+msgstr "سوابق کاری"
+
+#: src/components/careers/resume-form.tsx:770
+msgid "سوابق کاری اختیاری هستند. اگر عنوان شغل را خالی بگذارید، آن سابقه در فرم نهایی درج نخواهد شد."
+msgstr "سوابق کاری اختیاری هستند. اگر عنوان شغل را خالی بگذارید، آن سابقه در فرم نهایی درج نخواهد شد."
+
+#: src/app/[lang]/representatives/apply/page.tsx:74
+msgid "شخص حقوقی"
+msgstr "شخص حقوقی"
+
+#: src/app/[lang]/representatives/apply/page.tsx:69
+msgid "شخص حقیقی"
+msgstr "شخص حقیقی"
+
+#: src/components/careers/resume-form.tsx:630
+msgid "شخصی"
+msgstr "شخصی"
+
+#: src/components/careers/resume-form.tsx:672
+msgid "شغل مورد درخواست"
+msgstr "شغل مورد درخواست"
+
+#: src/components/careers/resume-form.tsx:672
+msgid "شغل مورد درخواست*"
+msgstr "شغل مورد درخواست*"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:125
+msgid "شماره پیگیری پرداخت"
+msgstr "شماره پیگیری پرداخت"
+
+#: src/components/ui/address-card.tsx:43
+msgid "شماره تلفن"
+msgstr "شماره تلفن"
+
+#: src/components/home/contact-from.tsx:83
+#: src/components/contact-us/contact-us-form.tsx:81
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:69
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:251
+msgid "شماره تماس"
+msgstr "شماره تماس"
+
+#: src/components/home/contact-from.tsx:33
+#: src/components/contact-us/contact-us-form.tsx:33
+msgid "شماره تماس الزامی است"
+msgstr "شماره تماس الزامی است"
+
+#: src/components/home/contact-from.tsx:32
+msgid "شماره تماس معتبر نیست"
+msgstr "شماره تماس معتبر نیست"
+
+#: src/components/contact-us/contact-us-form.tsx:32
+msgid "شماره تماس معتبر نیست (مثال: 09123456789)"
+msgstr "شماره تماس معتبر نیست (مثال: 09123456789)"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:53
+#: src/app/[lang]/(payment)/payment/page.tsx:105
+msgid "شماره سفارش"
+msgstr "شماره سفارش"
+
+#: src/components/representatives/apply-legal-form.tsx:158
+#: src/components/representatives/apply-legal-form.tsx:164
+#: src/components/representatives/apply-form.tsx:130
+#: src/components/representatives/apply-form.tsx:136
+#: src/components/profile/user-info-form.tsx:154
+#: src/components/profile/user-info-form.tsx:161
+#: src/components/profile/address-form.tsx:107
+#: src/components/profile/address-form.tsx:113
+#: src/components/careers/resume-form.tsx:561
+#: src/components/auth/register-form.tsx:83
+#: src/components/auth/login-form.tsx:106
+#: src/components/auth/forgot-password-form.tsx:79
+msgid "شماره موبایل"
+msgstr "شماره موبایل"
+
+#: src/components/auth/verify-form.tsx:196
+msgid "شماره موبایل اشتباه است؟ <0>ویرایش</0> کنید"
+msgstr "شماره موبایل اشتباه است؟ <0>ویرایش</0> کنید"
+
+#: src/components/careers/resume-form.tsx:562
+msgid "شماره موبایل اضطراری"
+msgstr "شماره موبایل اضطراری"
+
+#: src/components/ui/newsletter.tsx:23
+#: src/components/representatives/apply-legal-form.tsx:63
+#: src/components/representatives/apply-form.tsx:53
+#: src/components/profile/user-info-form.tsx:43
+#: src/components/profile/address-form.tsx:42
+#: src/components/careers/resume-form.tsx:34
+#: src/components/careers/resume-form.tsx:37
+#: src/components/auth/register-form.tsx:30
+#: src/components/auth/login-form.tsx:35
+#: src/components/auth/forgot-password-form.tsx:30
+msgid "شماره موبایل الزامی است"
+msgstr "شماره موبایل الزامی است"
+
+#: src/components/profile/address-form.tsx:41
+msgid "شماره موبایل باید حداقل ۸ کاراکتر باشد"
+msgstr "شماره موبایل باید حداقل ۸ کاراکتر باشد"
+
+#: src/components/representatives/apply-legal-form.tsx:62
+#: src/components/representatives/apply-form.tsx:52
+#: src/components/profile/user-info-form.tsx:42
+#: src/components/profile/address-form.tsx:43
+#: src/components/careers/resume-form.tsx:33
+#: src/components/careers/resume-form.tsx:36
+msgid "شماره موبایل معتبر نیست"
+msgstr "شماره موبایل معتبر نیست"
+
+#: src/components/representatives/apply-legal-form.tsx:218
+#: src/components/representatives/apply-legal-form.tsx:224
+msgid "شناسه ملی"
+msgstr "شناسه ملی"
+
+#: src/components/representatives/apply-legal-form.tsx:85
+msgid "شناسه ملی شرکت الزامی است"
+msgstr "شناسه ملی شرکت الزامی است"
+
+#: src/components/representatives/map-filter.tsx:134
+#: src/components/representatives/agency-card.tsx:58
+msgid "شهر"
+msgstr "شهر"
+
+#: src/components/careers/resume-form.tsx:593
+msgid "شوهر"
+msgstr "شوهر"
+
+#: src/components/careers/resume-form.tsx:751
+msgid "صادر شده"
+msgstr "صادر شده"
+
+#: src/components/careers/resume-form.tsx:750
+msgid "صادر نشده"
+msgstr "صادر نشده"
+
+#: src/app/[lang]/not-found.tsx:16
+msgid "صفحه مورد نظر پیدا نشد!"
+msgstr "صفحه مورد نظر پیدا نشد!"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:119
+msgid "صورت حساب"
+msgstr "صورت حساب"
+
+#: src/components/ui/footer.tsx:105
+msgid "طراحی و توسعه توسط <0>استودیو اوهانا</0>"
+msgstr "طراحی و توسعه توسط <0>استودیو اوهانا</0>"
+
+#: src/components/products/overview-section.tsx:30
+#: src/components/products/overview-section.tsx:118
+msgid "طرح ها"
+msgstr "طرح ها"
+
+#: src/components/careers/resume-form.tsx:621
+msgid "عدم مشمول"
+msgstr "عدم مشمول"
+
+#: src/components/i18n-switcher.tsx:17
+#: src/components/i18n-switcher-mobile.tsx:15
+msgid "عربی"
+msgstr "عربی"
+
+#: src/components/ui/newsletter.tsx:75
+msgid "عضویت"
+msgstr "عضویت"
+
+#: src/components/careers/resume-form.tsx:826
+#: src/components/careers/resume-form.tsx:827
+msgid "علت قطع همکاری"
+msgstr "علت قطع همکاری"
+
+#: src/components/careers/resume-form.tsx:724
+msgid "عنوان دوره آموزشی"
+msgstr "عنوان دوره آموزشی"
+
+#: src/components/careers/resume-form.tsx:795
+#: src/components/careers/resume-form.tsx:796
+msgid "عنوان سابقه کار"
+msgstr "عنوان سابقه کار"
+
+#: src/components/i18n-switcher.tsx:16
+#: src/components/i18n-switcher-mobile.tsx:14
+msgid "فارسی"
+msgstr "فارسی"
+
+#: src/components/auth/forgot-password-form.tsx:59
+msgid "فراموشی رمز عبور"
+msgstr "فراموشی رمز عبور"
+
+#: src/components/ui/navbar.tsx:75
+#: src/app/[lang]/careers/page.tsx:59
+#: src/app/[lang]/careers/[...slug]/page.tsx:44
+#: src/app/[lang]/careers/[...slug]/page.tsx:56
+msgid "فرصت های شغلی"
+msgstr "فرصت های شغلی"
+
+#: src/components/home/contact-from.tsx:44
+msgid "فرم با خطا مواجه شد. لطفاً دوباره تلاش کنید."
+msgstr "فرم با خطا مواجه شد. لطفاً دوباره تلاش کنید."
+
+#: src/components/home/contact-from.tsx:42
+msgid "فرم با موفقیت ارسال شد"
+msgstr "فرم با موفقیت ارسال شد"
+
+#: src/components/profile/user-info-form.tsx:39
+msgid "فرمت ایمیل معتبر نیست"
+msgstr "فرمت ایمیل معتبر نیست"
+
+#: src/components/auth/register-form.tsx:31
+#: src/components/auth/login-form.tsx:36
+#: src/components/auth/forgot-password-form.tsx:31
+msgid "فرمت شماره موبایل صحیح نیست (09xxxxxxxxx)"
+msgstr "فرمت شماره موبایل صحیح نیست (09xxxxxxxxx)"
+
+#: src/components/products/mobile-filter.tsx:29
+msgid "فیلتر محصولات"
+msgstr "فیلتر محصولات"
+
+#: src/components/products/filter.tsx:180
+msgid "فیلتر ها"
+msgstr "فیلتر ها"
+
+#: src/components/cart/cart-submit-page.tsx:327
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:143
+msgid "قابل پرداخت"
+msgstr "قابل پرداخت"
+
+#: src/components/home/pages/home-style-3.tsx:141
+#: src/components/home/pages/home-style-2.tsx:120
+#: src/components/home/pages/home-style-1.tsx:106
+msgid "قوانین و مقررات | سوالات متداول"
+msgstr "قوانین و مقررات | سوالات متداول"
+
+#: src/components/products/product-content.tsx:89
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:165
+msgid "قیمت"
+msgstr "قیمت"
+
+#: src/components/cart/cart-submit-page.tsx:298
+#: src/components/cart/cart-item.tsx:149
+#: src/components/cart/cart-content.tsx:90
+msgid "قیمت کل"
+msgstr "قیمت کل"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:180
+msgid "قیمت کل(ریال)"
+msgstr "قیمت کل(ریال)"
+
+#: src/components/cart/cart-item.tsx:141
+msgid "قیمت واحد"
+msgstr "قیمت واحد"
+
+#: src/components/ui/navbar.tsx:101
+msgid "کاتالوگ محصولات"
+msgstr "کاتالوگ محصولات"
+
+#: src/components/auth/register-form.tsx:49
+msgid "کاربر با این شماره تلفن وجود دارد."
+msgstr "کاربر با این شماره تلفن وجود دارد."
+
+#: src/components/careers/resume-form.tsx:650
+msgid "کاردانی"
+msgstr "کاردانی"
+
+#: src/components/careers/resume-form.tsx:651
+msgid "کارشناسی"
+msgstr "کارشناسی"
+
+#: src/components/careers/resume-form.tsx:652
+msgid "کارشناسی ارشد و بالاتر"
+msgstr "کارشناسی ارشد و بالاتر"
+
+#: src/components/representatives/apply-legal-form.tsx:203
+#: src/components/representatives/apply-legal-form.tsx:209
+msgid "کد اقتصادی"
+msgstr "کد اقتصادی"
+
+#: src/components/representatives/apply-legal-form.tsx:81
+msgid "کد اقتصادی الزامی است"
+msgstr "کد اقتصادی الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:325
+#: src/components/representatives/apply-form.tsx:223
+msgid "کد پستی"
+msgstr "کد پستی"
+
+#: src/components/representatives/apply-legal-form.tsx:319
+#: src/components/representatives/apply-form.tsx:217
+msgid "کد پستی:"
+msgstr "کد پستی:"
+
+#: src/components/auth/verify-form.tsx:42
+msgid "کد تایید الزامی است"
+msgstr "کد تایید الزامی است"
+
+#: src/components/auth/register-form.tsx:42
+#: src/components/auth/forgot-password-form.tsx:42
+msgid "کد تایید با موفقیت ارسال شد."
+msgstr "کد تایید با موفقیت ارسال شد."
+
+#: src/components/auth/verify-form.tsx:54
+#: src/components/auth/verify-form.tsx:62
+msgid "کد تایید با موفقیت وارد شد!"
+msgstr "کد تایید با موفقیت وارد شد!"
+
+#: src/components/auth/verify-form.tsx:43
+msgid "کد تایید باید 4 رقم باشد"
+msgstr "کد تایید باید 4 رقم باشد"
+
+#: src/components/auth/verify-form.tsx:44
+msgid "کد تایید باید شامل 4 رقم باشد"
+msgstr "کد تایید باید شامل 4 رقم باشد"
+
+#: src/components/auth/verify-form.tsx:139
+msgid "کد تایید به شماره موبایل {phoneNumber} ارسال شد"
+msgstr "کد تایید به شماره موبایل {phoneNumber} ارسال شد"
+
+#: src/components/auth/verify-form.tsx:154
+msgid "کد تایید:"
+msgstr "کد تایید:"
+
+#: src/components/cart/cart-submit-page.tsx:240
+#: src/components/cart/cart-submit-page.tsx:248
+msgid "کد تخفیف"
+msgstr "کد تخفیف"
+
+#: src/components/cart/cart-submit-page.tsx:260
+msgid "کد معتبر"
+msgstr "کد معتبر"
+
+#: src/components/representatives/apply-legal-form.tsx:143
+#: src/components/representatives/apply-legal-form.tsx:149
+#: src/components/representatives/apply-form.tsx:115
+#: src/components/representatives/apply-form.tsx:121
+#: src/components/careers/resume-form.tsx:560
+msgid "کد ملی"
+msgstr "کد ملی"
+
+#: src/components/careers/resume-form.tsx:560
+msgid "کد ملی 10 رقمی"
+msgstr "کد ملی 10 رقمی"
+
+#: src/components/representatives/apply-legal-form.tsx:60
+#: src/components/representatives/apply-form.tsx:50
+#: src/components/careers/resume-form.tsx:31
+msgid "کد ملی الزامی است"
+msgstr "کد ملی الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:59
+#: src/components/representatives/apply-form.tsx:49
+msgid "کد ملی باید ۱۰ رقم باشد"
+msgstr "کد ملی باید ۱۰ رقم باشد"
+
+#: src/components/careers/resume-form.tsx:30
+msgid "کد ملی باید 10 رقم باشد"
+msgstr "کد ملی باید 10 رقم باشد"
+
+#: src/components/cart/cart-submit-page.tsx:263
+msgid "کد نامعتبر"
+msgstr "کد نامعتبر"
+
+#: src/components/careers/resume-form.tsx:619
+msgid "کفالت دائم"
+msgstr "کفالت دائم"
+
+#: src/components/careers/resume-form.tsx:746
+#: src/components/careers/resume-form.tsx:748
+msgid "گواهینامه ارایه اخذ مدرک"
+msgstr "گواهینامه ارایه اخذ مدرک"
+
+#: src/components/careers/resume-form.tsx:68
+msgid "لطفا حقوق درخواستی را وارد کنید"
+msgstr "لطفا حقوق درخواستی را وارد کنید"
+
+#: src/components/careers/resume-form.tsx:55
+msgid "لطفا رشته تحصیلی را وارد کنید"
+msgstr "لطفا رشته تحصیلی را وارد کنید"
+
+#: src/components/careers/resume-form.tsx:73
+msgid "لطفا زمان کاری را انتخاب کنید"
+msgstr "لطفا زمان کاری را انتخاب کنید"
+
+#: src/components/careers/resume-form.tsx:64
+msgid "لطفا سابقه بیماری را مشخص کنید"
+msgstr "لطفا سابقه بیماری را مشخص کنید"
+
+#: src/components/careers/resume-form.tsx:71
+msgid "لطفا شغل مورد درخواست را وارد کنید"
+msgstr "لطفا شغل مورد درخواست را وارد کنید"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:54
+msgid "لطفا صبر کنید..."
+msgstr "لطفا صبر کنید..."
+
+#: src/components/careers/resume-form.tsx:77
+msgid "لطفا فایل رزومه را آپلود کنید"
+msgstr "لطفا فایل رزومه را آپلود کنید"
+
+#: src/components/careers/resume-form.tsx:75
+msgid "لطفا محل استخدام را انتخاب کنید"
+msgstr "لطفا محل استخدام را انتخاب کنید"
+
+#: src/components/careers/resume-form.tsx:53
+msgid "لطفا مقطع تحصیلی را انتخاب کنید"
+msgstr "لطفا مقطع تحصیلی را انتخاب کنید"
+
+#: src/components/auth/login-form.tsx:90
+msgid "لطفا وارد حساب کاربری خود شوید"
+msgstr "لطفا وارد حساب کاربری خود شوید"
+
+#: src/components/representatives/agency-card.tsx:47
+msgid "لطفا وارد شوید"
+msgstr "لطفا وارد شوید"
+
+#: src/components/profile/order-card.tsx:13
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:29
+msgid "لغو شده"
+msgstr "لغو شده"
+
+#: src/components/careers/resume-form.tsx:591
+msgid "مادر"
+msgstr "مادر"
+
+#: src/components/cart/cart-submit-page.tsx:318
+#: src/components/cart/cart-item.tsx:158
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:171
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:269
+msgid "مالیات"
+msgstr "مالیات"
+
+#: src/components/careers/jalali-date-input.tsx:79
+msgid "ماه"
+msgstr "ماه"
+
+#: src/components/profile/order-card.tsx:66
+#: src/app/[lang]/(payment)/payment/page.tsx:95
+msgid "مبلغ"
+msgstr "مبلغ"
+
+#: src/components/cart/cart-item.tsx:166
+msgid "مبلغ تمام شده"
+msgstr "مبلغ تمام شده"
+
+#: src/components/cart/cart-submit-page.tsx:122
+#: src/components/cart/cart-content.tsx:37
+#: src/components/cart/cart-content.tsx:99
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:277
+msgid "مبلغ قابل پرداخت"
+msgstr "مبلغ قابل پرداخت"
+
+#: src/components/careers/resume-form.tsx:608
+msgid "متارکه"
+msgstr "متارکه"
+
+#: src/app/[lang]/profile/orders/page.tsx:43
+msgid "متاسفانه هنوز هیچ سفارشی وجود ندارد !"
+msgstr "متاسفانه هنوز هیچ سفارشی وجود ندارد !"
+
+#: src/components/careers/resume-form.tsx:607
+msgid "متاهل"
+msgstr "متاهل"
+
+#: src/components/careers/resume-form.tsx:631
+msgid "متعلق به پدر"
+msgstr "متعلق به پدر"
+
+#: src/components/careers/resume-form.tsx:633
+msgid "متعلق به وابستگان"
+msgstr "متعلق به وابستگان"
+
+#: src/components/careers/resume-form.tsx:678
+msgid "متقاضی استخدام در*"
+msgstr "متقاضی استخدام در*"
+
+#: src/components/careers/resume-form.tsx:606
+msgid "مجرد"
+msgstr "مجرد"
+
+#: src/components/products/filter.tsx:243
+msgid "محدوده قیمت"
+msgstr "محدوده قیمت"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:159
+msgid "محصول"
+msgstr "محصول"
+
+#: src/components/cart/cart-item.tsx:74
+msgid "محصول با موفقیت حذف شد."
+msgstr "محصول با موفقیت حذف شد."
+
+#: src/components/ui/navbar.tsx:67
+#: src/components/products/detail-header.tsx:60
+#: src/app/[lang]/profile/favorite/page.tsx:35
+#: src/app/[lang]/products/page.tsx:95
+#: src/app/[lang]/products/page.tsx:103
+#: src/app/[lang]/products/[...slug]/page.tsx:77
+msgid "محصولات"
+msgstr "محصولات"
+
+#: src/components/products/product-content.tsx:16
+#: src/components/products/product-content.tsx:69
+msgid "محصولات مرتبط"
+msgstr "محصولات مرتبط"
+
+#: src/app/[lang]/profile/favorite/page.tsx:25
+msgid "محصولات مورد علاقه"
+msgstr "محصولات مورد علاقه"
+
+#: src/components/careers/resume-form.tsx:678
+msgid "محل استخدام"
+msgstr "محل استخدام"
+
+#: src/components/careers/resume-form.tsx:659
+#: src/components/careers/resume-form.tsx:659
+msgid "محل تحصیل آخرین مدرک"
+msgstr "محل تحصیل آخرین مدرک"
+
+#: src/components/careers/resume-form.tsx:658
+#: src/components/careers/resume-form.tsx:658
+msgid "مدت تحصیل آخرین مدرک"
+msgstr "مدت تحصیل آخرین مدرک"
+
+#: src/components/careers/resume-form.tsx:734
+msgid "مدت دوره (ساعت)"
+msgstr "مدت دوره (ساعت)"
+
+#: src/components/careers/resume-form.tsx:810
+#: src/components/careers/resume-form.tsx:811
+#: src/components/careers/resume-form.tsx:816
+#: src/components/careers/resume-form.tsx:817
+msgid "مدت همکاری"
+msgstr "مدت همکاری"
+
+#: src/components/careers/resume-form.tsx:646
+msgid "مدرک تحصیلی خود را انتخاب کنید"
+msgstr "مدرک تحصیلی خود را انتخاب کنید"
+
+#: src/components/careers/resume-form.tsx:881
+msgid "مرحله بعد"
+msgstr "مرحله بعد"
+
+#: src/components/careers/resume-form.tsx:872
+msgid "مرحله قبل"
+msgstr "مرحله قبل"
+
+#: src/app/[lang]/careers/[...slug]/page.tsx:90
+msgid "مزایای کار در این شرکت"
+msgstr "مزایای کار در این شرکت"
+
+#: src/app/[lang]/(payment)/payment/page.tsx:141
+msgid "مشاهده سفارشات"
+msgstr "مشاهده سفارشات"
+
+#: src/components/careers/resume-form.tsx:481
+msgid "مشخصات شما با موفقیت ارسال شد."
+msgstr "مشخصات شما با موفقیت ارسال شد."
+
+#: src/app/[lang]/news/[...slug]/page.tsx:121
+#: src/app/[lang]/news/[...slug]/page.tsx:143
+#: src/app/[lang]/articles/[...slug]/page.tsx:130
+#: src/app/[lang]/articles/[...slug]/page.tsx:152
+msgid "مطالب مرتبط"
+msgstr "مطالب مرتبط"
+
+#: src/components/careers/resume-form.tsx:618
+msgid "معافیت پزشکی"
+msgstr "معافیت پزشکی"
+
+#: src/components/careers/resume-form.tsx:620
+msgid "معافیت تحصیلی"
+msgstr "معافیت تحصیلی"
+
+#: src/components/careers/resume-form.tsx:617
+msgid "معافیت دائم"
+msgstr "معافیت دائم"
+
+#: src/components/careers/resume-form.tsx:657
+#: src/components/careers/resume-form.tsx:657
+msgid "معدل آخرین مدرک تحصیلی"
+msgstr "معدل آخرین مدرک تحصیلی"
+
+#: src/components/careers/resume-form.tsx:60
+msgid "معدل الزامی است"
+msgstr "معدل الزامی است"
+
+#: src/components/careers/resume-form.tsx:59
+msgid "معدل نمی‌تواند بیش از 20 باشد"
+msgstr "معدل نمی‌تواند بیش از 20 باشد"
+
+#: src/components/careers/resume-form.tsx:58
+msgid "معدل نمی‌تواند منفی باشد"
+msgstr "معدل نمی‌تواند منفی باشد"
+
+#: src/components/ui/navbar.tsx:93
+#: src/app/[lang]/articles/[...slug]/page.tsx:54
+msgid "مقالات"
+msgstr "مقالات"
+
+#: src/components/cart/cart-item.tsx:62
+msgid "مقدار وارد شده بیش از حد مجاز است!"
+msgstr "مقدار وارد شده بیش از حد مجاز است!"
+
+#: src/app/[lang]/careers/[...slug]/page.tsx:84
+msgid "مهارت های مورد نیاز و مسیولیتها"
+msgstr "مهارت های مورد نیاز و مسیولیتها"
+
+#: src/components/profile/address-form.tsx:91
+#: src/components/profile/address-form.tsx:97
+#: src/components/careers/resume-form.tsx:558
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:61
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:162
+msgid "نام"
+msgstr "نام"
+
+#: src/components/profile/address-form.tsx:39
+#: src/components/home/contact-from.tsx:30
+#: src/components/careers/resume-form.tsx:24
+msgid "نام الزامی است"
+msgstr "نام الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:56
+#: src/components/representatives/apply-form.tsx:46
+#: src/components/contact-us/contact-us-form.tsx:29
+msgid "نام باید حداقل ۲ کاراکتر باشد"
+msgstr "نام باید حداقل ۲ کاراکتر باشد"
+
+#: src/components/profile/address-form.tsx:38
+msgid "نام باید حداقل ۳ کاراکتر باشد"
+msgstr "نام باید حداقل ۳ کاراکتر باشد"
+
+#: src/components/careers/resume-form.tsx:559
+msgid "نام پدر"
+msgstr "نام پدر"
+
+#: src/components/careers/resume-form.tsx:28
+msgid "نام پدر الزامی است"
+msgstr "نام پدر الزامی است"
+
+#: src/components/careers/resume-form.tsx:26
+msgid "نام پدر باید حداقل 2 کاراکتر باشد"
+msgstr "نام پدر باید حداقل 2 کاراکتر باشد"
+
+#: src/components/careers/resume-form.tsx:559
+msgid "نام پدر خود را وارد کنید"
+msgstr "نام پدر خود را وارد کنید"
+
+#: src/components/careers/resume-form.tsx:27
+msgid "نام پدر نمی‌تواند بیش از 50 کاراکتر باشد"
+msgstr "نام پدر نمی‌تواند بیش از 50 کاراکتر باشد"
+
+#: src/components/ui/address-card.tsx:40
+#: src/components/profile/address-form.tsx:123
+#: src/components/profile/address-form.tsx:129
+msgid "نام تحویل گیرنده"
+msgstr "نام تحویل گیرنده"
+
+#: src/components/careers/resume-form.tsx:558
+msgid "نام خود را وارد کنید"
+msgstr "نام خود را وارد کنید"
+
+#: src/components/careers/resume-form.tsx:56
+msgid "نام دانشگاه الزامی است"
+msgstr "نام دانشگاه الزامی است"
+
+#: src/components/careers/resume-form.tsx:656
+msgid "نام دانشگاه یا موسسه آموزشی"
+msgstr "نام دانشگاه یا موسسه آموزشی"
+
+#: src/components/careers/resume-form.tsx:656
+msgid "نام دانشگاه*"
+msgstr "نام دانشگاه*"
+
+#: src/components/careers/resume-form.tsx:725
+msgid "نام دوره آموزشی"
+msgstr "نام دوره آموزشی"
+
+#: src/components/representatives/apply-legal-form.tsx:188
+#: src/components/representatives/apply-legal-form.tsx:194
+msgid "نام شرکت"
+msgstr "نام شرکت"
+
+#: src/components/representatives/apply-legal-form.tsx:77
+msgid "نام شرکت الزامی است"
+msgstr "نام شرکت الزامی است"
+
+#: src/components/representatives/apply-legal-form.tsx:76
+msgid "نام شرکت باید حداقل ۲ کاراکتر باشد"
+msgstr "نام شرکت باید حداقل ۲ کاراکتر باشد"
+
+#: src/components/profile/user-info-form.tsx:69
+#: src/components/profile/user-info-form.tsx:75
+msgid "نام کاربری"
+msgstr "نام کاربری"
+
+#: src/components/profile/user-info-form.tsx:36
+msgid "نام کاربری باید حداقل ۳ کاراکتر باشد"
+msgstr "نام کاربری باید حداقل ۳ کاراکتر باشد"
+
+#: src/components/careers/resume-form.tsx:22
+msgid "نام کامل باید حداقل 2 کاراکتر باشد"
+msgstr "نام کامل باید حداقل 2 کاراکتر باشد"
+
+#: src/components/profile/address-form.tsx:46
+msgid "نام گیرنده الزامی است"
+msgstr "نام گیرنده الزامی است"
+
+#: src/components/profile/address-form.tsx:45
+msgid "نام گیرنده باید حداقل ۲ کاراکتر باشد"
+msgstr "نام گیرنده باید حداقل ۲ کاراکتر باشد"
+
+#: src/components/careers/resume-form.tsx:729
+msgid "نام موسسه"
+msgstr "نام موسسه"
+
+#: src/components/careers/resume-form.tsx:730
+msgid "نام موسسه برگزارکننده"
+msgstr "نام موسسه برگزارکننده"
+
+#: src/components/representatives/map-filter.tsx:107
+msgid "نام نماینده"
+msgstr "نام نماینده"
+
+#: src/components/careers/resume-form.tsx:23
+msgid "نام نمی‌تواند بیش از 50 کاراکتر باشد"
+msgstr "نام نمی‌تواند بیش از 50 کاراکتر باشد"
+
+#: src/components/careers/resume-form.tsx:800
+#: src/components/careers/resume-form.tsx:801
+msgid "نام و آدرس محل کار"
+msgstr "نام و آدرس محل کار"
+
+#: src/components/representatives/apply-legal-form.tsx:128
+#: src/components/representatives/apply-legal-form.tsx:134
+#: src/components/representatives/apply-form.tsx:100
+#: src/components/representatives/apply-form.tsx:106
+#: src/components/profile/user-info-form.tsx:103
+#: src/components/profile/user-info-form.tsx:109
+#: src/components/home/contact-from.tsx:65
+#: src/components/contact-us/contact-us-form.tsx:63
+#: src/components/auth/complete-register.tsx:119
+#: src/components/auth/complete-register.tsx:125
+msgid "نام و نام خانوادگی"
+msgstr "نام و نام خانوادگی"
+
+#: src/components/representatives/apply-legal-form.tsx:57
+#: src/components/representatives/apply-form.tsx:47
+#: src/components/contact-us/contact-us-form.tsx:30
+#: src/components/auth/complete-register.tsx:43
+msgid "نام و نام خانوادگی الزامی است"
+msgstr "نام و نام خانوادگی الزامی است"
+
+#: src/components/careers/resume-form.tsx:586
+msgid "نسبت"
+msgstr "نسبت"
+
+#: src/components/careers/resume-form.tsx:39
+msgid "نسبت الزامی است"
+msgstr "نسبت الزامی است"
+
+#: src/components/careers/resume-form.tsx:588
+msgid "نسبت خود را انتخاب کنید"
+msgstr "نسبت خود را انتخاب کنید"
+
+#: src/components/representatives/apply-legal-form.tsx:263
+#: src/components/representatives/apply-legal-form.tsx:274
+#: src/components/representatives/apply-form.tsx:161
+#: src/components/representatives/apply-form.tsx:172
+msgid "نمایندگی جهت استان"
+msgstr "نمایندگی جهت استان"
+
+#: src/components/representatives/apply-legal-form.tsx:302
+#: src/components/representatives/apply-form.tsx:200
+msgid "نمایندگی جهت شهر"
+msgstr "نمایندگی جهت شهر"
+
+#: src/components/representatives/apply-legal-form.tsx:290
+#: src/components/representatives/apply-form.tsx:188
+msgid "نمایندگی جهت شهر*:"
+msgstr "نمایندگی جهت شهر*:"
+
+#: src/components/ui/navbar.tsx:62
+#: src/app/[lang]/representatives/page.tsx:57
+msgid "نمایندگی ها"
+msgstr "نمایندگی ها"
+
+#: src/components/representatives/agency-card.tsx:29
+msgid "نماینده"
+msgstr "نماینده"
+
+#: src/app/[lang]/products/[...slug]/page.tsx:135
+msgid "نوع محصول"
+msgstr "نوع محصول"
+
+#: src/components/cart/cart-submit-page.tsx:309
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:259
+msgid "هزینه ارسال"
+msgstr "هزینه ارسال"
+
+#: src/components/careers/resume-form.tsx:592
+msgid "همسر"
+msgstr "همسر"
+
+#: src/components/ui/navbar.tsx:71
+msgid "همکاری با ما"
+msgstr "همکاری با ما"
+
+#: src/components/representatives/map-wrapper.tsx:45
+msgid "همه نمایندگی ها"
+msgstr "همه نمایندگی ها"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:177
+msgid "واحد"
+msgstr "واحد"
+
+#: src/components/ui/profile-button.tsx:171
+#: src/components/auth/login-form.tsx:85
+#: src/components/auth/login-form.tsx:169
+#: src/app/[lang]/auth/login/page.tsx:16
+msgid "ورود"
+msgstr "ورود"
+
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:186
+msgid "وضعیت"
+msgstr "وضعیت"
+
+#: src/components/careers/resume-form.tsx:602
+msgid "وضعیت تاهل"
+msgstr "وضعیت تاهل"
+
+#: src/components/careers/resume-form.tsx:42
+msgid "وضعیت تاهل الزامی است"
+msgstr "وضعیت تاهل الزامی است"
+
+#: src/components/careers/resume-form.tsx:603
+msgid "وضعیت تاهل خود را انتخاب کنید"
+msgstr "وضعیت تاهل خود را انتخاب کنید"
+
+#: src/components/profile/order-card.tsx:43
+#: src/app/[lang]/profile/orders/[...slug]/page.tsx:127
+msgid "وضعیت سفارش"
+msgstr "وضعیت سفارش"
+
+#: src/components/careers/resume-form.tsx:626
+msgid "وضعیت مسکن"
+msgstr "وضعیت مسکن"
+
+#: src/components/careers/resume-form.tsx:48
+msgid "وضعیت مسکن الزامی است"
+msgstr "وضعیت مسکن الزامی است"
+
+#: src/components/careers/resume-form.tsx:627
+msgid "وضعیت مسکن خود را انتخاب کنید"
+msgstr "وضعیت مسکن خود را انتخاب کنید"
+
+#: src/components/careers/resume-form.tsx:612
+msgid "وضعیت نظام وظیفه"
+msgstr "وضعیت نظام وظیفه"
+
+#: src/components/careers/resume-form.tsx:46
+msgid "وضعیت نظام وظیفه الزامی است"
+msgstr "وضعیت نظام وظیفه الزامی است"
+
+#: src/components/careers/resume-form.tsx:613
+msgid "وضعیت نظام وظیفه خود را انتخاب کنید"
+msgstr "وضعیت نظام وظیفه خود را انتخاب کنید"
+
+#: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:14
+#: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:40
+msgid "ویرایش آدرس"
+msgstr "ویرایش آدرس"
+
+#: src/components/cart/cart-submit-page.tsx:144
+msgid "ویرایش سبد خرید"
+msgstr "ویرایش سبد خرید"
+
+#: src/components/cart/cart-submit-page.tsx:279
+msgid "یادداشت (اختیاری)"
+msgstr "یادداشت (اختیاری)"
+
+#: src/components/cart/cart-submit-page.tsx:83
+msgid "یک آدرس انتخاب کنید."
+msgstr "یک آدرس انتخاب کنید."
+
+#: src/components/cart/cart-submit-page.tsx:81
+msgid "یک روش ارسال انتخاب کنید."
+msgstr "یک روش ارسال انتخاب کنید."

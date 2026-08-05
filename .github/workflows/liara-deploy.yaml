@@ -1,0 +1,89 @@
+name: CD-Liara-All
+
+on:
+  push:
+    branches:
+      - auth
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        app:
+          - arg-front
+          - bastan-front
+          - emarat-front
+          - nafis-front
+          - nikceram-front
+          - parsian-front
+
+    env:
+      LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
+      TELEGRAM_BOT_TOKEN: "7735116770:AAHTmsS-wIIqRLoO7dWVEz9XH7-qV6rcirc"
+      TELEGRAM_CHAT_ID: "51239074"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      - name: Install Liara CLI
+        run: npm i -g @liara/cli@5
+
+      - name: Deploy to Liara (retry + conditional build-location)
+        run: |
+          MAX_RETRIES=3
+          ATTEMPT=1
+
+          while [ $ATTEMPT -le $MAX_RETRIES ]
+          do
+            if [ $ATTEMPT -eq 1 ]; then
+              DELAY=10
+              EXTRA_FLAGS=""
+            elif [ $ATTEMPT -eq 2 ]; then
+              DELAY=30
+              EXTRA_FLAGS="--build-location germany"
+            else
+              DELAY=60
+              EXTRA_FLAGS="--build-location germany"
+            fi
+
+            echo "🚀 Deploying ${{ matrix.app }} (attempt $ATTEMPT/$MAX_RETRIES)"
+            echo "➡️ Extra flags: $EXTRA_FLAGS"
+
+            liara deploy \
+              --app="${{ matrix.app }}" \
+              --api-token="$LIARA_TOKEN" \
+              --port=3000 \
+              --no-app-logs \
+              $EXTRA_FLAGS && exit 0
+
+            echo "⚠️ Attempt $ATTEMPT failed. Retrying in ${DELAY}s..."
+            sleep $DELAY
+            ATTEMPT=$((ATTEMPT+1))
+          done
+
+          echo "❌ Deployment failed after $MAX_RETRIES attempts"
+          exit 1
+
+      - name: Telegram Success
+        if: success()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
+          -d chat_id=$TELEGRAM_CHAT_ID \
+          -d text="✅ (${{ matrix.app }}) Deployment to Liara completed successfully!"
+
+      - name: Telegram Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
+          -d chat_id=$TELEGRAM_CHAT_ID \
+          -d text="❌ (${{ matrix.app }}) Deployment failed after retries (used germany build-location). Check the logs!"
