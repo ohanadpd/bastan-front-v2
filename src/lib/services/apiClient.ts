@@ -49,6 +49,9 @@ apiClient.interceptors.request.use(
     if (lang) {
       config.headers['Accept-Language'] = lang;
     }
+    if (typeof window === 'undefined') {
+      config.headers['Host'] = 'contino-bastan.bastantile.com';
+    }
     console.log('REQUEST URL:', `${config.baseURL ?? ''}${config.url ?? ''}`);
     console.log('HEADERS:', config.headers);
     return config;
