@@ -46,6 +46,8 @@ apiClient.interceptors.request.use(
     if (lang) {
       config.headers['Accept-Language'] = lang;
     }
+    console.log('REQUEST URL:', `${config.baseURL ?? ''}${config.url ?? ''}`);
+    console.log('HEADERS:', config.headers);
     return config;
   },
   (error) => {
