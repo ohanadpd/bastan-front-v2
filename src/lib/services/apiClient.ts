@@ -27,6 +27,9 @@ const apiClient = axios.create({
 // Add a request interceptor to add the auth token to every request
 apiClient.interceptors.request.use(
   async (config) => {
+    if (config.url?.startsWith('http')) {
+     config.baseURL = '';
+   }
     let token: string | undefined;
     if (typeof window === 'undefined') {
       // Server-side: use NextAuth auth() to read the session
@@ -58,9 +61,11 @@ apiClient.interceptors.request.use(
 // Add a response interceptor to handle 401 errors
 apiClient.interceptors.response.use(
   (response) => {
+    
     return response;
   },
   (error) => {
+    
     if (error.response && error.response.status === 401) {
       // These APIs are only available in the browser.
       if (typeof window !== 'undefined') {
