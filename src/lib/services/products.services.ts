@@ -3,7 +3,7 @@ import apiClient from './apiClient';
 import { PageDetailsResponse } from '@/types/page.type';
 import { ProductBrandListResponse, ProductCatergoriesListResponse, ProductDetailsResponse, ProductListResponse, CartListResponse, CartItem, OrderListResponse, DeliveryMethodsResponse, DiscountDataResponse, OrderDetailResponse, AttributeValuesResponse, PaymentDataResponse, CheckoutDataResponse } from '@/types/products.types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
+const API_BASE_URL = "";
 
 export const fetchProductCategories = async (): Promise<ProductCatergoriesListResponse> => {
     try {
