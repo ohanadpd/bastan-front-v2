@@ -6,7 +6,7 @@ const API_BASE_URL = "";
 
 export const fetchRepresentationList = async (search?: string, city?: number, province?: number, limit?: number, page?: number,): Promise<RepresentationListResponse> => {
     try {
-        const response = await apiClient.get<RepresentationListResponse>(`${API_BASE_URL}/representation/all/`, {
+        const response = await apiClient.get<RepresentationListResponse>(`${API_BASE_URL}/representation/all`, {
             params: {
                 search,
                 limit,
