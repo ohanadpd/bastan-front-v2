@@ -81,18 +81,19 @@ export const fetchProductPageDetails = async (): Promise<PageDetailsResponse> =>
     }
 };
 
-export const fetchProductDetails = async (id: string): Promise<ProductDetailsResponse> => {
-    try {
-        const response = await apiClient.get<ProductDetailsResponse>(`${API_BASE_URL}/products/products/${id}`, {
-            params: {
-                id
-            }
-        });
-        return response.data;
-    } catch (error: any) {
-        console.error('Error fetching Product Details:', error);
-        throw error;
-    }
+export const fetchProductDetails = async (
+  id: string
+): Promise<ProductDetailsResponse> => {
+  try {
+    const response = await apiClient.get<ProductDetailsResponse>(
+      `/products/products/${id}/`
+    );
+
+    return response.data;
+  } catch (error: any) {
+    console.error("Error fetching Product Details:", error);
+    throw error;
+  }
 };
 
 
