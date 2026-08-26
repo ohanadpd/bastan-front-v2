@@ -69,13 +69,19 @@ apiClient.interceptors.request.use(
       config.headers["X-Forwarded-Proto"] = "https";
     }
 
+    if (config.url) {
+      const [path, query] = config.url.split("?");
+      
+      if (!path.endsWith("/")) {
+        config.url = `${path}/${query ? `?${query}` : ""}`;
+      }
+    }
     console.log(
       "REQUEST URL:",
       `${config.baseURL ?? ""}${config.url ?? ""}`,
     );
-
+  
     console.log("HEADERS:", config.headers);
-
     return config;
   },
   (error) => {
