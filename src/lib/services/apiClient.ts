@@ -26,10 +26,19 @@ const apiClient = axios.create({
 // Add a request interceptor to add the auth token to every request
 apiClient.interceptors.request.use(
   async (config) => {
-    config.baseURL =
-      typeof window === "undefined"
-        ? process.env.INTERNAL_API_URL
-        : process.env.NEXT_PUBLIC_API_URL;
+    if (typeof window === "undefined") {
+      const publicApi = process.env.NEXT_PUBLIC_API_URL;
+      const internalApi = process.env.INTERNAL_API_URL;
+
+      if (config.url?.startsWith("http") && publicApi && internalApi) {
+        config.url = config.url.replace(publicApi, internalApi);
+        config.baseURL = "";
+      } else {
+        config.baseURL = internalApi;
+      }
+    } else {
+      config.baseURL = process.env.NEXT_PUBLIC_API_URL;
+    }
 
     let token: string | undefined;
 
