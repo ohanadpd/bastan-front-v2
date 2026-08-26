@@ -46,7 +46,7 @@ export const fetchNewsPageDetails = async (): Promise<PageDetailsResponse> => {
 export const fetchNewsDetails = async (id: string): Promise<ArticleDetailsResponse> => {
     console.log(id)
     try {
-        const response = await apiClient.get<ArticleDetailsResponse>(`${API_BASE_URL}/news/detail/${id}`,{
+        const response = await apiClient.get<ArticleDetailsResponse>(`${API_BASE_URL}/news/detail/${id}/`,{
             params: {
                 id
             }
