@@ -73,7 +73,7 @@ apiClient.interceptors.request.use(
     if (config.url) {
       const [path, query] = config.url.split("?");
 
-      if (!path.endsWith("/")) {
+      if (/\/\d+$/.test(path)) {
         config.url = `${path}/${query ? `?${query}` : ""}`;
       }
     }
