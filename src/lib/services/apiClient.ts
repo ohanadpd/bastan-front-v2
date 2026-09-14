@@ -66,19 +66,18 @@ apiClient.interceptors.request.use(
 
     if (typeof window === "undefined") {
       config.headers["Host"] = "contino-bastan.bastantile.com";
+      config.headers["X-Forwarded-Host"] = "contino-bastan.bastantile.com";
       config.headers["X-Forwarded-Proto"] = "https";
+      config.headers["X-Forwarded-Port"] = "443";
     }
-
     if (config.url) {
       const [path, query] = config.url.split("?");
 
-      if (/\/\d+$/.test(path)) {
+      if (!path.endsWith("/")) {
         config.url = `${path}/${query ? `?${query}` : ""}`;
       }
     }
-    console.log("REQUEST URL:", `${config.baseURL ?? ""}${config.url ?? ""}`);
 
-    console.log("HEADERS:", config.headers);
     return config;
   },
   (error) => {
