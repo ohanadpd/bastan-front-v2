@@ -20,7 +20,7 @@ export async function sendResume(formData: any) {
 
 export const fetchEmploymentList = async (page: number = 1, limit: number = 12, search?: string): Promise<employmentListResponse> => {
     try {
-        const response = await apiClient.get<employmentListResponse>(`${API_BASE_URL}/employment/employments`,
+        const response = await apiClient.get<employmentListResponse>(`${API_BASE_URL}/employment/employments/`,
             {
                 params: {
                     page,
@@ -38,7 +38,7 @@ export const fetchEmploymentList = async (page: number = 1, limit: number = 12, 
 
 export const fetchEmploymentDetails = async (id: string): Promise<EmploymentDetailResponse> => {
     try {
-        const response = await apiClient.get<EmploymentDetailResponse>(`${API_BASE_URL}/employment/${id}`, {
+        const response = await apiClient.get<EmploymentDetailResponse>(`${API_BASE_URL}/employment/${id}/`, {
             params: {
                 id
             }
@@ -62,7 +62,7 @@ export const fetchEmploymentPageDetails = async (): Promise<PageDetailsResponse>
 
 export const fetchPositions = async (): Promise<PositionResponse> => {
     try {
-        const response = await apiClient.get<PositionResponse>(`${API_BASE_URL}/employment/employment-positions`);
+        const response = await apiClient.get<PositionResponse>(`${API_BASE_URL}/employment/employment-positions/`);
         return response.data;
     } catch (error: any) {
         console.error('Error fetching Positions:', error);
