@@ -49,6 +49,7 @@
     "swiper": "^11.2.10",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "tile-visualizer": "github:ohanadpd/tile-visualizer",
     "vaul": "^1.1.2",
     "yup": "^1.7.0",
     "zustand": "^5.0.8"

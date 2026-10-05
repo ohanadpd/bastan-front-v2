@@ -1,14 +1,16 @@
 
 "use client";
 import Image from "next/image";
-import type { Step } from "./visualizer/types";
-import { useVisualizerController } from "./visualizer/useVisualizerController";
-import { VisualizerContext } from "./visualizer/VisualizerContext";
-import { UploadStep } from "./visualizer/UploadStep";
-import { MaskStep } from "./visualizer/MaskStep";
-import { PerspectiveStep } from "./visualizer/PerspectiveStep";
-import { TileStep } from "./visualizer/TileStep";
-import { RenderStep } from "./visualizer/RenderStep";
+import {
+  type Step,
+  useVisualizerController,
+  VisualizerContext,
+  UploadStep,
+  MaskStep,
+  PerspectiveStep,
+  TileStep,
+  RenderStep,
+} from "tile-visualizer";
 
 export default function VisualizerPage() {
   const controller = useVisualizerController();
