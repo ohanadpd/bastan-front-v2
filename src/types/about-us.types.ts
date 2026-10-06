@@ -10,7 +10,8 @@ export interface Achivment {
 }
 
 interface AboutUsPageData {
-    banner_image: string;
+    banner_image: string | null;
+    banner_image_mobile: string | null;
     about_text_title: string;
     about_text: string;
     image: string | null;

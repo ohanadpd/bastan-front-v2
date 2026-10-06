@@ -9,6 +9,7 @@ import { fetchSettingsData } from '@/lib/services/settigns.services';
 import { fetchContactUsPage } from '@/lib/services/contact-us.services';
 import Link from '@/components/localized-link'
 import { getMediaUrl } from '@/lib/utils';
+import ContactUsHero from '@/components/contact-us/hero';
 
 export async function generateMetadata() {
     const { data } = (await fetchContactUsPage())
@@ -37,25 +38,10 @@ export default async function ContactUsPage({ params }: PageProps) {
 
     return (
         <main className='pb-[155px]'>
-            <header className='relative h-[464px] bg-cover bg-center' style={{ backgroundImage: data.banner_image ? `url(${data.banner_image})` : '' }}>
-                <div className='absolute inset-0 bg-black/60'></div>
-                <div className='w-full h-full flex flex-col justify-center items-center gap-2 container relative z-10'>
-                    <h1 className='text-white text-2xl xl:text-[32px] font-extrabold'>
-                        {data.page_title}
-                    </h1>
-                    <p className='text-white text-sm xl:text-lg'>
-                        {data.page_sub_title}
-                    </p>
-                    <div className='absolute bottom-5 left-1/2 -translate-x-1/2 xl:left-auto xl:start-0 xl:translate-x-0'>
-                        <span className='text-white text-sm'>
-                            <Link href='/'><Trans>خانه</Trans></Link> /
-                        </span>
-                        <span className='text-white text-sm'>
-                            <Trans>تماس با ما</Trans>
-                        </span>
-                    </div>
-                </div>
-            </header>
+            <ContactUsHero
+                bannerImage={data.banner_image}
+                mobileBannerImage={data.banner_image_mobile}
+                />
             {setting.latitude && setting.longitude && <section className='container mt-[46px]'>
                 <h3 className='text-lg xl:text-xl font-bold text-[#010101] text-center'>
                     <Trans>آدرس کارخانه</Trans>

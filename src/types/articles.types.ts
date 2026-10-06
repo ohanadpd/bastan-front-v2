@@ -29,7 +29,8 @@ interface ArticleDetails {
     name: string;
     sub_title: string;
     image: string;
-    banner: string | null;
+    banner_image: string | null;
+    banner_image_mobile:string | null;
     file: string;
     related_posts: ArticleList[];
     description: string;

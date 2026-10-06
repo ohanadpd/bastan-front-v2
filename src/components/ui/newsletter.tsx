@@ -48,7 +48,7 @@ export default function FooterNewsletter() {
     return (
         <form
             onSubmit={formik.handleSubmit}
-            className='bg-white h-14 py-2 px-[10px] flex items-center justify-between w-full max-w-[455px] mx-auto mt-8 rounded-[5px]'
+            className='bg-white h-14 py-2 px-[10px] border border-[#B3B3B3] flex items-center justify-between w-full max-w-[455px] mx-auto mt-8 rounded-[5px]'
         >
             <div className='flex-1 h-full relative'>
                 <input

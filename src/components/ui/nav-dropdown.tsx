@@ -55,7 +55,7 @@ export default function NavDropdown({ item, index }: { item: NavItem, index: num
                     </Link>
                 </li>
             )}
-            {item.children && item.children.length > 0 && <ul className={cn('absolute top-[calc(100%+32px)] bg-[#2F3A41] backdrop-blur-[16.9px] start-0 w-fit min-w-[200px] p-4 text-nowrap py-5 px-8 space-y-[18px] transition-all duration-300 ease-in-out', isOpen ? 'opacity-100 scale-y-100' : 'scale-90 opacity-0 -z-50')}>
+            {item.children && item.children.length > 0 && <ul className={cn('absolute top-[calc(100%+32px)] bg-white backdrop-blur-[16.9px] start-0 w-fit min-w-[200px] p-4 text-nowrap py-5 px-8 space-y-[18px] transition-all duration-300 ease-in-out', isOpen ? 'opacity-100 scale-y-100' : 'scale-90 opacity-0 -z-50')}>
                 {
                     item.children && item.children.map((child, index) => (
                         isOpen && <li key={index} className={cn('primary-hover', isNavItemActive(child.href, child.match) ? 'text-primary' : '')}>

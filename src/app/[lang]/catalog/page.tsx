@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import Link from '@/components/localized-link'
 import { cn } from '@/lib/utils';
 import Pagination from '@/components/ui/pagination';
+import CatalogHero from '@/components/catalog/hero';
 
 export async function generateMetadata() {
     const { data } = (await fetchCatalogsPageDetails())
@@ -67,25 +68,10 @@ export default async function CatalogPage({ params, searchParams }: PageProps) {
 
     return (
         <main className='pb-[123px]'>
-            <header className='relative h-[464px] bg-cover bg-center' style={{ backgroundImage: pageDetails.banner_image ? `url(${pageDetails.banner_image})` : '' }}>
-                <div className='absolute inset-0 bg-black/60'></div>
-                <div className='w-full h-full flex flex-col justify-center items-center gap-2 container relative z-10'>
-                    <h1 className='text-white text-2xl xl:text-[32px] font-extrabold'>
-                        {pageDetails.title}
-                    </h1>
-                    <p className='text-white text-sm xl:text-lg'>
-                        {pageDetails.sub_title}
-                    </p>
-                    <div className='absolute bottom-5 left-1/2 -translate-x-1/2 xl:left-auto xl:start-0 xl:translate-x-0'>
-                        <span className='text-white text-sm'>
-                            <Link href='/'><Trans>خانه</Trans></Link> /
-                        </span>
-                        <span className='text-white text-sm'>
-                            {pageDetails.title}
-                        </span>
-                    </div>
-                </div>
-            </header>
+            <CatalogHero
+                bannerImage={pageDetails.banner_image}
+                mobileBannerImage={pageDetails.banner_image_mobile}
+                />
             <div className='container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-24'>
                 {data.results.map((item, index) => <div key={index} className='group relative rounded-[5px] overflow-hidden aspect-square'>
                     {item.image && <Image src={item.image} alt="slide" fill className="object-cover group-hover:scale-105 duration-300" />}

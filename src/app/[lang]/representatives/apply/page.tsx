@@ -8,6 +8,7 @@ import { fetchGetRepresentationPageDetails } from '@/lib/services/representation
 import Link from '@/components/localized-link';
 import { msg } from '@lingui/core/macro';
 import { getI18nInstance } from '@/appRouterI18n';
+import ApplyHero from '@/components/representatives/ApplyHero';
 
 export async function generateMetadata({ params }: PageProps) {
     const { lang } = await params;
@@ -31,27 +32,10 @@ export default async function ApplyPage({ params }: PageProps) {
 
     return (
         <main className='pb-[118px]'>
-            <header className='relative h-[464px] bg-cover bg-center' style={{ backgroundImage: pageDetails.banner_image ? `url(${pageDetails.banner_image})` : '' }}>
-                <div className='absolute inset-0 bg-black/60'></div>
-                <div className='w-full h-full flex flex-col justify-center items-center gap-2 container relative z-10'>
-                    <h1 className='text-white text-2xl xl:text-[32px] font-extrabold'>
-                        <Trans>
-                            دریافت نمایندگی
-                        </Trans>
-                    </h1>
-                    <p className='text-white text-sm xl:text-lg'>
-                        {pageDetails.sub_title}
-                    </p>
-                    <div className='absolute bottom-5 left-1/2 -translate-x-1/2 xl:left-auto xl:start-0 xl:translate-x-0'>
-                        <span className='text-white text-sm'>
-                            <Link href='/'><Trans>خانه</Trans></Link> /
-                        </span>
-                        <span className='text-white text-sm'>
-                            <Trans>دریافت نمایندگی</Trans>
-                        </span>
-                    </div>
-                </div>
-            </header>
+            <ApplyHero
+                bannerImage={pageDetails.banner_image}
+                mobileBannerImage={pageDetails.banner_image_mobile}
+                />
             <div className='container mt-11 max-w-[930px] mx-auto'>
                 <h2 className='text-[28px] font-extrabold text-[#252525] text-center'>
                     <Trans>این فرصت برای شماست</Trans>
