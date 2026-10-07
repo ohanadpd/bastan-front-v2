@@ -41,7 +41,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
 
     return (
         <main className='pb-[155px]'>
-            <header className='relative h-[464px] bg-cover bg-center' style={{ backgroundImage: data.banner ? `url(${data.banner})` : '' }}>
+            <header className='relative h-[464px] bg-cover bg-center' style={{ backgroundImage: data.banner_image ? `url(${data.banner_image})` : '' }}>
                 <div className='absolute inset-0 bg-black/60'></div>
                 <div className='w-full h-full flex flex-col justify-center items-center gap-2 container relative z-10'>
                     <h1 className='text-white text-2xl xl:text-[32px] font-extrabold'>
