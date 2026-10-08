@@ -39,5 +39,5 @@ export default async function Home({
     ...termsData,
   };
 
-  return <HomeStyle data={data} />;
+  return <HomeStyle data={data} lang={lang}/>;
 }

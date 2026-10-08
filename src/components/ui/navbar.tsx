@@ -346,7 +346,7 @@ export default function Navbar({
                     block h-7 w-6 bg-[#353535]
                     transition-colors duration-300
                     group-hover:bg-primary
-                    group-focus-visible:bg-bastan1
+                    group-focus-visible:bg-primary
                     xl:h-8 xl:w-8
                   "
                   style={{

@@ -77,6 +77,7 @@ export default async function AgenciesPage({
       <AgenciesHero
         bannerImage={pageDetails.banner_image}
         mobileBannerImage={pageDetails.banner_image_mobile}
+        tabletBannerImage={pageDetails.banner_image_tablet}
       />
 
 

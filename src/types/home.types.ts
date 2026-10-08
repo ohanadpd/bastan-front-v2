@@ -104,10 +104,12 @@ export interface ImageGallery {
 }
 
 export interface HeaderProduct {
-    id: number;
-    product: Product;
-    order: number;
-    publish: boolean;
+  id: number;
+  banner_image: string;
+  banner_image_mobile?: string | null;
+  banner_image_tablet?: string | null;
+  order: number;
+  publish: boolean;
 }
 
 export interface HomeBodyText {

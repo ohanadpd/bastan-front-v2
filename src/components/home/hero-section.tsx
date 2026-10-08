@@ -1,110 +1,98 @@
 "use client";
 
-import Image from "next/image";
+import type { CSSProperties } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, EffectFade } from "swiper/modules";
-import { Button } from "../ui/button";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import Link from "@/components/localized-link";
-import { Trans } from "@lingui/react/macro";
-import { HeaderProduct } from "@/types/home.types";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import { getMediaUrl } from "@/lib/utils";
+import type { HeaderProduct } from "@/types/home.types";
 
-const slides = [
-  {
-    id: 1,
-    desktopImage: "/images/hero/slide-1-desktop.png",
-    mobileImage: "/images/hero/slide-1-mobile.jpg",
-  },
-  {
-    id: 2,
-    desktopImage: "/images/hero/slide-2-desktop.jpg",
-    mobileImage: "/images/hero/slide-2-mobile.jpg",
-  },
-];
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 
 interface Props {
-  title: string;
-  description: string;
   products: HeaderProduct[];
 }
 
-export default function HomeHeroSection({
-  title,
-  description,
-  products,
-}: Props) {
+type BannerStyle = CSSProperties & {
+  "--banner-desktop": string;
+  "--banner-tablet": string;
+  "--banner-mobile": string;
+};
+
+export default function HomeHeroSection({ products }: Props) {
+  const slides = [...products]
+    .filter((item) => item.banner_image)
+    .sort((a, b) => a.order - b.order);
+
+  if (!slides.length) return null;
+
   return (
-    <section className="relative w-full overflow-hidden" >
+    <section className="relative w-full overflow-hidden">
       <Swiper
-        modules={[Pagination, Autoplay, EffectFade]}
+        modules={[Autoplay, EffectFade, Pagination]}
         slidesPerView={1}
         effect="fade"
         fadeEffect={{ crossFade: true }}
         speed={1500}
-        loop
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        loop={slides.length > 1}
+        autoplay={
+          slides.length > 1
+            ? {
+                delay: 5000,
+                disableOnInteraction: false,
+              }
+            : false
+        }
         pagination={{
           clickable: true,
-          el: "#hero-pagination",
-          bulletClass:
-            "swiper-pagination-bullet !m-0 !h-[5px] !w-[5px] !rounded-full !bg-white/60 !opacity-100 transition-all",
-          bulletActiveClass: "!w-[35px] !bg-white",
+          el: ".home-hero-pagination",
+          bulletClass: "home-hero-bullet",
+          bulletActiveClass: "home-hero-bullet-active",
         }}
-        className=" w-full h-[600px] md:h-[900px] xl:h-[750px]"
+        className="h-[600px] w-full md:h-[900px] xl:h-[750px]"
       >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className="relative h-full w-full">
-            {/* Mobile */}
-            <div className="relative h-full w-full md:hidden">
-              <Image
-                src={slide.mobileImage}
-                alt="Bastan"
-                fill
-                priority={slide.id === 1}
-                sizes="(max-width: 767px) 100vw, 1px"
-                className="object-cover"
-              />
+        {slides.map((slide) => {
+          const desktopImage = getMediaUrl(slide.banner_image);
 
-              <div className="absolute bottom-[8%] left-1/2 z-20 -translate-x-1/2">
-                <Link href="/products">
-                  <Button className="h-[32px] min-w-[110px] rounded-[5px] bg-white px-[18px] text-[12px] font-medium text-[#C4000D] hover:bg-white">
-                    <Trans>دیدن محصولات</Trans>
-                  </Button>
-                </Link>
-              </div>
-            </div>
+          const mobileImage = slide.banner_image_mobile
+            ? getMediaUrl(slide.banner_image_mobile)
+            : desktopImage;
 
-            {/* Desktop */}
-            <div className="relative hidden h-full w-full md:block">
-              <Image
-                src={slide.desktopImage}
-                alt="Bastan"
-                fill
-                priority={slide.id === 1}
-                sizes="(min-width: 768px) 100vw, 1px"
-                className="object-cover"
-              />
+          const tabletImage = slide.banner_image_tablet
+            ? getMediaUrl(slide.banner_image_tablet)
+            : desktopImage;
 
-              <div className="absolute bottom-[5%] right-[25%] z-20">
-                <Link href="/products">
-                  <Button className="h-[38px] min-w-[130px] rounded-[5px] bg-white px-[18px] text-[13px] font-medium text-[#C4000D] hover:bg-white lg:h-[42px] lg:min-w-[150px] lg:text-[14px]">
-                    <Trans>دیدن محصولات</Trans>
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
+          const bannerStyle: BannerStyle = {
+            "--banner-desktop": `url("${desktopImage}")`,
+            "--banner-tablet": `url("${tabletImage}")`,
+            "--banner-mobile": `url("${mobileImage}")`,
+          };
+
+          return (
+            <SwiperSlide key={slide.id}>
+              <Link
+                href="/products"
+                aria-label="مشاهده محصولات"
+                style={bannerStyle}
+                className="
+                  block h-full w-full bg-cover bg-center
+                  [background-image:var(--banner-mobile)]
+                  md:[background-image:var(--banner-tablet)]
+                  xl:[background-image:var(--banner-desktop)]
+                "
+              >
+                <span className="sr-only">مشاهده محصولات</span>
+              </Link>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       <div
-        id="hero-pagination"
-        className="absolute bottom-[12px] left-1/2 z-30 flex -translate-x-1/2 items-center gap-[5px]"
+        dir="ltr"
+        className="home-hero-pagination !absolute !bottom-6 !left-1/2 z-30 flex !w-auto -translate-x-1/2 items-center justify-center gap-[5px]"
       />
     </section>
   );

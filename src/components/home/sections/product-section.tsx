@@ -79,7 +79,7 @@ export default function ProductSection({
               {title}
             </h2>
 
-            <div className="mt-[6px] h-[2px] w-full bg-bastan1" />
+            <div className="mt-[6px] h-[2px] w-full bg-primary" />
           </div>
 
           {description && (
@@ -105,8 +105,8 @@ export default function ProductSection({
               className={cn(
                 "rounded-[16px] border px-[10px] py-[5px] text-[14px] transition-colors max-md:text-[11px]",
                 active === year
-                  ? "border-bastan1 text-bastan1"
-                  : "border-transparent text-[#555555] hover:text-bastan1",
+                  ? "border-primary text-primary"
+                  : "border-transparent text-[#555555] hover:text-primary",
               )}
             >
               <Trans>سال</Trans> {year}

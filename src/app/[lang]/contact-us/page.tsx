@@ -41,6 +41,7 @@ export default async function ContactUsPage({ params }: PageProps) {
             <ContactUsHero
                 bannerImage={data.banner_image}
                 mobileBannerImage={data.banner_image_mobile}
+                tabletBannerImage={data.banner_image_tablet}
                 />
             {setting.latitude && setting.longitude && <section className='container mt-[46px]'>
                 <h3 className='text-lg xl:text-xl font-bold text-[#010101] text-center'>

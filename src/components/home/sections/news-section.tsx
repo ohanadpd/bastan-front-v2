@@ -99,7 +99,7 @@ function Theme3NewsCard({
               items-center
               justify-center
               rounded-full
-              bg-bastan1
+              bg-primary
               text-white
             "
           >
@@ -196,7 +196,7 @@ export default function NewsSectionTheme3({
               {title}
             </h2>
 
-            <div className="mt-[6px] h-[2px] w-full bg-bastan1" />
+            <div className="mt-[6px] h-[2px] w-full bg-primary" />
           </div>
 
           {description && (

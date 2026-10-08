@@ -4,6 +4,7 @@ import { fetchArticlePageDetails } from "@/lib/services/articles.services";
 type BannerStyle = CSSProperties & {
   "--banner-desktop": string;
   "--banner-mobile": string;
+  "--banner-tablet": string;
 };
 
 const FALLBACK_BANNER = "/images/articles-banner.jpg";
@@ -11,12 +12,14 @@ const FALLBACK_BANNER = "/images/articles-banner.jpg";
 export default async function ArticlesHeroTheme() {
   let desktopBanner = FALLBACK_BANNER;
   let mobileBanner = FALLBACK_BANNER;
+  let tabletBanner = FALLBACK_BANNER;
 
   try {
     const { data } = await fetchArticlePageDetails();
 
     desktopBanner = data.banner_image || FALLBACK_BANNER;
     mobileBanner = data.banner_image_mobile || desktopBanner;
+    tabletBanner = data.banner_image_tablet || desktopBanner;
   } catch (error) {
     console.error("Failed to load articles banners:", error);
   }
@@ -24,14 +27,17 @@ export default async function ArticlesHeroTheme() {
   const bannerStyle: BannerStyle = {
     "--banner-desktop": `url("${desktopBanner}")`,
     "--banner-mobile": `url("${mobileBanner}")`,
+    "--banner-tablet": `url("${tabletBanner}")`,
   };
 
   return (
     <header
       className="
-        relative h-[550px] xl:h-[460px] w-full bg-cover bg-center
+        relative h-[550px] w-full bg-cover bg-center
+        xl:h-[460px]
         [background-image:var(--banner-mobile)]
-        md:[background-image:var(--banner-desktop)]
+        md:[background-image:var(--banner-tablet)]
+        xl:[background-image:var(--banner-desktop)]
       "
       style={bannerStyle}
     />

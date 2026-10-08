@@ -113,6 +113,7 @@ export default async function BlogsPage({
       <NewsHero
         bannerImage={pageDetails.banner_image}
         mobileBannerImage={pageDetails.banner_image_mobile}
+        tabletBannerImage={pageDetails.banner_image_tablet}
       />
 
 

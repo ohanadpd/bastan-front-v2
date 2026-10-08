@@ -19,7 +19,7 @@ export default function BrandsSectionTheme3({ data }: { data: LogoBand[] }) {
           <div className="w-fit">
             <h2 className="text-[20px] font-bold text-black">همراهان ما</h2>
 
-            <div className="mt-[2px] h-[2px] w-full bg-bastan1" />
+            <div className="mt-[2px] h-[2px] w-full bg-primary" />
           </div>
 
           <p className="mt-2 text-center text-[14px] text-[#868686]">
@@ -62,10 +62,10 @@ export default function BrandsSectionTheme3({ data }: { data: LogoBand[] }) {
                     items-center justify-center
                     rounded-[10px] border border-[#D3D3D3]
                     bg-white p-3 transition-all
-                    hover:border-bastan1
+                    hover:border-primary
                     xl:aspect-auto xl:h-[150px] xl:max-w-[150px]
                   "
-                >
+                >همراهان
                   <div className="relative aspect-square w-full max-w-[100px] xl:max-w-[90px]">
                     <Image
                       src={getMediaUrl(item.logo)}

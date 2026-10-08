@@ -5,6 +5,7 @@ interface ContactUsPageData {
     page_sub_title: null | string;
     banner_image: null | string;
     banner_image_mobile: null | string;
+    banner_image_tablet:null | string;
     telegram_link: null | string;
     whatsapp_link: null | string;
     telegram_id: null | string;

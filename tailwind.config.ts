@@ -31,7 +31,6 @@ export default {
     			dark: 'var(--primary-dark)',
     		}
 			,
-			 bastan1: "var(--bastan1)",
     		},
     		borderRadius: {
     			lg: 'var(--radius)',

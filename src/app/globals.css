@@ -12,11 +12,10 @@ html[dir="ltr"] body {
 }
 
 :root {
-  --primary: #CE9F2B;
+  --primary: #A9020C;
   --primary-light: #FFF6E0;
   --primary-dark: #74560B;
   --popover: white;
-  --bastan1:#A9020C;
 }
 
 .toaster {
@@ -201,4 +200,49 @@ input[type=number] {
 .news-theme3-pagination .swiper-pagination-bullet-active {
   width: 30px;
   background: var(--bastan1);
+}
+
+.home-hero-pagination .home-hero-bullet {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  margin: 0;
+  border-radius: 999px;
+  background-color: #6B6B6B;
+  opacity: 1;
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.home-hero-pagination .home-hero-bullet-active {
+  width: 40px;
+  background-color: #ffffff;
+}
+
+.promo-slider {
+  padding-bottom: 28px;
+}
+
+.promo-slider > .swiper-pagination {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.promo-slider .promo-slider-bullet {
+  display: inline-block;
+  width: 5px;
+  height: 3px;
+  border-radius: 999px;
+  background: #d8d8d8;
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.promo-slider .promo-slider-bullet-active {
+  width: 24px;
+  background: #c4000d;
 }
