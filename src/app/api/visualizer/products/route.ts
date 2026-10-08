@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const API_BASE_URL =
+  process.env.INTERNAL_API_URL ||
+  "https://contino-bastan.bastantile.com/api/v1";
+
 const PRODUCTS_URL =
-  "https://contino-bastan.bastantile.com/api/v1/products/search/";
+  `${API_BASE_URL.replace(/\/+$/, "")}/products/search/`;
 
 export async function GET(request: NextRequest) {
   try {
