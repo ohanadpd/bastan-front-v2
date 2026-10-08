@@ -1,57 +1,57 @@
+import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
-const API_BASE_URL =
-  process.env.INTERNAL_API_URL ||
-  "https://contino-bastan.bastantile.com/api/v1";
-
-const PRODUCTS_URL = `${API_BASE_URL.replace(/\/+$/, "")}/products/search/`;
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   try {
-    const searchParams = request.nextUrl.searchParams;
+    const baseUrl =
+      process.env.INTERNAL_API_URL ||
+      "https://contino-bastan.bastantile.com/api/v1";
 
-    const page = searchParams.get("page") || "1";
-    const limit = searchParams.get("limit") || "12";
+    const url = `${baseUrl.replace(/\/+$/, "")}/products/search/`;
 
-    const url = new URL(PRODUCTS_URL);
-
-    url.searchParams.set("page", page);
-    url.searchParams.set("limit", limit);
-
-    const response = await fetch(url.toString(), {
-      method: "GET",
+    const response = await axios.get(url, {
+      adapter: "http",
+      proxy: false,
+      maxRedirects: 0,
+      timeout: 15000,
       headers: {
         Accept: "application/json",
         Host: "contino-bastan.bastantile.com",
       },
-      cache: "no-store",
+      params: {
+        page: request.nextUrl.searchParams.get("page") || "1",
+        limit: request.nextUrl.searchParams.get("limit") || "12",
+      },
+      validateStatus: () => true,
     });
 
-    if (!response.ok) {
+    if (response.status < 200 || response.status >= 300) {
+      console.error("Visualizer products upstream status:", response.status);
+
       return NextResponse.json(
         {
           message: "خطا در دریافت محصولات",
           status: response.status,
         },
-        {
-          status: response.status,
-        },
+        { status: response.status >= 400 ? response.status : 502 },
       );
     }
 
-    const data = await response.json();
-
-    return NextResponse.json(data);
+    return NextResponse.json(response.data);
   } catch (error) {
-    console.error("Visualizer products proxy error:", error);
+    console.error(
+      "Visualizer products proxy error:",
+      axios.isAxiosError(error)
+        ? { code: error.code, message: error.message }
+        : error,
+    );
 
     return NextResponse.json(
-      {
-        message: "ارتباط با سرور محصولات برقرار نشد.",
-      },
-      {
-        status: 500,
-      },
+      { message: "ارتباط با سرور محصولات برقرار نشد." },
+      { status: 502 },
     );
   }
 }
