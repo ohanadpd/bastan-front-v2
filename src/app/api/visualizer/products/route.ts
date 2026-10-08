@@ -4,8 +4,7 @@ const API_BASE_URL =
   process.env.INTERNAL_API_URL ||
   "https://contino-bastan.bastantile.com/api/v1";
 
-const PRODUCTS_URL =
-  `${API_BASE_URL.replace(/\/+$/, "")}/products/search/`;
+const PRODUCTS_URL = `${API_BASE_URL.replace(/\/+$/, "")}/products/search/`;
 
 export async function GET(request: NextRequest) {
   try {
@@ -23,6 +22,7 @@ export async function GET(request: NextRequest) {
       method: "GET",
       headers: {
         Accept: "application/json",
+        Host: "contino-bastan.bastantile.com",
       },
       cache: "no-store",
     });
@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
         },
         {
           status: response.status,
-        }
+        },
       );
     }
 
@@ -43,10 +43,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(data);
   } catch (error) {
-    console.error(
-      "Visualizer products proxy error:",
-      error
-    );
+    console.error("Visualizer products proxy error:", error);
 
     return NextResponse.json(
       {
@@ -54,7 +51,7 @@ export async function GET(request: NextRequest) {
       },
       {
         status: 500,
-      }
+      },
     );
   }
 }
