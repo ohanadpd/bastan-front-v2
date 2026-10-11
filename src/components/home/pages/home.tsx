@@ -99,9 +99,9 @@ export default function HomeStyle({ data, lang }: HomeStyleProps) {
         />
       )}
 
-      {/* <Reveal>
+       <Reveal>
         <PromotionalSlider lang={lang} />
-      </Reveal> */}
+      </Reveal> 
 
       <FactoryProjectsSection />
 

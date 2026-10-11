@@ -221,11 +221,13 @@ input[type=number] {
 }
 
 .promo-slider {
-  padding-bottom: 28px;
+  padding-bottom: 0px;
 }
 
 .promo-slider > .swiper-pagination {
-  bottom: 0;
+  position: relative;
+  bottom: auto;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,7 +237,7 @@ input[type=number] {
 .promo-slider .promo-slider-bullet {
   display: inline-block;
   width: 5px;
-  height: 3px;
+  height: 5px;
   border-radius: 999px;
   background: #d8d8d8;
   cursor: pointer;
@@ -243,6 +245,6 @@ input[type=number] {
 }
 
 .promo-slider .promo-slider-bullet-active {
-  width: 24px;
-  background: #c4000d;
+  width: 40px;
+  background: var(--primary)
 }
