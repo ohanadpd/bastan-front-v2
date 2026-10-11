@@ -73,6 +73,8 @@ export default async function CareersPage({
               bannerImage={pageDetails.banner_image}
               mobileBannerImage={pageDetails.banner_image_mobile}
               tabletBannerImage={pageDetails.banner_image_tablet}
+              breadcrumbs={[{ label: "فرصت های شغلی" }]}
+              
        />
       
 

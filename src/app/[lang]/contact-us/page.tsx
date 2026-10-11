@@ -42,6 +42,7 @@ export default async function ContactUsPage({ params }: PageProps) {
                     bannerImage={data.banner_image}
                     mobileBannerImage={data.banner_image_mobile}
                     tabletBannerImage={data.banner_image_tablet}
+                    breadcrumbs={[{ label: "تماس با ما " }]}
                   />
             
             {setting.latitude && setting.longitude && <section className='container mt-[46px]'>

@@ -5,7 +5,6 @@ import Image from "next/image";
 import AchievementsSlider from "@/components/about-us/achievements-slider";
 import { fetchAboutUsPage } from "@/lib/services/about-us.services";
 import Link from "@/components/localized-link";
-import AboutUsHero from "@/components/about-us/hero";
 import PageHero from "@/components/shared/page-hero";
 
 export async function generateMetadata() {
@@ -37,10 +36,11 @@ export default async function AboutUsPage({ params }: PageProps) {
   return (
     <main className="pb-[155px]">
       <PageHero
-            bannerImage={data.banner_image}
-            mobileBannerImage={data.banner_image_mobile}
-            tabletBannerImage={data.banner_image_tablet}
-       />
+        bannerImage={data.banner_image}
+        mobileBannerImage={data.banner_image_mobile}
+        tabletBannerImage={data.banner_image_tablet}
+        breadcrumbs={[{ label: "درباره ما" }]}
+      />
 
       <section className="container flex flex-col-reverse xl:flex-row gap-12 mt-[70px]">
         <div className="flex flex-col gap-4 w-full">

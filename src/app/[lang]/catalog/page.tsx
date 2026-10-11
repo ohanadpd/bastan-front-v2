@@ -72,6 +72,7 @@ export default async function CatalogPage({ params, searchParams }: PageProps) {
                    bannerImage={pageDetails.banner_image}
                    mobileBannerImage={pageDetails.banner_image_mobile}
                    tabletBannerImage={pageDetails.banner_image_tablet}
+                   breadcrumbs={[{ label: "کاتالوگ" }]}
                  />
            
             <div className='container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-24'>

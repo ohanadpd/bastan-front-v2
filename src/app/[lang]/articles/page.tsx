@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils";
 
 import { ArticleCatergoriesList, ArticleList } from "@/types/articles.types";
 
-import ArticlesHero from "@/components/articles/hero-theme";
 import PageHero from "@/components/shared/page-hero";
 
 export async function generateMetadata() {
@@ -80,6 +79,7 @@ export default async function ArticlesPage({ params }: PageProps) {
         bannerImage={pageDetails.banner_image}
         mobileBannerImage={pageDetails.banner_image_mobile}
         tabletBannerImage={pageDetails.banner_image_tablet}
+        breadcrumbs={[{ label: "مقالات" }]}
       />
 
       <section className="container mt-14">
