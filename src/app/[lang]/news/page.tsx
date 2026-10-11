@@ -22,6 +22,7 @@ import {
 
 import NewsHeroTheme3 from "@/components/news/hero";
 import NewsHero from "@/components/news/hero";
+import PageHero from "@/components/shared/page-hero";
 
 
 export async function generateMetadata() {
@@ -110,11 +111,12 @@ export default async function BlogsPage({
 
 
 
-      <NewsHero
-        bannerImage={pageDetails.banner_image}
-        mobileBannerImage={pageDetails.banner_image_mobile}
-        tabletBannerImage={pageDetails.banner_image_tablet}
+     <PageHero
+             bannerImage={pageDetails.banner_image}
+             mobileBannerImage={pageDetails.banner_image_mobile}
+             tabletBannerImage={pageDetails.banner_image_tablet}
       />
+     
 
 
 

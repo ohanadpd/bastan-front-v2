@@ -5,10 +5,9 @@ import * as React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ApplyLegalForm from '@/components/representatives/apply-legal-form';
 import { fetchGetRepresentationPageDetails } from '@/lib/services/representation.services';
-import Link from '@/components/localized-link';
 import { msg } from '@lingui/core/macro';
 import { getI18nInstance } from '@/appRouterI18n';
-import ApplyHero from '@/components/representatives/ApplyHero';
+import PageHero from '@/components/shared/page-hero';
 
 export async function generateMetadata({ params }: PageProps) {
     const { lang } = await params;
@@ -32,11 +31,12 @@ export default async function ApplyPage({ params }: PageProps) {
 
     return (
         <main className='pb-[118px]'>
-            <ApplyHero
-                bannerImage={pageDetails.banner_image}
-                mobileBannerImage={pageDetails.banner_image_mobile}
-                tabletBannerImage={pageDetails.banner_image_tablet}
-                />
+            <PageHero
+                    bannerImage={pageDetails.banner_image}
+                    mobileBannerImage={pageDetails.banner_image_mobile}
+                    tabletBannerImage={pageDetails.banner_image_tablet}
+                  />
+            
             <div className='container mt-11 max-w-[930px] mx-auto'>
                 <h2 className='text-[28px] font-extrabold text-[#252525] text-center'>
                     <Trans>این فرصت برای شماست</Trans>

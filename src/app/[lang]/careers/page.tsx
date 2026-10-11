@@ -10,7 +10,7 @@ import {
 
 import Link from "@/components/localized-link";
 import Pagination from "@/components/ui/pagination";
-import CareersHero from "@/components/careers/hero";
+import PageHero from "@/components/shared/page-hero";
 
 
 export async function generateMetadata() {
@@ -69,11 +69,12 @@ export default async function CareersPage({
 
 
 
-      <CareersHero
-        bannerImage={pageDetails.banner_image}
-        mobileBannerImage={pageDetails.banner_image_mobile}
-        tabletBannerImage={pageDetails.banner_image_tablet}
-      />
+      <PageHero
+              bannerImage={pageDetails.banner_image}
+              mobileBannerImage={pageDetails.banner_image_mobile}
+              tabletBannerImage={pageDetails.banner_image_tablet}
+       />
+      
 
 
 

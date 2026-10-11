@@ -9,7 +9,7 @@ import {
   fetchRepresentationPageDetails,
 } from "@/lib/services/representation.services";
 
-import AgenciesHero from "@/components/representatives/hero";
+import PageHero from "@/components/shared/page-hero";
 
 
 export async function generateMetadata() {
@@ -74,11 +74,12 @@ export default async function AgenciesPage({
 
 
 
-      <AgenciesHero
-        bannerImage={pageDetails.banner_image}
-        mobileBannerImage={pageDetails.banner_image_mobile}
-        tabletBannerImage={pageDetails.banner_image_tablet}
-      />
+      <PageHero
+              bannerImage={pageDetails.banner_image}
+              mobileBannerImage={pageDetails.banner_image_mobile}
+              tabletBannerImage={pageDetails.banner_image_tablet}
+            />
+      
 
 
 

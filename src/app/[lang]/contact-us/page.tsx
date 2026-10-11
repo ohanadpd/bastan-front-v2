@@ -9,7 +9,7 @@ import { fetchSettingsData } from '@/lib/services/settigns.services';
 import { fetchContactUsPage } from '@/lib/services/contact-us.services';
 import Link from '@/components/localized-link'
 import { getMediaUrl } from '@/lib/utils';
-import ContactUsHero from '@/components/contact-us/hero';
+import PageHero from '@/components/shared/page-hero';
 
 export async function generateMetadata() {
     const { data } = (await fetchContactUsPage())
@@ -38,11 +38,12 @@ export default async function ContactUsPage({ params }: PageProps) {
 
     return (
         <main className='pb-[155px]'>
-            <ContactUsHero
-                bannerImage={data.banner_image}
-                mobileBannerImage={data.banner_image_mobile}
-                tabletBannerImage={data.banner_image_tablet}
-                />
+            <PageHero
+                    bannerImage={data.banner_image}
+                    mobileBannerImage={data.banner_image_mobile}
+                    tabletBannerImage={data.banner_image_tablet}
+                  />
+            
             {setting.latitude && setting.longitude && <section className='container mt-[46px]'>
                 <h3 className='text-lg xl:text-xl font-bold text-[#010101] text-center'>
                     <Trans>آدرس کارخانه</Trans>

@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 import Link from '@/components/localized-link'
 import { cn } from '@/lib/utils';
 import Pagination from '@/components/ui/pagination';
-import CatalogHero from '@/components/catalog/hero';
+import PageHero from '@/components/shared/page-hero';
 
 export async function generateMetadata() {
     const { data } = (await fetchCatalogsPageDetails())
@@ -68,11 +68,12 @@ export default async function CatalogPage({ params, searchParams }: PageProps) {
 
     return (
         <main className='pb-[123px]'>
-            <CatalogHero
-                bannerImage={pageDetails.banner_image}
-                mobileBannerImage={pageDetails.banner_image_mobile}
-                tabletBannerImage={pageDetails.banner_image_tablet}
-                />
+           <PageHero
+                   bannerImage={pageDetails.banner_image}
+                   mobileBannerImage={pageDetails.banner_image_mobile}
+                   tabletBannerImage={pageDetails.banner_image_tablet}
+                 />
+           
             <div className='container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-24'>
                 {data.results.map((item, index) => <div key={index} className='group relative rounded-[5px] overflow-hidden aspect-square'>
                     {item.image && <Image src={item.image} alt="slide" fill className="object-cover group-hover:scale-105 duration-300" />}

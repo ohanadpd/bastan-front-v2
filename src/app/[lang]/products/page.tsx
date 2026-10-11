@@ -12,8 +12,7 @@ import {
 
 import ProductsMobileFilter from "@/components/products/mobile-filter";
 import Pagination from "@/components/ui/pagination";
-import ProductsHeroTheme3 from "@/components/products/hero";
-import ProductsHero from "@/components/products/hero";
+import PageHero from "@/components/shared/page-hero";
 
 export async function generateMetadata() {
   const { data } = await fetchProductPageDetails();
@@ -120,11 +119,12 @@ export default async function ProductsPage({
 
 
 
-      <ProductsHero
-      bannerImage={pageDetails.banner_image}
-      mobileBannerImage={pageDetails.banner_image_mobile}
-      tabletBannerImage={pageDetails.banner_image_tablet}
-    />
+      <PageHero
+              bannerImage={pageDetails.banner_image}
+              mobileBannerImage={pageDetails.banner_image_mobile}
+              tabletBannerImage={pageDetails.banner_image_tablet}
+            />
+      
 
 
 
