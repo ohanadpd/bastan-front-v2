@@ -35,7 +35,7 @@ msgstr ""
 msgid "آخرین مقطع تحصیلی*"
 msgstr ""
 
-#: src/components/ui/footer.tsx:83
+#: src/components/ui/footer.tsx:234
 #: src/components/ui/address-card.tsx:37
 #: src/components/representatives/agency-card.tsx:67
 #: src/components/profile/order-card.tsx:56
@@ -62,7 +62,7 @@ msgstr ""
 msgid "آدرس باید حداقل ۲ کاراکتر باشد"
 msgstr ""
 
-#: src/app/[lang]/contact-us/page.tsx:61
+#: src/app/[lang]/contact-us/page.tsx:50
 msgid "آدرس کارخانه"
 msgstr ""
 
@@ -74,6 +74,10 @@ msgstr ""
 msgid "آدرسی وجود ندارد!"
 msgstr ""
 
+#: src/app/[lang]/about-us/page.tsx:183
+msgid "آلبوم تصاویر"
+msgstr ""
+
 #: src/components/profile/delete-address-dialog.tsx:54
 msgid "آیا از حذف این آدرس مطمئن هستید؟"
 msgstr ""
@@ -82,8 +86,7 @@ msgstr ""
 msgid "اجاره ای"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:89
-#: src/app/[lang]/news/[...slug]/page.tsx:56
+#: src/components/ui/navbar.tsx:115
 msgid "اخبار"
 msgstr ""
 
@@ -91,13 +94,11 @@ msgstr ""
 msgid "ادامه"
 msgstr ""
 
-#: src/components/home/pages/home-style-3.tsx:131
-#: src/components/home/pages/home-style-2.tsx:110
-#: src/components/home/pages/home-style-1.tsx:96
+#: src/components/home/pages/home.tsx:124
 msgid "ارتباط با کارخانه..."
 msgstr ""
 
-#: src/components/ui/footer.tsx:62
+#: src/components/ui/footer.tsx:186
 msgid "ارتباط با ما"
 msgstr ""
 
@@ -108,8 +109,8 @@ msgstr ""
 msgid "ارسال"
 msgstr ""
 
-#: src/app/[lang]/careers/[...slug]/page.tsx:78
-#: src/app/[lang]/careers/[...slug]/page.tsx:99
+#: src/app/[lang]/careers/[...slug]/page.tsx:95
+#: src/app/[lang]/careers/[...slug]/page.tsx:121
 msgid "ارسال رزومه"
 msgstr ""
 
@@ -163,7 +164,7 @@ msgstr ""
 msgid "اعمال فیلتر"
 msgstr ""
 
-#: src/app/[lang]/about-us/page.tsx:64
+#: src/app/[lang]/about-us/page.tsx:145
 msgid "افتخارات و دستاورد های کارخانه"
 msgstr ""
 
@@ -207,6 +208,10 @@ msgstr ""
 msgid "انتخاب شهر الزامی است"
 msgstr ""
 
+#: src/components/products/kashef-search.tsx:211
+msgid "انتخاب کنید"
+msgstr ""
+
 #: src/components/profile/order-card.tsx:12
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:28
 msgid "انجام شده"
@@ -216,12 +221,12 @@ msgstr ""
 msgid "انصراف"
 msgstr ""
 
-#: src/components/i18n-switcher.tsx:15
+#: src/components/i18n-switcher.tsx:12
 #: src/components/i18n-switcher-mobile.tsx:13
 msgid "انگلیسی"
 msgstr ""
 
-#: src/components/ui/footer.tsx:75
+#: src/components/ui/footer.tsx:220
 #: src/components/profile/user-info-form.tsx:137
 #: src/components/profile/user-info-form.tsx:143
 msgid "ایمیل"
@@ -235,23 +240,15 @@ msgstr ""
 msgid "این سابقه کاری در فرم نهایی درج نخواهد شد"
 msgstr ""
 
-#: src/app/[lang]/representatives/apply/page.tsx:57
+#: src/app/[lang]/representatives/apply/page.tsx:43
 msgid "این فرصت برای شماست"
 msgstr ""
 
-#: src/components/home/pages/home-style-3.tsx:146
-#: src/components/home/pages/home-style-2.tsx:125
-#: src/components/home/pages/home-style-1.tsx:111
-msgid "با جدیدترین متد های طراحی کاشی"
-msgstr ""
-
-#: src/app/[lang]/contact-us/page.tsx:88
+#: src/app/[lang]/contact-us/page.tsx:77
 msgid "با ما در ارتباط باشید"
 msgstr ""
 
-#: src/components/home/pages/home-style-3.tsx:126
-#: src/components/home/pages/home-style-2.tsx:105
-#: src/components/home/pages/home-style-1.tsx:91
+#: src/components/home/pages/home.tsx:120
 msgid "با ما در ارتباط بمانید"
 msgstr ""
 
@@ -267,8 +264,16 @@ msgstr ""
 msgid "با موفقیت وارد شدید."
 msgstr ""
 
+#: src/components/ui/navbar.tsx:227
+msgid "باز کردن منو"
+msgstr ""
+
 #: src/app/[lang]/(payment)/payment/page.tsx:136
 msgid "بازگشت به صفحه اول سایت"
+msgstr ""
+
+#: src/app/[lang]/about-us/page.tsx:187
+msgid "باستان از لنز دوربین"
 msgstr ""
 
 #: src/app/[lang]/(payment)/payment/page.tsx:115
@@ -303,6 +308,10 @@ msgstr ""
 msgid "برای عضویت در خبر نامه شماره موبایل خود را وارد کنید"
 msgstr ""
 
+#: src/components/auth/login-form.tsx:50
+msgid "برای ورود به سامانه، شماره موبایل خود را وارد کنید."
+msgstr ""
+
 #: src/components/products/product-content.tsx:14
 #: src/components/products/overview-section.tsx:30
 #: src/components/products/overview-section.tsx:105
@@ -319,12 +328,19 @@ msgstr ""
 msgid "برند"
 msgstr ""
 
-#: src/components/home/pages/home-style-2.tsx:37
-#: src/components/home/pages/home-style-1.tsx:36
-msgid "برند های ما"
+#: src/components/ui/navbar.tsx:227
+msgid "بستن منو"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:85
+#: src/components/products/kashef-search.tsx:121
+msgid "بگرد و کشف کن"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:83
+msgid "بگرد و کشف کن. با جست و جوی تصویری، محصول مورد نظرت رو پیدا کن."
+msgstr ""
+
+#: src/components/ui/navbar.tsx:111
 msgid "بلاگ"
 msgstr ""
 
@@ -335,6 +351,10 @@ msgstr ""
 
 #: src/components/products/add-to-card.tsx:29
 msgid "به سبد خرید اضافه شد."
+msgstr ""
+
+#: src/components/home/pages/home.tsx:55
+msgid "بیشتر بدانید"
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:821
@@ -416,6 +436,10 @@ msgstr ""
 msgid "تخفیف(ریال)"
 msgstr ""
 
+#: src/components/products/kashef-search.tsx:201
+msgid "تصویر را بکشید و رها کنید"
+msgstr ""
+
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:174
 msgid "تعداد"
 msgstr ""
@@ -432,6 +456,10 @@ msgstr ""
 msgid "تعیین حوزه فعالیت الزامی است"
 msgstr ""
 
+#: src/components/products/kashef-search.tsx:191
+msgid "تغییر تصویر"
+msgstr ""
+
 #: src/components/ui/profile-button.tsx:92
 #: src/components/auth/password-confirmation-form.tsx:78
 #: src/components/auth/password-confirmation-form.tsx:169
@@ -442,6 +470,10 @@ msgstr ""
 #: src/app/[lang]/profile/(profile)/change-password/page.tsx:12
 #: src/app/[lang]/auth/password-confirmation/page.tsx:16
 msgid "تغییر رمزعبور"
+msgstr ""
+
+#: src/components/i18n-switcher.tsx:107
+msgid "تغییر زبان"
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:674
@@ -467,7 +499,7 @@ msgstr ""
 msgid "تکمیل ثبت نام"
 msgstr ""
 
-#: src/components/ui/footer.tsx:67
+#: src/components/ui/footer.tsx:206
 #: src/components/representatives/agency-card.tsx:38
 msgid "تلفن تماس"
 msgstr ""
@@ -494,8 +526,7 @@ msgstr ""
 msgid "تلفن محل کار"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:109
-#: src/app/[lang]/contact-us/page.tsx:54
+#: src/components/ui/navbar.tsx:137
 msgid "تماس با ما"
 msgstr ""
 
@@ -541,20 +572,20 @@ msgid "ثبت و ادامه"
 msgstr ""
 
 #. placeholder {0}: settings.name
-#: src/app/[lang]/news/page.tsx:84
+#: src/app/[lang]/news/page.tsx:130
 msgid "جدید ترین اخبار {0}"
 msgstr ""
 
-#: src/app/[lang]/articles/page.tsx:82
+#: src/app/[lang]/articles/page.tsx:87
 msgid "جدید ترین مقالات"
 msgstr ""
 
-#: src/app/[lang]/news/[...slug]/page.tsx:83
+#: src/app/[lang]/news/[...slug]/page.tsx:74
 #: src/app/[lang]/articles/[...slug]/page.tsx:92
 msgid "جدیدترین اخبار"
 msgstr ""
 
-#: src/app/[lang]/news/[...slug]/page.tsx:102
+#: src/app/[lang]/news/[...slug]/page.tsx:93
 #: src/app/[lang]/articles/[...slug]/page.tsx:111
 msgid "جدیدترین مقالات"
 msgstr ""
@@ -566,8 +597,17 @@ msgstr ""
 msgid "جزییات سفارش"
 msgstr ""
 
-#: src/components/representatives/map-filter.tsx:159
+#: src/components/representatives/map-filter.tsx:170
+#: src/components/products/kashef-search.tsx:255
 msgid "جست و جو"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:136
+msgid "جست و جو با تصویر"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:150
+msgid "جست و جو با لینک"
 msgstr ""
 
 #: src/components/representatives/map-wrapper.tsx:37
@@ -582,7 +622,7 @@ msgstr ""
 msgid "جمع کل اقلام"
 msgstr ""
 
-#: src/app/[lang]/contact-us/page.tsx:93
+#: src/app/[lang]/contact-us/page.tsx:82
 msgid "جهت ارتباط مستقیم با شرکت فرم زیر را تکمیل فرمایید"
 msgstr ""
 
@@ -598,8 +638,9 @@ msgstr ""
 msgid "حذف آدرس"
 msgstr ""
 
-#: src/components/auth/login-form.tsx:178
-msgid "حساب کاربری ندارید؟ <0>ثبت نام</0> کنید"
+#: src/components/ui/navbar.tsx:363
+#: src/components/ui/navbar.tsx:364
+msgid "حساب کاربری"
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:832
@@ -628,21 +669,12 @@ msgstr ""
 msgid "حوزه فعالیت"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:58
+#: src/components/ui/navbar.tsx:84
+#: src/components/ui/navbar.tsx:248
 #: src/components/products/detail-header.tsx:60
-#: src/app/[lang]/representatives/page.tsx:54
-#: src/app/[lang]/representatives/apply/page.tsx:47
-#: src/app/[lang]/products/page.tsx:92
 #: src/app/[lang]/products/[...slug]/page.tsx:77
-#: src/app/[lang]/news/page.tsx:74
-#: src/app/[lang]/news/[...slug]/page.tsx:53
-#: src/app/[lang]/contact-us/page.tsx:51
-#: src/app/[lang]/catalog/page.tsx:81
-#: src/app/[lang]/careers/page.tsx:56
 #: src/app/[lang]/careers/[...slug]/page.tsx:53
-#: src/app/[lang]/articles/page.tsx:72
 #: src/app/[lang]/articles/[...slug]/page.tsx:51
-#: src/app/[lang]/about-us/page.tsx:45
 msgid "خانه"
 msgstr ""
 
@@ -720,8 +752,8 @@ msgid "خیر"
 msgstr ""
 
 #. placeholder {0}: settings.name
-#: src/app/[lang]/news/page.tsx:89
-#: src/app/[lang]/articles/page.tsx:87
+#: src/app/[lang]/news/page.tsx:140
+#: src/app/[lang]/articles/page.tsx:91
 msgid "در {0} چه اتفاقی می افتد؟"
 msgstr ""
 
@@ -741,21 +773,16 @@ msgstr ""
 msgid "در حال پردازش"
 msgstr ""
 
-#: src/components/auth/login-form.tsx:164
-msgid "در حال ورود..."
-msgstr ""
-
 #: src/components/careers/resume-form.tsx:670
 #: src/components/careers/resume-form.tsx:670
 msgid "در صورت وجود عمل جراحی و یا نقض عضو نام ببرید"
 msgstr ""
 
-#: src/app/[lang]/careers/[...slug]/page.tsx:71
+#: src/app/[lang]/careers/[...slug]/page.tsx:79
 msgid "درباره این موقعیت شغلی"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:105
-#: src/app/[lang]/about-us/page.tsx:48
+#: src/components/ui/navbar.tsx:133
 msgid "درباره ما"
 msgstr ""
 
@@ -787,7 +814,7 @@ msgstr ""
 msgid "درخواست شما با موفقیت ارسال شد"
 msgstr ""
 
-#: src/app/[lang]/representatives/apply/page.tsx:63
+#: src/app/[lang]/representatives/apply/page.tsx:49
 msgid "درخواست نمایندگی"
 msgstr ""
 
@@ -795,10 +822,8 @@ msgstr ""
 msgid "درصد"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:79
+#: src/components/ui/navbar.tsx:105
 #: src/app/[lang]/representatives/apply/page.tsx:16
-#: src/app/[lang]/representatives/apply/page.tsx:38
-#: src/app/[lang]/representatives/apply/page.tsx:50
 msgid "دریافت نمایندگی"
 msgstr ""
 
@@ -832,11 +857,6 @@ msgstr ""
 msgid "دیپلم"
 msgstr ""
 
-#: src/components/home/hero-section-two.tsx:37
-#: src/components/home/hero-section-3.tsx:38
-msgid "دیدن محصولات"
-msgstr ""
-
 #: src/components/representatives/all-agency-modal.tsx:28
 msgid "دیدن همه نمایندگی ها"
 msgstr ""
@@ -862,14 +882,12 @@ msgstr ""
 #: src/components/profile/change-password-form.tsx:77
 #: src/components/profile/change-password-form.tsx:97
 #: src/components/profile/change-password-form.tsx:116
-#: src/components/auth/login-form.tsx:126
 #: src/components/auth/complete-register.tsx:139
 msgid "رمز عبور"
 msgstr ""
 
 #: src/components/profile/change-password-form.tsx:39
 #: src/components/auth/password-confirmation-form.tsx:35
-#: src/components/auth/login-form.tsx:38
 #: src/components/auth/complete-register.tsx:45
 msgid "رمز عبور الزامی است"
 msgstr ""
@@ -885,13 +903,11 @@ msgstr ""
 #: src/components/profile/change-password-form.tsx:38
 #: src/components/profile/change-password-form.tsx:44
 #: src/components/auth/password-confirmation-form.tsx:36
-#: src/components/auth/login-form.tsx:39
 #: src/components/auth/complete-register.tsx:46
 msgid "رمز عبور باید حداقل ۸ کاراکتر باشد"
 msgstr ""
 
 #: src/components/auth/password-confirmation-form.tsx:37
-#: src/components/auth/login-form.tsx:40
 #: src/components/auth/complete-register.tsx:47
 msgid "رمز عبور باید حداکثر ۳۲ کاراکتر باشد"
 msgstr ""
@@ -903,10 +919,6 @@ msgstr ""
 
 #: src/components/profile/change-password-form.tsx:45
 msgid "رمز عبور جدید الزامی است"
-msgstr ""
-
-#: src/components/auth/login-form.tsx:181
-msgid "رمز عبور را فراموش کرده اید؟"
 msgstr ""
 
 #: src/components/profile/change-password-form.tsx:42
@@ -979,7 +991,7 @@ msgstr ""
 msgid "سابقه بیماری دارید؟*"
 msgstr ""
 
-#: src/components/home/product-section.tsx:29
+#: src/components/home/sections/product-section.tsx:112
 #: src/components/careers/jalali-date-input.tsx:102
 msgid "سال"
 msgstr ""
@@ -1057,11 +1069,11 @@ msgstr ""
 msgid "سوابق کاری اختیاری هستند. اگر عنوان شغل را خالی بگذارید، آن سابقه در فرم نهایی درج نخواهد شد."
 msgstr ""
 
-#: src/app/[lang]/representatives/apply/page.tsx:74
+#: src/app/[lang]/representatives/apply/page.tsx:60
 msgid "شخص حقوقی"
 msgstr ""
 
-#: src/app/[lang]/representatives/apply/page.tsx:69
+#: src/app/[lang]/representatives/apply/page.tsx:55
 msgid "شخص حقیقی"
 msgstr ""
 
@@ -1120,7 +1132,7 @@ msgstr ""
 #: src/components/profile/address-form.tsx:113
 #: src/components/careers/resume-form.tsx:561
 #: src/components/auth/register-form.tsx:83
-#: src/components/auth/login-form.tsx:106
+#: src/components/auth/login-form.tsx:75
 #: src/components/auth/forgot-password-form.tsx:79
 msgid "شماره موبایل"
 msgstr ""
@@ -1141,13 +1153,17 @@ msgstr ""
 #: src/components/careers/resume-form.tsx:34
 #: src/components/careers/resume-form.tsx:37
 #: src/components/auth/register-form.tsx:30
-#: src/components/auth/login-form.tsx:35
+#: src/components/auth/login-form.tsx:27
 #: src/components/auth/forgot-password-form.tsx:30
 msgid "شماره موبایل الزامی است"
 msgstr ""
 
 #: src/components/profile/address-form.tsx:41
 msgid "شماره موبایل باید حداقل ۸ کاراکتر باشد"
+msgstr ""
+
+#: src/components/auth/login-form.tsx:30
+msgid "شماره موبایل را به‌صورت 09xxxxxxxxx وارد کنید"
 msgstr ""
 
 #: src/components/representatives/apply-legal-form.tsx:62
@@ -1193,8 +1209,8 @@ msgstr ""
 msgid "صورت حساب"
 msgstr ""
 
-#: src/components/ui/footer.tsx:105
-msgid "طراحی و توسعه توسط <0>استودیو اوهانا</0>"
+#: src/components/ui/footer.tsx:317
+msgid "طراحی و توسعه توسط<0>استودیو اوهانا</0>"
 msgstr ""
 
 #: src/components/products/overview-section.tsx:30
@@ -1206,7 +1222,7 @@ msgstr ""
 msgid "عدم مشمول"
 msgstr ""
 
-#: src/components/i18n-switcher.tsx:17
+#: src/components/i18n-switcher.tsx:14
 #: src/components/i18n-switcher-mobile.tsx:15
 msgid "عربی"
 msgstr ""
@@ -1229,7 +1245,7 @@ msgstr ""
 msgid "عنوان سابقه کار"
 msgstr ""
 
-#: src/components/i18n-switcher.tsx:16
+#: src/components/i18n-switcher.tsx:13
 #: src/components/i18n-switcher-mobile.tsx:14
 msgid "فارسی"
 msgstr ""
@@ -1238,11 +1254,12 @@ msgstr ""
 msgid "فراموشی رمز عبور"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:75
-#: src/app/[lang]/careers/page.tsx:59
-#: src/app/[lang]/careers/[...slug]/page.tsx:44
-#: src/app/[lang]/careers/[...slug]/page.tsx:56
+#: src/components/ui/navbar.tsx:101
 msgid "فرصت های شغلی"
+msgstr ""
+
+#: src/app/[lang]/careers/[...slug]/page.tsx:61
+msgid "فرصت‌های شغلی"
 msgstr ""
 
 #: src/components/home/contact-from.tsx:44
@@ -1258,7 +1275,6 @@ msgid "فرمت ایمیل معتبر نیست"
 msgstr ""
 
 #: src/components/auth/register-form.tsx:31
-#: src/components/auth/login-form.tsx:36
 #: src/components/auth/forgot-password-form.tsx:31
 msgid "فرمت شماره موبایل صحیح نیست (09xxxxxxxxx)"
 msgstr ""
@@ -1276,10 +1292,8 @@ msgstr ""
 msgid "قابل پرداخت"
 msgstr ""
 
-#: src/components/home/pages/home-style-3.tsx:141
-#: src/components/home/pages/home-style-2.tsx:120
-#: src/components/home/pages/home-style-1.tsx:106
-msgid "قوانین و مقررات | سوالات متداول"
+#: src/components/products/kashef-search.tsx:261
+msgid "قدرت گرفته از"
 msgstr ""
 
 #: src/components/products/product-content.tsx:89
@@ -1301,7 +1315,7 @@ msgstr ""
 msgid "قیمت واحد"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:101
+#: src/components/ui/navbar.tsx:125
 msgid "کاتالوگ محصولات"
 msgstr ""
 
@@ -1319,6 +1333,14 @@ msgstr ""
 
 #: src/components/careers/resume-form.tsx:652
 msgid "کارشناسی ارشد و بالاتر"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:263
+msgid "کاشف"
+msgstr ""
+
+#: src/components/ui/navbar.tsx:129
+msgid "کاشی نگار"
 msgstr ""
 
 #: src/components/representatives/apply-legal-form.tsx:203
@@ -1455,17 +1477,21 @@ msgstr ""
 msgid "لطفا مقطع تحصیلی را انتخاب کنید"
 msgstr ""
 
-#: src/components/auth/login-form.tsx:90
-msgid "لطفا وارد حساب کاربری خود شوید"
-msgstr ""
-
 #: src/components/representatives/agency-card.tsx:47
 msgid "لطفا وارد شوید"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:227
+msgid "لطفاً یک فایل تصویر انتخاب کنید."
 msgstr ""
 
 #: src/components/profile/order-card.tsx:13
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:29
 msgid "لغو شده"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:234
+msgid "لینک مستقیم تصویر"
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:591
@@ -1539,11 +1565,9 @@ msgstr ""
 msgid "محصول با موفقیت حذف شد."
 msgstr ""
 
-#: src/components/ui/navbar.tsx:67
+#: src/components/ui/navbar.tsx:93
 #: src/components/products/detail-header.tsx:60
 #: src/app/[lang]/profile/favorite/page.tsx:35
-#: src/app/[lang]/products/page.tsx:95
-#: src/app/[lang]/products/page.tsx:103
 #: src/app/[lang]/products/[...slug]/page.tsx:77
 msgid "محصولات"
 msgstr ""
@@ -1594,7 +1618,7 @@ msgstr ""
 msgid "مرحله قبل"
 msgstr ""
 
-#: src/app/[lang]/careers/[...slug]/page.tsx:90
+#: src/app/[lang]/careers/[...slug]/page.tsx:110
 msgid "مزایای کار در این شرکت"
 msgstr ""
 
@@ -1606,10 +1630,8 @@ msgstr ""
 msgid "مشخصات شما با موفقیت ارسال شد."
 msgstr ""
 
-#: src/app/[lang]/news/[...slug]/page.tsx:121
-#: src/app/[lang]/news/[...slug]/page.tsx:143
-#: src/app/[lang]/articles/[...slug]/page.tsx:130
-#: src/app/[lang]/articles/[...slug]/page.tsx:152
+#: src/app/[lang]/news/[...slug]/page.tsx:116
+#: src/app/[lang]/articles/[...slug]/page.tsx:134
 msgid "مطالب مرتبط"
 msgstr ""
 
@@ -1642,7 +1664,7 @@ msgstr ""
 msgid "معدل نمی‌تواند منفی باشد"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:93
+#: src/components/ui/navbar.tsx:119
 #: src/app/[lang]/articles/[...slug]/page.tsx:54
 msgid "مقالات"
 msgstr ""
@@ -1651,7 +1673,7 @@ msgstr ""
 msgid "مقدار وارد شده بیش از حد مجاز است!"
 msgstr ""
 
-#: src/app/[lang]/careers/[...slug]/page.tsx:84
+#: src/app/[lang]/careers/[...slug]/page.tsx:101
 msgid "مهارت های مورد نیاز و مسیولیتها"
 msgstr ""
 
@@ -1829,8 +1851,7 @@ msgstr ""
 msgid "نمایندگی جهت شهر*:"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:62
-#: src/app/[lang]/representatives/page.tsx:57
+#: src/components/ui/navbar.tsx:88
 msgid "نمایندگی ها"
 msgstr ""
 
@@ -1851,7 +1872,7 @@ msgstr ""
 msgid "همسر"
 msgstr ""
 
-#: src/components/ui/navbar.tsx:71
+#: src/components/ui/navbar.tsx:97
 msgid "همکاری با ما"
 msgstr ""
 
@@ -1864,9 +1885,9 @@ msgid "واحد"
 msgstr ""
 
 #: src/components/ui/profile-button.tsx:171
-#: src/components/auth/login-form.tsx:85
-#: src/components/auth/login-form.tsx:169
-#: src/app/[lang]/auth/login/page.tsx:16
+#: src/components/auth/login-form.tsx:46
+#: src/components/auth/login-form.tsx:135
+#: src/app/[lang]/auth/login/page.tsx:19
 msgid "ورود"
 msgstr ""
 
@@ -1922,6 +1943,10 @@ msgstr ""
 
 #: src/components/cart/cart-submit-page.tsx:144
 msgid "ویرایش سبد خرید"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:205
+msgid "یا فایل را از سیستم"
 msgstr ""
 
 #: src/components/cart/cart-submit-page.tsx:279

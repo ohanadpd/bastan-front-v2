@@ -125,30 +125,12 @@ export default async function ArticlesDetailPage({ params }: PageProps) {
                                 ))}
                             </ul>
                         </div>
-                        <div className='bg-white p-5 rounded-[10px]'>
-                            <h3 className='text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]'>
-                                <Trans>
-                                    مطالب مرتبط
-                                </Trans>
-                            </h3>
-                            <ul className="mt-4 space-y-4">
-                                {data.related_posts.map((related, index) => (
-                                    <li key={index}>
-                                        <LocalizedLink href={`/articles/${related.pk}/${related.slug}`} className='group flex gap-2 text-sm text-[#575757] hover:text-primary transition-all duration-300'>
-                                            <span className='text-xs text-[#575757] group-hover:text-primary transition-all duration-300'>
-                                                <ArrowSquareLeft size={24} color='currentColor' />
-                                            </span>
-                                            {related.name}
-                                        </LocalizedLink>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
             {data?.related_posts?.length > 0 && <div className='container mt-[50px]'>
-                <h2 className='text-xl font-bold text-[#252525] mb-7'>
+                <h2 className='text-xl border-b-2 border-primary w-fit font-bold text-[#252525] mb-7'>
                     <Trans>
                         مطالب مرتبط
                     </Trans>

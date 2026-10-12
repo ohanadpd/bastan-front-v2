@@ -74,8 +74,7 @@ export default function Navbar({
     }
 
     return (
-      normalizedPathname === href ||
-      normalizedPathname.startsWith(`${href}/`)
+      normalizedPathname === href || normalizedPathname.startsWith(`${href}/`)
     );
   };
 
@@ -125,6 +124,10 @@ export default function Navbar({
       showCatalog && {
         title: i18n._(msg`کاتالوگ محصولات`),
         href: "/catalog",
+      },
+      {
+        title: i18n._(msg`کاشی نگار`),
+        href: "/visualizer",
       },
       {
         title: i18n._(msg`درباره ما`),
@@ -203,13 +206,15 @@ export default function Navbar({
                   text-[14px] font-semibold text-[#252525]
                 "
               >
-                {navbarItems.map((item, index) => (
-                  <NavDropdownTheme3
-                    key={`${item.href}-${index}`}
-                    item={item}
-                    index={index}
-                  />
-                ))}
+                {navbarItems
+                  .filter((item) => item.href !== "/visualizer")
+                  .map((item, index) => (
+                    <NavDropdownTheme3
+                      key={`${item.href}-${index}`}
+                      item={item}
+                      index={index}
+                    />
+                  ))}
               </ul>
             </div>
 
@@ -219,9 +224,7 @@ export default function Navbar({
                 type="button"
                 onClick={() => setIsOpen((previous) => !previous)}
                 aria-label={
-                  isOpen
-                    ? i18n._(msg`بستن منو`)
-                    : i18n._(msg`باز کردن منو`)
+                  isOpen ? i18n._(msg`بستن منو`) : i18n._(msg`باز کردن منو`)
                 }
                 aria-expanded={isOpen}
                 aria-controls="navbar-mobile-menu"
@@ -279,7 +282,7 @@ export default function Navbar({
                 <span
                   dir="ltr"
                   className="
-                    whitespace-nowrap text-[10px] font-medium
+                    whitespace-nowrap text-[10px] font-semibold
                     xl:text-[12px]
                   "
                 >
@@ -301,21 +304,26 @@ export default function Navbar({
                 href="/visualizer"
                 aria-label="کاشی نگار"
                 title="کاشی نگار"
+                aria-current={
+                  isNavItemActive("/visualizer") ? "page" : undefined
+                }
                 className="
-                  group hidden h-10 w-10 shrink-0
-                  items-center justify-center rounded-[5px]
-                  focus-visible:outline-2
-                  focus-visible:outline-primary xl:flex
-                "
+                group relative hidden h-10 w-10 shrink-0
+                items-center justify-center rounded-[5px]
+                focus-visible:outline-2
+                focus-visible:outline-primary xl:flex
+              "
               >
                 <span
                   aria-hidden="true"
-                  className="
-                    block h-10 w-10 bg-[#353535]
-                    transition-colors duration-300
-                    group-hover:bg-primary
-                    group-focus-visible:bg-primary
-                  "
+                  className={cn(
+                    "absolute inset-0 h-10 w-10 bg-[#353535]",
+                    "transition-opacity duration-300",
+                    "group-hover:opacity-0 group-focus-visible:opacity-0",
+                    isNavItemActive("/visualizer")
+                      ? "opacity-0"
+                      : "opacity-100",
+                  )}
                   style={{
                     maskImage: 'url("/images/icons/Icon.svg")',
                     WebkitMaskImage: 'url("/images/icons/Icon.svg")',
@@ -327,8 +335,29 @@ export default function Navbar({
                     WebkitMaskPosition: "center",
                   }}
                 />
-              </LocalizedLink>
 
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    "absolute inset-0 h-10 w-10 bg-primary",
+                    "transition-opacity duration-300",
+                    "group-hover:opacity-100 group-focus-visible:opacity-100",
+                    isNavItemActive("/visualizer")
+                      ? "opacity-100"
+                      : "opacity-0",
+                  )}
+                  style={{
+                    maskImage: 'url("/images/icons/icon2.svg")',
+                    WebkitMaskImage: 'url("/images/icons/icon2.svg")',
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                  }}
+                />
+              </LocalizedLink>
               <LocalizedLink
                 href="/auth/login"
                 aria-label={i18n._(msg`حساب کاربری`)}

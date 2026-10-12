@@ -31,6 +31,7 @@ interface ArticleDetails {
     image: string;
     banner_image: string | null;
     banner_image_mobile:string | null;
+    banner_image_tablet:string | null;
     file: string;
     related_posts: ArticleList[];
     description: string;

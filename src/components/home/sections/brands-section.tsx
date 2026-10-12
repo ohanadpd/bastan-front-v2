@@ -65,7 +65,7 @@ export default function BrandsSectionTheme3({ data }: { data: LogoBand[] }) {
                     hover:border-primary
                     xl:aspect-auto xl:h-[150px] xl:max-w-[150px]
                   "
-                >همراهان
+                >
                   <div className="relative aspect-square w-full max-w-[100px] xl:max-w-[90px]">
                     <Image
                       src={getMediaUrl(item.logo)}

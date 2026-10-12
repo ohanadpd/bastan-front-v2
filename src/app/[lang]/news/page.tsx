@@ -125,7 +125,7 @@ export default async function BlogsPage({
       <section className="container mt-14">
 
 
-        <h2 className="text-xl font-bold text-[#252525]">
+        <h2 className="text-xl border-b-2 border-primary w-fit font-bold text-[#252525]">
 
           <Trans>
             جدید ترین اخبار {settings.name}
@@ -211,11 +211,11 @@ export default async function BlogsPage({
 
             <section
               key={item.category.pk}
-              className="container mt-[88px]"
+              className="container mt-[88px] "
             >
 
 
-              <h2 className="text-xl font-bold text-[#252525]">
+              <h2 className="text-xl font-bold text-[#252525] border-b-2 border-primary w-fit">
 
                 {item.category.name}
 

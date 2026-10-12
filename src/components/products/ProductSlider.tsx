@@ -24,7 +24,7 @@ export default function ProductSlider({ data }: { data: Gallery[] }) {
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs, Pagination]}
                 onSlideChange={handleSlideChange}
-                className='w-full h-auto rounded-[8.45px] overflow-hidden'
+                className='w-full h-auto rounded-[5px] border border[#F2F2F2] overflow-hidden'
                 pagination={{
                     clickable: true,
                     el: '.pagination-container',
@@ -59,13 +59,13 @@ export default function ProductSlider({ data }: { data: Gallery[] }) {
             >
                 {data.map((item, index) => (
                     <SwiperSlide key={index} className='!w-fit'>
-                        <img src={getMediaUrl(item.image_thumbnail)} alt={item.title} className={cn(selectedImage === index ? 'border-2 border-primary' : '', 'w-full h-auto size-[80px] object-cover rounded-[8.45px] cursor-pointer')} />
+                        <img src={getMediaUrl(item.image_thumbnail)} alt={item.title} className={cn(selectedImage === index ? 'border-2 border-primary' : 'border border-[#F2F2F2]', 'w-full h-auto size-[80px]  object-cover rounded-[5px] cursor-pointer')} />
                     </SwiperSlide>
                 ))}
                 {
                     data.length === 0 && (
                         <SwiperSlide className='!w-fit'>
-                            <img src="/images/default.png" alt="product" className={cn('border-2 border-primary', 'w-full h-auto size-[80px] object-cover rounded-[8.45px] cursor-pointer')} />
+                            <img src="/images/default.png" alt="product" className={cn('border-2 border-primary', 'w-full h-auto size-[80px] border border-[#F2F2F2] object-cover rounded-[5px] cursor-pointer')} />
                         </SwiperSlide>
                     )
                 }

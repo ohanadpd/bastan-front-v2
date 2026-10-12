@@ -149,19 +149,32 @@ export default function AgenciesMapFilter() {
                     </Select>
                 </div>
             </div>
-            <Button onClick={handleApplyFilters} className='flex items-center justify-center gap-2 mt-9 text-lg w-full max-w-[162px] mx-auto h-12'>
-                {isPending ? (
-                    <span className='flex items-center justify-center'>
-                        <LoadingSpin />
-                    </span>
-                ) : (
-                    <>
-                        <Trans>
-                            جست و جو
-                        </Trans>
-                        <SearchNormal className='size-5' variant='Bold' color='#fff' />
-                    </>
-                )}
+            <Button
+            type="button"
+            variant="outline"
+            onClick={handleApplyFilters}
+            disabled={isPending}
+            className="
+                mt-9 mx-auto flex h-10 w-full max-w-[238px]
+                items-center justify-center gap-1
+                rounded-[4px] border border-primary
+                bg-white text-[12px] font-normal text-primary
+                hover:bg-primary/5 hover:text-primary
+                active:!bg-primary active:!text-white
+            "
+            >
+            {isPending ? (
+                <LoadingSpin />
+            ) : (
+                <>
+                <Trans>جست و جو</Trans>
+                <SearchNormal
+                    className="size-[14px]"
+                    variant="Linear"
+                    color="currentColor"
+                />
+                </>
+            )}
             </Button>
         </>
     );

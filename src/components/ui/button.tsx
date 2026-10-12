@@ -1,32 +1,57 @@
-import { cn } from '@/lib/utils';
-import * as React from 'react';
+import { cn } from "@/lib/utils";
+import * as React from "react";
 
-type ButtonProps = React.ComponentPropsWithRef<'button'> & {
-  variant?: 'solid' | 'outline';
+type ButtonProps = React.ComponentPropsWithoutRef<"button"> & {
+  variant?: "solid" | "outline";
 };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'solid', ...props }, ref) => {
-    const baseStyles =
-      'h-12 min-w-[179px] font-semibold transition-all duration-300 rounded-[5px]';
+  (
+    {
+      className,
+      variant = "solid",
+      type = "button",
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    const baseStyles = `
+      inline-flex h-12 min-w-[179px]
+      items-center justify-center gap-2 px-6
+      rounded-[10px] border-2 border-primary
+      text-[18px] font-normal
+      transition-colors duration-200
+      focus-visible:outline-none
+      focus-visible:ring-2 focus-visible:ring-primary
+      focus-visible:ring-offset-2
+      disabled:pointer-events-none disabled:opacity-50
+    `;
 
     const variants = {
-      solid: 'bg-primary text-white hover:bg-primary-dark',
-      outline:
-        'border-[1px] border-primary text-primary bg-transparent hover:bg-primary hover:text-white',
+      solid: `
+        bg-primary text-white
+        hover:border-primary-dark hover:bg-primary-dark
+      `,
+      outline: `
+        bg-white text-primary
+        hover:bg-primary hover:text-white
+      `,
     };
 
     return (
       <button
         ref={ref}
+        type={type}
         {...props}
         className={cn(baseStyles, variants[variant], className)}
       >
-        {props.children}
+        {children}
       </button>
     );
-  }
+  },
 );
 
-Button.displayName = 'Button';
+Button.displayName = "Button";
+
 export { Button };

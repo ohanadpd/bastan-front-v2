@@ -1,73 +1,80 @@
 "use client";
-import * as React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Scrollbar } from 'swiper/modules';
-import 'swiper/css';
-import { useState, useRef } from 'react';
-import { cn } from '@/lib/utils';
-import Image from 'next/image';
-import LocalizedLink from '@/components/localized-link';
-import { Achivment } from '@/types/about-us.types';
-import { toPersianDate } from '@/lib/utils';
 
-export default function AchievementsSlider({ className, data }: { className?: string, data: Achivment[] }) {
-    const [swiper, setSwiper] = useState<any>(null);
-    const paginationRef = useRef<HTMLDivElement>(null);
-    return (
-        <>
-            <Swiper
-                // install Swiper modules
-                modules={[Pagination, Scrollbar]}
-                spaceBetween={20}
-                slidesPerView={4}
-                breakpoints={{
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    480: {
-                        slidesPerView: 1,
-                    },
-                    320: {
-                        slidesPerView: 1,
-                    },
-                }}
-                navigation
-                pagination={{
-                    clickable: true,
-                    el: paginationRef.current,
-                    type: 'bullets',
-                    bulletClass: 'size-[5px] rounded-full',
-                    bulletActiveClass: '!bg-primary w-10',
-                    renderBullet: function (index: number, className: string) {
-                        return `<span class="bg-[#D9D9D9] ${className}"></span>`;
-                    }
-                }}
-                onSwiper={(swiper) => setSwiper(swiper)}
-                onSlideChange={() => console.log('slide change')}
-                className={cn('h-full w-full', className)}
-            >
-                {data.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <div className='group flex flex-col gap-3 '>
-                            <div className='flex flex-col gap-[14px]'>
-                                <Image src={item.image} alt="slide" width={500} height={500} className="object-cover w-full h-auto rounded-[5px]" />
-                            </div>
-                            <div className='text-[#474747] group-hover:text-primary transition-all duration-300'>
-                                <h3 className='font-semibold '>
-                                    {item.title}
-                                </h3>
-                                {item.date && <span className='text-sm'>
-                                    {toPersianDate(item.date)}
-                                </span>}
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                ))}
-                <div ref={paginationRef} className='!static flex justify-center items-center gap-[2.5px] w-fit mt-6 mx-auto'></div>
-            </Swiper>
-        </>
-    );
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import Image from "next/image";
+
+import { cn, toPersianDate } from "@/lib/utils";
+import type { Achivment } from "@/types/about-us.types";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+type AchievementsSliderProps = {
+  className?: string;
+  data: Achivment[];
+};
+
+export default function AchievementsSlider({
+  className,
+  data,
+}: AchievementsSliderProps) {
+  return (
+    <Swiper
+      modules={[Pagination]}
+      spaceBetween={20}
+      slidesPerView={1}
+      watchOverflow
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1280: {
+          slidesPerView: 4,
+        },
+      }}
+      pagination={{
+        clickable: true,
+        bulletClass: "achievements-bullet",
+        bulletActiveClass: "achievements-bullet-active",
+      }}
+      className={cn("achievements-slider w-full", className)}
+    >
+      {data.map((item, index) => (
+        <SwiperSlide key={index}>
+          <div className="group  flex flex-col gap-[6px]">
+            <div className="relative aspect-[226/320] w-full overflow-hidden rounded-[4px]">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="
+                  (min-width: 1280px) 25vw,
+                  (min-width: 1024px) 33vw,
+                  (min-width: 768px) 50vw,
+                  100vw
+                "
+                className="object-contain"
+              />
+            </div>
+
+            <div className="rounded-[5px] border-[0.5px] border-[#BFBFBF] bg-white px-2 py-2 text-start transition-colors duration-300 group-hover:border-primary">
+            <h3 className="text-[14px] font-bold leading-6 text-black transition-colors duration-300 group-hover:text-primary">
+                {item.title}
+            </h3>
+
+            {item.date && (
+                <span className="mt-1 block text-[12px] text-[#595959] transition-colors duration-300 ">
+                {toPersianDate(item.date)}
+                </span>
+            )}
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 }

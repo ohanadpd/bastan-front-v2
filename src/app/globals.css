@@ -248,3 +248,36 @@ input[type=number] {
   width: 40px;
   background: var(--primary)
 }
+
+.achievements-slider > .swiper-pagination {
+  position: static;
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transform: none;
+}
+
+.achievements-slider .achievements-bullet {
+  display: block;
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  margin: 0;
+  border-radius: 999px;
+  background: #d9d9d9;
+  opacity: 1;
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.achievements-slider .achievements-bullet-active {
+  width: 40px;
+  background: #c4000d;
+}
+
+.achievements-slider > .swiper-pagination.swiper-pagination-lock {
+  display: none;
+}

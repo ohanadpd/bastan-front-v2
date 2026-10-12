@@ -51,8 +51,7 @@ export default function HomeProductSlider({
                 [&>a>div>div:last-child]:!mt-[6px]
                 [&>a>div>div:last-child]:min-h-[108px]
                 [&>a>div>div:last-child]:!rounded-[3px]
-                [&>a>div>div:last-child]:border
-                [&>a>div>div:last-child]:border-[#FF656D]
+                
                 [&>a>div>div:last-child]:!p-[10px]
                 [&_h3]:!text-[12px]
                 [&_h3]:!text-[#C4000D]

@@ -1,18 +1,18 @@
 import ProductCard from "@/components/ui/product-card";
 import ProductsFilter from "@/components/products/filter";
-import * as React from "react";
+import ProductsMobileFilter from "@/components/products/mobile-filter";
+import Pagination from "@/components/ui/pagination";
+import PageHero from "@/components/shared/page-hero";
+import LocalizedLink from "@/components/localized-link";
+import KashefSearch from "@/components/products/kashef-search";
+
 import { initLingui } from "@/initLingui";
 import { Trans } from "@lingui/react/macro";
-import LocalizedLink from "@/components/localized-link";
 
 import {
   fetchProductList,
   fetchProductPageDetails,
 } from "@/lib/services/products.services";
-
-import ProductsMobileFilter from "@/components/products/mobile-filter";
-import Pagination from "@/components/ui/pagination";
-import PageHero from "@/components/shared/page-hero";
 
 export async function generateMetadata() {
   const { data } = await fetchProductPageDetails();
@@ -46,28 +46,19 @@ export default async function ProductsPage({
   params,
   searchParams,
 }: PageProps) {
-
   const { lang } = await params;
 
   initLingui(lang);
+
   const { data: pageDetails } = await fetchProductPageDetails();
 
-
-  const {
-    category,
-    brand,
-    attr,
-    minprice,
-    maxprice,
-    page,
-  } = await searchParams;
-
+  const { category, brand, attr, minprice, maxprice, page } =
+    await searchParams;
 
   const limit = 12;
-
-  const currentPage = parseInt(page ?? "1");
-
-
+  const parsedPage = Number(page ?? "1");
+  const currentPage =
+    Number.isSafeInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1;
 
   const { data } = await fetchProductList({
     page: currentPage,
@@ -79,141 +70,54 @@ export default async function ProductsPage({
     price_min: minprice,
   });
 
-
-
-  const totalPages = Math.ceil(
-    data ? data.count / limit : 0
-  );
-
-
-
-  const createPageUrl = (newPage: number) => {
-
-    const params = new URLSearchParams();
-
-
-    Object.entries(searchParams).forEach(([key, value]) => {
-
-      if (value && typeof value === "string") {
-        params.set(key, value);
-      }
-
-    });
-
-
-    params.set(
-      "page",
-      newPage.toString()
-    );
-
-
-    return `/products?${params.toString()}`;
-
-  };
-
-
+  const totalPages = Math.ceil(data.count / limit);
 
   return (
-
     <main className="pb-[104px]">
-
-
-
       <PageHero
-              bannerImage={pageDetails.banner_image}
-              mobileBannerImage={pageDetails.banner_image_mobile}
-              tabletBannerImage={pageDetails.banner_image_tablet}
-              breadcrumbs={[{ label: "محصولات" }]}
-            />
-      
-
-
+        bannerImage={pageDetails.banner_image}
+        mobileBannerImage={pageDetails.banner_image_mobile}
+        tabletBannerImage={pageDetails.banner_image_tablet}
+        breadcrumbs={[{ label: "محصولات" }]}
+      />
 
       <section className="container pt-14">
+        
 
-
-        <div className="flex justify-between xl:justify-center items-center">
-
-
-          <h2 className="text-[28px] font-bold text-[#252525] text-center">
-
-            <Trans>
-              محصولات
-            </Trans>
-
-          </h2>
-
-
-
-          <ProductsMobileFilter />
-
-
-        </div>
-
-
-
-
-        <div className="flex gap-5 mt-[88px]">
-
-
-          <div className="w-[265px] shrink-0 hidden xl:block">
-
+        <div className="mt-[54px] flex gap-5">
+          <div className="hidden w-[265px] shrink-0 xl:block">
             <ProductsFilter />
-
           </div>
 
-
-
-          <div className="flex flex-col gap-10 w-full">
-
-
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 w-full">
-
-
-              {data.results.map((item, index) => (
-
+          <div className="flex min-w-0 flex-1 flex-col gap-5">
+            <KashefSearch />
+            <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {data.results.map((item) => (
                 <LocalizedLink
+                  key={item.id}
                   href={`/products/${item.id}/${item.slug}`}
-                  key={index}
                 >
-
                   <ProductCard
                     title={item.name}
                     description={item.description}
                     badges={item.badge}
                     image={item.image}
                   />
-
                 </LocalizedLink>
-
               ))}
+            </div>
 
-
-
-              <div className="flex justify-center mt-4 col-span-full w-full">
-
+            {totalPages > 1 && (
+              <div className="mt-4 flex w-full justify-center">
                 <Pagination
                   currentPage={currentPage}
                   totalPages={totalPages}
                 />
-
               </div>
-
-
-
-            </div>
-
-
+            )}
           </div>
-
-
         </div>
-
-
       </section>
-
-
     </main>
-
   );
 }

@@ -27,7 +27,7 @@ export default function ProductContent({ product }: { product: ProductDetail }) 
 
     return (
         <div className="xl:container mt-10 rounded-[15px] py-10 px-7">
-            <ul className='flex items-center gap-4 text-sm text-secondary bg-white h-14 px-2 rounded-[10px] [&>li]:px-3 [&>li]:h-9 [&>li]:rounded-[5px] text-nowrap overflow-auto cursor-pointer'>
+            <ul className='flex items-center gap-4 text-sm text-secondary bg-white h-14 px-4 rounded-[30px] border-[0.5px] border-[#F2F2F2] [&>li]:px-3 [&>li]:h-9 [&>li]:rounded-[50px] text-nowrap overflow-auto cursor-pointer'>
                 {tabs.map((tab) => (
                     <li
                         key={tab.id}
@@ -41,7 +41,7 @@ export default function ProductContent({ product }: { product: ProductDetail }) 
             <div className='flex flex-col xl:flex-row justify-between gap-5 mt-10'>
                 <div className='flex-1'>
                     <div id="overview" className='space-y-7'>
-                        <h3 className='font-bold text-lg'>
+                        <h3 className="table border-b-2 border-primary pb-2 font-bold text-[18px]">
                             <Trans>
                                 بررسی اجمالی محصول
                             </Trans>
@@ -52,7 +52,7 @@ export default function ProductContent({ product }: { product: ProductDetail }) 
                     <hr className='my-10' />
 
                     <div id="other_faces" className='space-y-7'>
-                        <h3 className='font-bold text-lg'>
+                        <h3 className="table border-b-2 border-primary pb-2 font-bold text-[18px]">
                             <Trans>
                                 سایر فیس ها
                             </Trans>
@@ -65,7 +65,7 @@ export default function ProductContent({ product }: { product: ProductDetail }) 
                     <hr className='my-10' />
 
                     <div id="related_products" className='space-y-7'>
-                        <h3 className='font-bold text-lg'>
+                        <h3 className="table border-b-2 border-primary pb-2 font-bold text-[18px]">
                             <Trans>
                                 محصولات مرتبط
                             </Trans>
@@ -76,8 +76,8 @@ export default function ProductContent({ product }: { product: ProductDetail }) 
                     </div>
                 </div>
                 <div className='relative'>
-                    <div className=' sticky top-28 shrink-0 w-full xl:w-[278px] xl:h-[278px] bg-white rounded-[15px] p-3'>
-                        <div className='relative w-full h-[166px] rounded-[15px] overflow-hidden'>
+                    <div className=' sticky top-28 shrink-0 w-full xl:w-[278px] xl:h-[278px] bg-white border-[0.5px] border-[#F2F2F2] rounded-[15px] p-3'>
+                        <div className='relative w-full h-[166px] rounded-[15px]  overflow-hidden'>
                             <Image src={getMediaUrl(product.image) || "/images/default.png"} alt="test" fill />
                         </div>
                         <div className='flex flex-col gap-5 mt-4'>

@@ -47,7 +47,7 @@ export default function PageHero({
       style={bannerStyle}
     >
       {breadcrumbs.length > 0 && (
-        <div className="container absolute inset-x-0 bottom-4">
+        <div className="container absolute inset-x-0 bottom-4 flex justify-center md:justify-start">
           <nav
             aria-label="Breadcrumb"
             className="inline-flex rounded-[18px] bg-[#FFFFFFCF] px-[18px] py-[10px] text-[12px]"

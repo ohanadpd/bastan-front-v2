@@ -46,7 +46,7 @@ export default async function ContactUsPage({ params }: PageProps) {
                   />
             
             {setting.latitude && setting.longitude && <section className='container mt-[46px]'>
-                <h3 className='text-lg xl:text-xl font-bold text-[#010101] text-center'>
+                <h3 className='text-lg xl:text-xl border-b-2 border-primary w-fit mx-auto font-bold text-[#010101] text-center'>
                     <Trans>آدرس کارخانه</Trans>
                 </h3>
                 <div className='mt-12 h-[453px]'>
@@ -59,13 +59,13 @@ export default async function ContactUsPage({ params }: PageProps) {
                         <div key={idx} className='group w-full xl:w-[calc(25%-15px)] flex flex-col justify-center items-center bg-white border-[0.6px] border-[#BEBEBE] hover:border-primary transition-all duration-300 h-[145px] rounded-[5px]'>
                             <div className='flex flex-col items-center gap-2'>
                                 <span className='text-[#292D32] group-hover:text-primary transition-all duration-300'>
-                                    {item.light_icon && <Image src={getMediaUrl(item.light_icon)} alt={item.name} width={24} height={24} />}
+                                    {item.light_icon && <Image src={getMediaUrl(item.light_icon)} alt={item.name} width={32} height={32} />}
                                 </span>
-                                <h3 className='text-sm font-semibold'>
+                                <h3 className='text-[16px] font-semibold'>
                                     {item.name}
                                 </h3>
                             </div>
-                            <span className='block text-sm text-[#3B3B3B] mt-4'>
+                            <span className='block text-[16px] text-[#353535] mt-4'>
                                 <a href={item.link || '#'} target='_blank'>{item.username_or_id || '-'}</a>
                             </span>
                         </div>
@@ -73,7 +73,7 @@ export default async function ContactUsPage({ params }: PageProps) {
                 </div>
             </section>
             <section className='container mt-[88px]'>
-                <h3 className='text-lg xl:text-xl font-bold text-center'>
+                <h3 className='text-lg xl:text-xl border-b-2 border-primary w-fit mx-auto font-bold text-center'>
                     <Trans>
                         با ما در ارتباط باشید
                     </Trans>

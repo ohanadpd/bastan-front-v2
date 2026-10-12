@@ -83,7 +83,7 @@ export default async function ArticlesPage({ params }: PageProps) {
       />
 
       <section className="container mt-14">
-        <h2 className="text-xl font-bold text-[#252525]">
+        <h2 className="text-xl border-b-2 border-primary w-fit font-bold text-[#252525]">
           <Trans>جدید ترین مقالات</Trans>
         </h2>
 
@@ -139,7 +139,7 @@ export default async function ArticlesPage({ params }: PageProps) {
         (item) =>
           item.articles.length > 0 && (
             <section key={item.category.pk} className="container mt-[88px]">
-              <h2 className="text-xl font-bold text-[#252525]">
+              <h2 className="text-xl font-bold text-[#252525] border-b-2 border-primary w-fit">
                 {item.category.name}
               </h2>
 

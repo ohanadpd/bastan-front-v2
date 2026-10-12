@@ -1,8 +1,4 @@
-import { Trans } from "@lingui/react/macro";
-import * as React from "react";
 import { initLingui } from "@/initLingui";
-import { Flag2 } from "iconsax-reactjs";
-
 import {
   fetchEmploymentList,
   fetchEmploymentPageDetails,
@@ -12,6 +8,32 @@ import Link from "@/components/localized-link";
 import Pagination from "@/components/ui/pagination";
 import PageHero from "@/components/shared/page-hero";
 
+function VerifyIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      <path
+        d="M21.5599 10.7405L20.1999 9.16055C19.9399 8.86055 19.7299 8.30055 19.7299 7.90055V6.20055C19.7299 5.14055 18.8599 4.27055 17.7999 4.27055H16.0999C15.7099 4.27055 15.1399 4.06055 14.8399 3.80055L13.2599 2.44055C12.5699 1.85055 11.4399 1.85055 10.7399 2.44055L9.16988 3.81055C8.86988 4.06055 8.29988 4.27055 7.90988 4.27055H6.17988C5.11988 4.27055 4.24988 5.14055 4.24988 6.20055V7.91055C4.24988 8.30055 4.03988 8.86055 3.78988 9.16055L2.43988 10.7505C1.85988 11.4405 1.85988 12.5605 2.43988 13.2505L3.78988 14.8405C4.03988 15.1405 4.24988 15.7005 4.24988 16.0905V17.8005C4.24988 18.8605 5.11988 19.7305 6.17988 19.7305H7.90988C8.29988 19.7305 8.86988 19.9405 9.16988 20.2005L10.7499 21.5605C11.4399 22.1505 12.5699 22.1505 13.2699 21.5605L14.8499 20.2005C15.1499 19.9405 15.7099 19.7305 16.1099 19.7305H17.8099C18.8699 19.7305 19.7399 18.8605 19.7399 17.8005V16.1005C19.7399 15.7105 19.9499 15.1405 20.2099 14.8405L21.5699 13.2605C22.1499 12.5705 22.1499 11.4305 21.5599 10.7405ZM16.1599 10.1105L11.3299 14.9405C11.1899 15.0805 10.9999 15.1605 10.7999 15.1605C10.5999 15.1605 10.4099 15.0805 10.2699 14.9405L7.84988 12.5205C7.55988 12.2305 7.55988 11.7505 7.84988 11.4605C8.13988 11.1705 8.61988 11.1705 8.90988 11.4605L10.7999 13.3505L15.0999 9.05055C15.3899 8.76055 15.8699 8.76055 16.1599 9.05055C16.4499 9.34055 16.4499 9.82055 16.1599 10.1105Z"
+        fill="#E39AA2"
+      />
+
+      <path
+        d="M8.4 12L10.8 14.4L15.6 9.6"
+        stroke="#C4000D"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export async function generateMetadata() {
   const { data } = await fetchEmploymentPageDetails();
@@ -27,7 +49,6 @@ export async function generateMetadata() {
   };
 }
 
-
 interface PageProps {
   params: Promise<{
     lang: string;
@@ -37,123 +58,93 @@ interface PageProps {
   }>;
 }
 
-
 export default async function CareersPage({
   params,
   searchParams,
 }: PageProps) {
-
   const { lang } = await params;
-
   initLingui(lang);
 
+  const parsedPage = Number((await searchParams).page ?? "1");
+  const page =
+    Number.isSafeInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1;
 
-  const page = Number((await searchParams).page) || 1;
-
-  const limit = 1;
-
+  const limit = 12;
 
   const { data } = await fetchEmploymentList(page, limit);
+  const { data: pageDetails } = await fetchEmploymentPageDetails();
 
-  const { data: pageDetails } =
-    await fetchEmploymentPageDetails();
-
-
-  const totalPages = Math.ceil(
-    data ? data.count / limit : 0
-  );
-
+  const totalPages = Math.ceil(data.count / limit);
 
   return (
     <main className="pb-[123px]">
-
-
-
       <PageHero
-              bannerImage={pageDetails.banner_image}
-              mobileBannerImage={pageDetails.banner_image_mobile}
-              tabletBannerImage={pageDetails.banner_image_tablet}
-              breadcrumbs={[{ label: "فرصت های شغلی" }]}
-              
-       />
-      
-
-
+        bannerImage={pageDetails.banner_image}
+        mobileBannerImage={pageDetails.banner_image_mobile}
+        tabletBannerImage={pageDetails.banner_image_tablet}
+        breadcrumbs={[{ label: "فرصت های شغلی" }]}
+      />
 
       <section className="container mt-[68px]">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-x-5 xl:gap-y-6">
-
-
-          {data.results.map((item, index) => (
-
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-y-6">
+          {data.results.map((item) => (
             <Link
+              key={item.id}
               href={`/careers/${item.id}/${item.slug}`}
-              key={index}
-              className="group bg-white rounded-[5px] py-8 px-5 border-[0.6px] border-[#E5E4E4] hover:border-primary transition-all duration-300"
+              className="
+                group block rounded-[5px] border border-[#EEEEEE]
+                bg-white px-4 py-4
+                transition-colors duration-300
+                 md:px-6
+                 hover:border-primary
+              "
             >
-
-              <h3 className="text-lg font-bold group-hover:text-primary transition-all duration-300">
-
+              <h3
+                className="
+                  text-center text-[16px] font-bold leading-8 text-black
+                  transition-colors duration-300
+                  
+                "
+              >
                 {item.job_title}
-
               </h3>
 
+              <hr className="my-4 border-[#BFBFBF]" />
 
+              <ul className="space-y-4 text-[14px]  text-[#353535] ">
+                {item.city && (
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5">
+                      <VerifyIcon />
+                    </span>
 
-              <ul className="space-y-4 mt-6 text-lg text-[#424141]">
-
-                <li className="flex items-center gap-2">
-
-                  <Flag2 size={20} color="#949494" />
-
-                  {item.city}
-
-                </li>
-
-
-
-                {item.tag.map((tag, index) => (
-
-                  <li
-                    key={index}
-                    className="flex items-center gap-2"
-                  >
-
-                    <Flag2 size={20} color="#949494" />
-
-                    {tag}
-
+                    <span>{item.city}</span>
                   </li>
+                )}
 
+                {item.tag?.map((tag, index) => (
+                  <li
+                    key={`${item.id}-${index}`}
+                    className="flex items-start gap-3"
+                  >
+                    <span className="mt-0.5">
+                      <VerifyIcon />
+                    </span>
+
+                    <span>{tag}</span>
+                  </li>
                 ))}
-
-
               </ul>
-
-
             </Link>
-
           ))}
-
-
         </div>
 
-
-
-        <div className="flex justify-center mt-4 w-full">
-
-          <Pagination
-            currentPage={page}
-            totalPages={totalPages}
-          />
-
-        </div>
-
-
+        {totalPages > 1 && (
+          <div className="mt-8 flex w-full justify-center">
+            <Pagination currentPage={page} totalPages={totalPages} />
+          </div>
+        )}
       </section>
-
-
     </main>
   );
 }
