@@ -220,12 +220,16 @@ msgstr "اختيار المحافظة إلزامي"
 msgid "انتخاب به عنوان ادرس پیش فرض"
 msgstr "اختيار كعنوان افتراضي"
 
+#: src/components/products/kashef-search.tsx:252
+msgid "انتخاب تصویر"
+msgstr "اختيار صورة"
+
 #: src/components/representatives/apply-legal-form.tsx:70
 #: src/components/representatives/apply-form.tsx:60
 msgid "انتخاب شهر الزامی است"
 msgstr "اختيار المدينة إلزامي"
 
-#: src/components/products/kashef-search.tsx:211
+#: src/components/products/kashef-search.tsx:242
 msgid "انتخاب کنید"
 msgstr "اختر ملفًا"
 
@@ -359,14 +363,15 @@ msgid "بستن منو"
 msgstr "إغلاق القائمة"
 
 #: src/components/home/sections/home-album.tsx:246
+#: src/components/about-us/photo-album.tsx:110
 msgid "بستن ویدئو"
 msgstr "إغلاق الفيديو"
 
-#: src/components/products/kashef-search.tsx:121
+#: src/components/products/kashef-search.tsx:127
 msgid "بگرد و کشف کن"
 msgstr "استكشف واكتشف"
 
-#: src/components/products/kashef-search.tsx:83
+#: src/components/products/kashef-search.tsx:85
 msgid "بگرد و کشف کن. با جست و جوی تصویری، محصول مورد نظرت رو پیدا کن."
 msgstr "استكشف واكتشف. اعثر على المنتج الذي تبحث عنه باستخدام البحث بالصور."
 
@@ -402,6 +407,7 @@ msgstr "إنهاء الخدمة"
 
 #: src/components/home/sections/home-album.tsx:116
 #: src/components/home/sections/home-album.tsx:149
+#: src/components/about-us/photo-album.tsx:54
 msgid "پخش ویدئو"
 msgstr "تشغيل الفيديو"
 
@@ -430,6 +436,10 @@ msgstr "فشل الدفع"
 #: src/app/[lang]/profile/(profile)/page.tsx:14
 msgid "پروفایل"
 msgstr "الملف الشخصي"
+
+#: src/components/products/kashef-search.tsx:198
+msgid "پیش‌نمایش تصویر انتخاب‌شده"
+msgstr "معاينة الصورة المختارة"
 
 #: src/components/products/filter.tsx:270
 msgid "تا"
@@ -475,7 +485,7 @@ msgstr "خصم(ريال)"
 msgid "تصاویر باستان"
 msgstr "صور باستان"
 
-#: src/components/products/kashef-search.tsx:201
+#: src/components/products/kashef-search.tsx:232
 msgid "تصویر را بکشید و رها کنید"
 msgstr "اسحب الصورة وأفلتها"
 
@@ -495,7 +505,7 @@ msgstr "إجمالي عدد العناصر"
 msgid "تعیین حوزه فعالیت الزامی است"
 msgstr "تحديد مجال النشاط إلزامي"
 
-#: src/components/products/kashef-search.tsx:191
+#: src/components/products/kashef-search.tsx:222
 msgid "تغییر تصویر"
 msgstr "تغيير الصورة"
 
@@ -637,15 +647,15 @@ msgid "جزییات سفارش"
 msgstr "تفاصيل الطلب"
 
 #: src/components/representatives/map-filter.tsx:170
-#: src/components/products/kashef-search.tsx:255
+#: src/components/products/kashef-search.tsx:293
 msgid "جست و جو"
 msgstr "بحث"
 
-#: src/components/products/kashef-search.tsx:136
+#: src/components/products/kashef-search.tsx:148
 msgid "جست و جو با تصویر"
 msgstr "البحث بالصورة"
 
-#: src/components/products/kashef-search.tsx:150
+#: src/components/products/kashef-search.tsx:169
 msgid "جست و جو با لینک"
 msgstr "البحث بالرابط"
 
@@ -676,6 +686,10 @@ msgstr "حذف"
 #: src/components/profile/delete-address-dialog.tsx:49
 msgid "حذف آدرس"
 msgstr "حذف العنوان"
+
+#: src/components/products/kashef-search.tsx:207
+msgid "حذف تصویر"
+msgstr "حذف الصورة"
 
 #: src/components/ui/navbar.tsx:363
 #: src/components/ui/navbar.tsx:364
@@ -1342,7 +1356,7 @@ msgstr "الفلاتر"
 msgid "قابل پرداخت"
 msgstr "قابل للدفع"
 
-#: src/components/products/kashef-search.tsx:261
+#: src/components/products/kashef-search.tsx:298
 msgid "قدرت گرفته از"
 msgstr "بدعم من"
 
@@ -1389,7 +1403,8 @@ msgstr "بكالوريوس"
 msgid "کارشناسی ارشد و بالاتر"
 msgstr "ماجستير وأعلى"
 
-#: src/components/products/kashef-search.tsx:263
+#: src/components/products/kashef-search.tsx:78
+#: src/components/products/kashef-search.tsx:300
 msgid "کاشف"
 msgstr "كاشف"
 
@@ -1527,7 +1542,7 @@ msgstr "يرجى اختيار المستوى التعليمي"
 msgid "لطفا وارد شوید"
 msgstr "يرجى تسجيل الدخول"
 
-#: src/components/products/kashef-search.tsx:227
+#: src/components/products/kashef-search.tsx:262
 msgid "لطفاً یک فایل تصویر انتخاب کنید."
 msgstr "يرجى اختيار ملف صورة."
 
@@ -1540,7 +1555,7 @@ msgstr "ملغي"
 msgid "لیست محصولات"
 msgstr "قائمة المنتجات"
 
-#: src/components/products/kashef-search.tsx:234
+#: src/components/products/kashef-search.tsx:272
 msgid "لینک مستقیم تصویر"
 msgstr "الرابط المباشر للصورة"
 
@@ -2006,6 +2021,8 @@ msgid "وضعیت نظام وظیفه خود را انتخاب کنید"
 msgstr "اختر حالتك في الخدمة العسكرية"
 
 #: src/components/home/sections/home-album.tsx:62
+#: src/components/about-us/photo-album.tsx:104
+#: src/components/about-us/photo-album.tsx:132
 msgid "ویدئوی باستان"
 msgstr "فيديو باستان"
 
@@ -2022,7 +2039,7 @@ msgstr "تعديل سلة التسوق"
 msgid "ویرایش شماره موبایل"
 msgstr "تعديل رقم الهاتف المحمول"
 
-#: src/components/products/kashef-search.tsx:205
+#: src/components/products/kashef-search.tsx:236
 msgid "یا فایل را از سیستم"
 msgstr "أو اختر ملفًا من جهازك"
 

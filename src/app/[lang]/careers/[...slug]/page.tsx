@@ -71,7 +71,7 @@ export default async function CareerDetailPage({ params }: PageProps) {
         </nav>
       </section>
       <section className="container mt-[60px]">
-        <h2 className="mx-auto w-fit border-b-2 border-primary pb-2 text-center text-2xl font-extrabold">
+        <h2 className="mx-auto w-fit border-b-2 border-primary pb-2 text-center text-[18px] xl:text-2xl font-extrabold">
           {data.job_title}
         </h2>
         <div className="mt-[58px] rounded-[5px] border-[0.6px] border-[#F2F2F2] bg-white px-5 py-7">
