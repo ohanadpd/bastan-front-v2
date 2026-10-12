@@ -4,6 +4,7 @@ import * as React from "react";
 
 import { NewCard } from "@/components/news/new-card";
 import BlogsPostSlider from "../../../components/news/post-slider";
+import { msg } from "@lingui/core/macro";
 
 import {
   fetchArticleCategories,
@@ -42,7 +43,7 @@ interface PageProps {
 export default async function ArticlesPage({ params }: PageProps) {
   const { lang } = await params;
 
-  initLingui(lang);
+  const i18n = initLingui(lang);
 
   const { data: categories } = await fetchArticleCategories();
 
@@ -79,7 +80,7 @@ export default async function ArticlesPage({ params }: PageProps) {
         bannerImage={pageDetails.banner_image}
         mobileBannerImage={pageDetails.banner_image_mobile}
         tabletBannerImage={pageDetails.banner_image_tablet}
-        breadcrumbs={[{ label: "مقالات" }]}
+        breadcrumbs={[{ label: i18n._(msg`مقالات`) }]}
       />
 
       <section className="container mt-14">

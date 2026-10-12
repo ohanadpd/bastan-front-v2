@@ -5,7 +5,7 @@ import Pagination from "@/components/ui/pagination";
 import PageHero from "@/components/shared/page-hero";
 import LocalizedLink from "@/components/localized-link";
 import KashefSearch from "@/components/products/kashef-search";
-
+import { msg } from "@lingui/core/macro";
 import { initLingui } from "@/initLingui";
 import { Trans } from "@lingui/react/macro";
 
@@ -48,7 +48,7 @@ export default async function ProductsPage({
 }: PageProps) {
   const { lang } = await params;
 
-  initLingui(lang);
+  const i18n = initLingui(lang);
 
   const { data: pageDetails } = await fetchProductPageDetails();
 
@@ -78,12 +78,10 @@ export default async function ProductsPage({
         bannerImage={pageDetails.banner_image}
         mobileBannerImage={pageDetails.banner_image_mobile}
         tabletBannerImage={pageDetails.banner_image_tablet}
-        breadcrumbs={[{ label: "محصولات" }]}
+        breadcrumbs={[{ label: i18n._(msg`محصولات`) }]}
       />
 
       <section className="container pt-14">
-        
-
         <div className="mt-[54px] flex gap-5">
           <div className="hidden w-[265px] shrink-0 xl:block">
             <ProductsFilter />
@@ -109,10 +107,7 @@ export default async function ProductsPage({
 
             {totalPages > 1 && (
               <div className="mt-4 flex w-full justify-center">
-                <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                />
+                <Pagination currentPage={currentPage} totalPages={totalPages} />
               </div>
             )}
           </div>

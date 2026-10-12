@@ -347,8 +347,8 @@ export default function Navbar({
                       : "opacity-0",
                   )}
                   style={{
-                    maskImage: 'url("/images/icons/icon2.svg")',
-                    WebkitMaskImage: 'url("/images/icons/icon2.svg")',
+                    maskImage: 'url("/images/icons/Icon2.svg")',
+                    WebkitMaskImage: 'url("/images/icons/Icon2.svg")',
                     maskSize: "contain",
                     WebkitMaskSize: "contain",
                     maskRepeat: "no-repeat",

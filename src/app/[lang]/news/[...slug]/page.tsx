@@ -1,124 +1,138 @@
-import { initLingui } from '@/initLingui';
-import { Trans } from '@lingui/react/macro';
-import * as React from 'react';
-import BlogsPostSlider from '@/components/news/post-slider';
-import LocalizedLink from '@/components/localized-link';
-import { ArrowSquareLeft } from 'iconsax-reactjs';
-import Image from 'next/image';
-import { fetchNewsDetails, fetchNewsList, fetchNewsPageDetails } from '@/lib/services/news.services';
-import { fetchArticleList } from '@/lib/services/articles.services';
-import Link from '@/components/localized-link';
-import PageHero from '@/components/shared/page-hero';
+import { initLingui } from "@/initLingui";
+import { Trans } from "@lingui/react/macro";
+import * as React from "react";
+import BlogsPostSlider from "@/components/news/post-slider";
+import LocalizedLink from "@/components/localized-link";
+import { ArrowSquareLeft } from "iconsax-reactjs";
+import Image from "next/image";
+import {
+  fetchNewsDetails,
+  fetchNewsList,
+  fetchNewsPageDetails,
+} from "@/lib/services/news.services";
+import { fetchArticleList } from "@/lib/services/articles.services";
+import Link from "@/components/localized-link";
+import PageHero from "@/components/shared/page-hero";
+import { msg } from "@lingui/core/macro";
 
 interface PageProps {
-    params: Promise<{
-        lang: string;
-        slug: string[]
-    }>;
-
+  params: Promise<{
+    lang: string;
+    slug: string[];
+  }>;
 }
 
 export async function generateMetadata({ params }: PageProps) {
-    const { slug } = await params;
-    const { data } = (await fetchNewsDetails(slug[0]))
-    
-    return {
-        title: data.page_title,
-        description: data.page_description,
-        keywords: data.page_keywords,
-        openGraph: {
-            title: data.page_title,
-            description: data.page_description,
-        },
-    }
+  const { slug } = await params;
+  const { data } = await fetchNewsDetails(slug[0]);
+
+  return {
+    title: data.page_title,
+    description: data.page_description,
+    keywords: data.page_keywords,
+    openGraph: {
+      title: data.page_title,
+      description: data.page_description,
+    },
+  };
 }
 
 export default async function NewsDetailPage({ params }: PageProps) {
-    const { lang, slug } = await params;
-    const i18n = initLingui(lang);
+  const { lang, slug } = await params;
+  const i18n = initLingui(lang);
 
-    const { data } = await fetchNewsDetails(slug[0]);
-    const { data: latestArticles } = await fetchArticleList(1, 4);
-    const { data: latestNews } = await fetchNewsList(1, 4);
-     const { data: pageDetails } =
-        await fetchNewsPageDetails();
+  const { data } = await fetchNewsDetails(slug[0]);
+  const { data: latestArticles } = await fetchArticleList(1, 4);
+  const { data: latestNews } = await fetchNewsList(1, 4);
+  const { data: pageDetails } = await fetchNewsPageDetails();
 
-    return (
-        <main className='pb-[155px]'>
-            <PageHero
-                         bannerImage={pageDetails.banner_image}
-                         mobileBannerImage={pageDetails.banner_image_mobile}
-                         tabletBannerImage={pageDetails.banner_image_tablet}
-                         breadcrumbs={[{ label: "اخبار" }]}
-            
-                  />
-            <div className='container flex flex-col xl:flex-row gap-5 mt-12'>
-                <div className='w-full'>
-                    <div className='flex flex-col xl:flex-row gap-2 xl:justify-between'>
-                        <h2 className='text-xl font-bold text-[#010101]'>
-                            {data.name}
-                        </h2>
-                        <span className='text-xs text-[#7D7D7D]'>
-                            {data.jcreated}
-                        </span>
-                    </div>
-                    <div className='mt-[30px]'>
-                        <div className='text-sm text-[#383838] [&>p>img]:!w-full [&>p>img]:!h-auto [&>p>img]:object-cover' dangerouslySetInnerHTML={{ __html: data.content }} />
-                    </div>
-                    <hr className='mt-10 border-[#9C9C9C] border-[0.6px]' />
-                </div>
-                <div className='w-full xl:max-w-[266px] shrink-0'>
-                    <div className='flex flex-col gap-2 sticky top-[100px]'>
-                        <div className='bg-white p-5 rounded-[10px] border border-[#F2F2F2]'>
-                            <h3 className='text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]'>
-                                <Trans>
-                                    جدیدترین اخبار
-                                </Trans>
-                            </h3>
-                            <ul className="mt-4 space-y-4">
-                                {latestNews.results.map((news, index) => (
-                                    <li key={index}>
-                                        <LocalizedLink href={`/news/${news.pk}/${news.slug}`} className='group flex gap-2 text-sm text-[#575757] hover:text-primary transition-all duration-300'>
-                                            <span className='text-xs text-[#575757] group-hover:text-primary transition-all duration-300'>
-                                                <ArrowSquareLeft size={24} color='currentColor' />
-                                            </span>
-                                            {news.name}
-                                        </LocalizedLink>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className='bg-white p-5 rounded-[10px] border border-[#F2F2F2]'>
-                            <h3 className='text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]'>
-                                <Trans>
-                                    جدیدترین مقالات
-                                </Trans>
-                            </h3>
-                            <ul className="mt-4 space-y-4">
-                                {latestArticles.results.map((article, index) => (
-                                    <li key={index}>
-                                        <LocalizedLink href={`/articles/${article.pk}/${article.slug}`} className='group flex gap-2 text-sm text-[#575757] hover:text-primary transition-all duration-300'>
-                                            <span className='text-xs text-[#575757] group-hover:text-primary transition-all duration-300'>
-                                                <ArrowSquareLeft size={24} color='currentColor' />
-                                            </span>
-                                            {article.name}
-                                        </LocalizedLink>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
+  return (
+    <main className="pb-[155px]">
+      <div className="container">
+        <PageHero
+         contained
+          bannerImage={pageDetails.banner_image}
+          mobileBannerImage={pageDetails.banner_image_mobile}
+          tabletBannerImage={pageDetails.banner_image_tablet}
+          breadcrumbs={[
+            {
+              label: i18n._(msg`اخبار`),
+              href: "/news",
+            },
+            {
+              label: data.name,
+            },
+          ]}
+          className="overflow-hidden rounded-[10px] xl:!h-auto xl:aspect-[2.8/1] mt-[140px]"
+        />
+      </div>
+      <div className="container flex flex-col xl:flex-row gap-5 mt-12">
+        <div className="w-full">
+          <div className="flex flex-col xl:flex-row gap-2 xl:justify-between">
+            <h2 className="text-xl font-bold text-[#010101]">{data.name}</h2>
+            <span className="text-xs text-[#7D7D7D]">{data.jcreated}</span>
+          </div>
+          <div className="mt-[30px]">
+            <div
+              className="text-sm text-[#383838] [&>p>img]:!w-full [&>p>img]:!h-auto [&>p>img]:object-cover"
+              dangerouslySetInnerHTML={{ __html: data.content }}
+            />
+          </div>
+          <hr className="mt-10 border-[#9C9C9C] border-[0.6px]" />
+        </div>
+        <div className="w-full xl:max-w-[266px] shrink-0">
+          <div className="flex flex-col gap-2 sticky top-[100px]">
+            <div className="bg-white p-5 rounded-[10px] border border-[#F2F2F2]">
+              <h3 className="text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]">
+                <Trans>جدیدترین اخبار</Trans>
+              </h3>
+              <ul className="mt-4 space-y-4">
+                {latestNews.results.map((news, index) => (
+                  <li key={index}>
+                    <LocalizedLink
+                      href={`/news/${news.pk}/${news.slug}`}
+                      className="group flex gap-2 text-sm text-[#575757] hover:text-primary transition-all duration-300"
+                    >
+                      <span className="text-xs text-[#575757] group-hover:text-primary transition-all duration-300">
+                        <ArrowSquareLeft size={24} color="currentColor" />
+                      </span>
+                      {news.name}
+                    </LocalizedLink>
+                  </li>
+                ))}
+              </ul>
             </div>
-            {data?.related_posts?.length > 0 && <div className='container mt-[50px]'>
-                <h2 className='text-xl border-b-2 border-primary w-fit font-bold text-[#252525] mb-7'>
-                    <Trans>
-                        مطالب مرتبط
-                    </Trans>
-                </h2>
-                <BlogsPostSlider data={data.related_posts} type='news' />
-            </div>}
-        </main>
-    );
+            <div className="bg-white p-5 rounded-[10px] border border-[#F2F2F2]">
+              <h3 className="text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]">
+                <Trans>جدیدترین مقالات</Trans>
+              </h3>
+              <ul className="mt-4 space-y-4">
+                {latestArticles.results.map((article, index) => (
+                  <li key={index}>
+                    <LocalizedLink
+                      href={`/articles/${article.pk}/${article.slug}`}
+                      className="group flex gap-2 text-sm text-[#575757] hover:text-primary transition-all duration-300"
+                    >
+                      <span className="text-xs text-[#575757] group-hover:text-primary transition-all duration-300">
+                        <ArrowSquareLeft size={24} color="currentColor" />
+                      </span>
+                      {article.name}
+                    </LocalizedLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {data?.related_posts?.length > 0 && (
+        <div className="container mt-[50px]">
+          <h2 className="text-xl border-b-2 border-primary w-fit font-bold text-[#252525] mb-7">
+            <Trans>مطالب مرتبط</Trans>
+          </h2>
+          <BlogsPostSlider data={data.related_posts} type="news" />
+        </div>
+      )}
+    </main>
+  );
 }

@@ -1,15 +1,17 @@
 "use client";
 
 import { useId } from "react";
+import { Trans } from "@lingui/react/macro";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
 import Link from "@/components/localized-link";
-
+import FactoryProjectCard, {
+  type FactoryProjectData,
+} from "../factory-project-card";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import FactoryProjectCard, { FactoryProjectData } from "../factory-project-card";
 
 const projects: FactoryProjectData[] = Array.from(
   { length: 8 },
@@ -47,21 +49,21 @@ export default function FactoryProjectsSection({
       <div className="flex flex-col items-center text-center">
         <div className="w-fit">
           <h2 className="text-[17px] font-bold leading-[28px] text-[#252525] lg:text-[20px]">
-            مشارکت در تولید
+            <Trans>مشارکت در تولید</Trans>
           </h2>
 
           <div className="mt-[6px] h-[2px] w-full bg-primary" />
         </div>
 
         <p className="mt-2 text-[14px] text-[#666666]">
-          محصولات تولید شده در شرکت کاشی و سرامیک باستان
+          <Trans>محصولات تولید شده در شرکت کاشی و سرامیک باستان</Trans>
         </p>
 
         <Link
           href={moreHref}
           className="mt-5 flex h-[32px] items-center justify-center rounded-[5px] border border-primary px-4 text-[12px] text-primary transition-colors hover:bg-primary hover:text-white"
         >
-          اطلاعات بیشتر
+          <Trans>اطلاعات بیشتر</Trans>
         </Link>
       </div>
 

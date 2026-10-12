@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import type { LogoBand } from "@/types/home.types";
 import { getMediaUrl } from "@/lib/utils";
+import { Trans } from "@lingui/react/macro";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,13 +18,15 @@ export default function BrandsSectionTheme3({ data }: { data: LogoBand[] }) {
       <div className="container">
         <div className="mb-[50px] flex flex-col items-center max-xl:mb-8">
           <div className="w-fit">
-            <h2 className="text-[20px] font-bold text-black">همراهان ما</h2>
+            <h2 className="text-[20px] font-bold text-black">
+              <Trans>همراهان ما</Trans>
+            </h2>
 
             <div className="mt-[2px] h-[2px] w-full bg-primary" />
           </div>
 
           <p className="mt-2 text-center text-[14px] text-[#868686]">
-            برند های همراه باستان
+            <Trans>برند های همراه باستان</Trans>
           </p>
         </div>
 

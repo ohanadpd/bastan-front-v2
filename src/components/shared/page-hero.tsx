@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import Link from "@/components/localized-link";
+import { Trans } from "@lingui/react/macro";
 
 type PageHeroProps = {
   bannerImage?: string | null;
@@ -10,6 +11,8 @@ type PageHeroProps = {
     href?: string;
   }[];
   homeLabel?: string;
+  className?: string;
+  contained?: boolean;
 };
 
 type BannerStyle = CSSProperties & {
@@ -25,7 +28,9 @@ export default function PageHero({
   mobileBannerImage,
   tabletBannerImage,
   breadcrumbs = [],
-  homeLabel = "خانه",
+  homeLabel,
+  className = "",
+  contained = false,
 }: PageHeroProps) {
   const desktopBanner = bannerImage || FALLBACK_BANNER;
 
@@ -37,17 +42,22 @@ export default function PageHero({
 
   return (
     <header
-      className="
-        relative h-[550px] w-full bg-cover bg-center
-        xl:h-[460px]
-        [background-image:var(--banner-mobile)]
-        md:[background-image:var(--banner-tablet)]
-        xl:[background-image:var(--banner-desktop)]
-      "
+      className={`
+      relative h-[550px] w-full bg-cover bg-center
+      xl:h-[460px]
+      [background-image:var(--banner-mobile)]
+      md:[background-image:var(--banner-tablet)]
+      xl:[background-image:var(--banner-desktop)]
+      ${className}
+    `}
       style={bannerStyle}
     >
       {breadcrumbs.length > 0 && (
-        <div className="container absolute inset-x-0 bottom-4 flex justify-center md:justify-start">
+        <div
+          className={`absolute bottom-4 flex justify-center md:justify-start ${
+            contained ? "inset-x-4" : "container inset-x-0"
+          }`}
+        >
           <nav
             aria-label="Breadcrumb"
             className="inline-flex rounded-[18px] bg-[#FFFFFFCF] px-[18px] py-[10px] text-[12px]"
@@ -55,7 +65,7 @@ export default function PageHero({
             <ol className="flex flex-wrap items-center gap-1">
               <li>
                 <Link href="/" className="text-[#000000]">
-                  {homeLabel}
+                  {homeLabel ?? <Trans>خانه</Trans>}
                 </Link>
               </li>
 

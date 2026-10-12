@@ -10,7 +10,7 @@ import { fetchContactUsPage } from '@/lib/services/contact-us.services';
 import Link from '@/components/localized-link'
 import { getMediaUrl } from '@/lib/utils';
 import PageHero from '@/components/shared/page-hero';
-
+import { msg } from "@lingui/core/macro";
 export async function generateMetadata() {
     const { data } = (await fetchContactUsPage())
     return {
@@ -23,7 +23,6 @@ export async function generateMetadata() {
         },
     }
 }
-
 interface PageProps {
     params: Promise<{
         lang: string
@@ -42,8 +41,10 @@ export default async function ContactUsPage({ params }: PageProps) {
                     bannerImage={data.banner_image}
                     mobileBannerImage={data.banner_image_mobile}
                     tabletBannerImage={data.banner_image_tablet}
-                    breadcrumbs={[{ label: "تماس با ما " }]}
-                  />
+                    breadcrumbs={[
+                    { label: i18n._(msg`تماس با ما`) },
+                    ]}
+                                    />
             
             {setting.latitude && setting.longitude && <section className='container mt-[46px]'>
                 <h3 className='text-lg xl:text-xl border-b-2 border-primary w-fit mx-auto font-bold text-[#010101] text-center'>

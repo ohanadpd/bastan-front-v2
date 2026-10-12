@@ -7,6 +7,7 @@ import { fetchAboutUsPage } from "@/lib/services/about-us.services";
 import Link from "@/components/localized-link";
 import PageHero from "@/components/shared/page-hero";
 import PhotoAlbum, { AlbumImage } from "@/components/about-us/photo-album";
+import { msg } from "@lingui/core/macro";
 
 export async function generateMetadata() {
   const { data } = await fetchAboutUsPage();
@@ -113,7 +114,7 @@ export default async function AboutUsPage({ params }: PageProps) {
   const { data } = await fetchAboutUsPage();
   const { lang } = await params;
 
-  initLingui(lang);
+  const i18n = initLingui(lang);
 
   return (
     <main className="pb-[155px]">
@@ -121,7 +122,9 @@ export default async function AboutUsPage({ params }: PageProps) {
         bannerImage={data.banner_image}
         mobileBannerImage={data.banner_image_mobile}
         tabletBannerImage={data.banner_image_tablet}
-        breadcrumbs={[{ label: "درباره ما" }]}
+        breadcrumbs={[
+          { label: i18n._(msg`درباره ما`) },
+        ]}
       />
 
       <section className="container mt-[70px]">

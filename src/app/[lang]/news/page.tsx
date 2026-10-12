@@ -15,15 +15,12 @@ import {
 
 import { fetchSettingsData } from "@/lib/services/settigns.services";
 
-import {
-  ArticleCatergoriesList,
-  ArticleList,
-} from "@/types/articles.types";
+import { ArticleCatergoriesList, ArticleList } from "@/types/articles.types";
 
 import NewsHeroTheme3 from "@/components/news/hero";
 import NewsHero from "@/components/news/hero";
 import PageHero from "@/components/shared/page-hero";
-
+import { msg } from "@lingui/core/macro";
 
 export async function generateMetadata() {
   const { data } = await fetchNewsPageDetails();
@@ -39,59 +36,36 @@ export async function generateMetadata() {
   };
 }
 
-
 interface PageProps {
   params: Promise<{
     lang: string;
   }>;
 }
 
-
-export default async function BlogsPage({
-  params,
-}: PageProps) {
-
+export default async function BlogsPage({ params }: PageProps) {
   const { lang } = await params;
 
-  initLingui(lang);
+  const i18n = initLingui(lang);
 
+  const { data: categories } = await fetchNewsCategories();
 
+  const { data: latestArticles } = await fetchNewsList(1, 4);
 
-  const { data: categories } =
-    await fetchNewsCategories();
+  const { data: settings } = await fetchSettingsData();
 
-
-  const { data: latestArticles } =
-    await fetchNewsList(1, 4);
-
-
-
-  const { data: settings } =
-    await fetchSettingsData();
-
-
-
-  const { data: pageDetails } =
-    await fetchNewsPageDetails();
-
-
+  const { data: pageDetails } = await fetchNewsPageDetails();
 
   let groupedNews: {
     category: ArticleCatergoriesList;
     articles: ArticleList[];
   }[] = [];
 
-
-
   for (const ctg of categories.results) {
-
-    const { data: latestCategoryNews } =
-      await fetchNewsList(
-        1,
-        12,
-        String(ctg.pk),
-      );
-
+    const { data: latestCategoryNews } = await fetchNewsList(
+      1,
+      12,
+      String(ctg.pk),
+    );
 
     groupedNews = [
       ...groupedNews,
@@ -100,128 +74,66 @@ export default async function BlogsPage({
         articles: latestCategoryNews.results,
       },
     ];
-
   }
 
-
-
   return (
-
     <main className="pb-[155px]">
-
-
-
-     <PageHero
-             bannerImage={pageDetails.banner_image}
-             mobileBannerImage={pageDetails.banner_image_mobile}
-             tabletBannerImage={pageDetails.banner_image_tablet}
-             breadcrumbs={[{ label: "اخبار" }]}
-
+      <PageHero
+        bannerImage={pageDetails.banner_image}
+        mobileBannerImage={pageDetails.banner_image_mobile}
+        tabletBannerImage={pageDetails.banner_image_tablet}
+        breadcrumbs={[{ label: i18n._(msg`اخبار`) }]}
       />
-     
-
-
 
       <section className="container mt-14">
-
-
         <h2 className="text-xl border-b-2 border-primary w-fit font-bold text-[#252525]">
-
-          <Trans>
-            جدید ترین اخبار {settings.name}
-          </Trans>
-
+          <Trans>جدید ترین اخبار {settings.name}</Trans>
         </h2>
 
-
-
         <p className="text-sm text-[#626262] mt-2">
-
-          <Trans>
-            در {settings.name} چه اتفاقی می افتد؟
-          </Trans>
-
+          <Trans>در {settings.name} چه اتفاقی می افتد؟</Trans>
         </p>
 
-
-
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mt-12">
-
-
           {latestArticles.results[0] && (
-
             <LocalizedLink
               href={`/news/${latestArticles.results[0].pk}/${latestArticles.results[0].slug}`}
             >
-
               <NewCard
                 title={latestArticles.results[0].name}
                 description={latestArticles.results[0].description}
                 image={latestArticles.results[0].image}
                 className="w-full h-full"
               />
-
             </LocalizedLink>
-
           )}
 
-
-
           <div className="h-full grid grid-rows-3 min-h-[623px] gap-[14px]">
-
-
-            {latestArticles?.results?.slice(1, 4)?.map(
-              (item, index) => (
-
-                <LocalizedLink
-                  href={`/news/${item.pk}/${item.slug}`}
-                  key={index}
-                  title="خبر شماره یک"
-                >
-
-                  <NewCard
-                    title={item.name}
-                    description={item.description}
-                    image={item.image}
-                    className="w-full h-full"
-                  />
-
-                </LocalizedLink>
-
-              )
-            )}
-
-
+            {latestArticles?.results?.slice(1, 4)?.map((item, index) => (
+              <LocalizedLink
+                href={`/news/${item.pk}/${item.slug}`}
+                key={index}
+                title="خبر شماره یک"
+              >
+                <NewCard
+                  title={item.name}
+                  description={item.description}
+                  image={item.image}
+                  className="w-full h-full"
+                />
+              </LocalizedLink>
+            ))}
           </div>
-
-
         </div>
-
-
       </section>
 
-
-
-
       {groupedNews.map(
-
         (item) =>
-
           item.articles.length > 0 && (
-
-            <section
-              key={item.category.pk}
-              className="container mt-[88px] "
-            >
-
-
+            <section key={item.category.pk} className="container mt-[88px] ">
               <h2 className="text-xl font-bold text-[#252525] border-b-2 border-primary w-fit">
-
                 {item.category.name}
-
               </h2>
-
-
 
               <div
                 className="text-sm text-[#626262] mt-2"
@@ -230,27 +142,12 @@ export default async function BlogsPage({
                 }}
               />
 
-
-
               <div className="mt-12">
-
-                <BlogsPostSlider
-                  data={item.articles}
-                  type="news"
-                />
-
+                <BlogsPostSlider data={item.articles} type="news" />
               </div>
-
-
-
             </section>
-
-          )
-
+          ),
       )}
-
-
     </main>
-
   );
 }

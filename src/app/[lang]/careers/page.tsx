@@ -7,6 +7,7 @@ import {
 import Link from "@/components/localized-link";
 import Pagination from "@/components/ui/pagination";
 import PageHero from "@/components/shared/page-hero";
+import { msg } from "@lingui/core/macro";
 
 function VerifyIcon() {
   return (
@@ -58,12 +59,9 @@ interface PageProps {
   }>;
 }
 
-export default async function CareersPage({
-  params,
-  searchParams,
-}: PageProps) {
+export default async function CareersPage({ params, searchParams }: PageProps) {
   const { lang } = await params;
-  initLingui(lang);
+  const i18n = initLingui(lang);
 
   const parsedPage = Number((await searchParams).page ?? "1");
   const page =
@@ -82,7 +80,7 @@ export default async function CareersPage({
         bannerImage={pageDetails.banner_image}
         mobileBannerImage={pageDetails.banner_image_mobile}
         tabletBannerImage={pageDetails.banner_image_tablet}
-        breadcrumbs={[{ label: "فرصت های شغلی" }]}
+        breadcrumbs={[{ label: i18n._(msg`فرصت های شغلی`) }]}
       />
 
       <section className="container mt-[68px]">

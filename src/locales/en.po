@@ -62,7 +62,7 @@ msgstr "Address edited successfully."
 msgid "آدرس باید حداقل ۲ کاراکتر باشد"
 msgstr "Address must be at least 2 characters"
 
-#: src/app/[lang]/contact-us/page.tsx:50
+#: src/app/[lang]/contact-us/page.tsx:51
 msgid "آدرس کارخانه"
 msgstr "Factory Address"
 
@@ -74,7 +74,7 @@ msgstr "My Addresses"
 msgid "آدرسی وجود ندارد!"
 msgstr "No address exists!"
 
-#: src/app/[lang]/about-us/page.tsx:183
+#: src/app/[lang]/about-us/page.tsx:186
 msgid "آلبوم تصاویر"
 msgstr "Photo Gallery"
 
@@ -87,6 +87,8 @@ msgid "اجاره ای"
 msgstr "Rented"
 
 #: src/components/ui/navbar.tsx:115
+#: src/app/[lang]/news/page.tsx:85
+#: src/app/[lang]/news/[...slug]/page.tsx:59
 msgid "اخبار"
 msgstr "News"
 
@@ -131,6 +133,10 @@ msgstr "Province"
 msgid "استعلام از کارخانه"
 msgstr "Factory Inquiry"
 
+#: src/components/home/sections/factory-projects-section.tsx:66
+msgid "اطلاعات بیشتر"
+msgstr "More Information"
+
 #: src/components/careers/resume-form.tsx:205
 msgid "اطلاعات تحصیلی و شغلی"
 msgstr "Educational and Professional Information"
@@ -164,7 +170,7 @@ msgstr "Enter your information to register."
 msgid "اعمال فیلتر"
 msgstr "Apply Filters"
 
-#: src/app/[lang]/about-us/page.tsx:145
+#: src/app/[lang]/about-us/page.tsx:148
 msgid "افتخارات و دستاورد های کارخانه"
 msgstr "Factory Honors and Achievements"
 
@@ -240,11 +246,11 @@ msgstr "This course will not be included in the final form"
 msgid "این سابقه کاری در فرم نهایی درج نخواهد شد"
 msgstr "This work experience will not be included in the final form"
 
-#: src/app/[lang]/representatives/apply/page.tsx:43
+#: src/app/[lang]/representatives/apply/page.tsx:42
 msgid "این فرصت برای شماست"
 msgstr "This opportunity is for you"
 
-#: src/app/[lang]/contact-us/page.tsx:77
+#: src/app/[lang]/contact-us/page.tsx:78
 msgid "با ما در ارتباط باشید"
 msgstr "Stay in touch with us"
 
@@ -272,7 +278,7 @@ msgstr "Open menu"
 msgid "بازگشت به صفحه اول سایت"
 msgstr "Return to Homepage"
 
-#: src/app/[lang]/about-us/page.tsx:187
+#: src/app/[lang]/about-us/page.tsx:190
 msgid "باستان از لنز دوربین"
 msgstr "Bastan Through the Lens"
 
@@ -324,9 +330,13 @@ msgstr "Product Overview"
 
 #: src/components/products/product-content.tsx:99
 #: src/components/products/filter.tsx:214
-#: src/app/[lang]/products/[...slug]/page.tsx:124
+#: src/app/[lang]/products/[...slug]/page.tsx:172
 msgid "برند"
 msgstr "Brand"
+
+#: src/components/home/sections/brands-section.tsx:29
+msgid "برند های همراه باستان"
+msgstr "Bastan’s partner brands"
 
 #: src/components/ui/navbar.tsx:227
 msgid "بستن منو"
@@ -527,6 +537,7 @@ msgid "تلفن محل کار"
 msgstr "Work Phone"
 
 #: src/components/ui/navbar.tsx:137
+#: src/app/[lang]/contact-us/page.tsx:45
 msgid "تماس با ما"
 msgstr "Contact Us"
 
@@ -572,21 +583,21 @@ msgid "ثبت و ادامه"
 msgstr "Register and Continue"
 
 #. placeholder {0}: settings.name
-#: src/app/[lang]/news/page.tsx:130
+#: src/app/[lang]/news/page.tsx:90
 msgid "جدید ترین اخبار {0}"
 msgstr "Latest News from {0}"
 
-#: src/app/[lang]/articles/page.tsx:87
+#: src/app/[lang]/articles/page.tsx:88
 msgid "جدید ترین مقالات"
 msgstr "Latest Articles"
 
-#: src/app/[lang]/news/[...slug]/page.tsx:74
-#: src/app/[lang]/articles/[...slug]/page.tsx:92
+#: src/app/[lang]/news/[...slug]/page.tsx:87
+#: src/app/[lang]/articles/[...slug]/page.tsx:95
 msgid "جدیدترین اخبار"
 msgstr "Latest News"
 
-#: src/app/[lang]/news/[...slug]/page.tsx:93
-#: src/app/[lang]/articles/[...slug]/page.tsx:111
+#: src/app/[lang]/news/[...slug]/page.tsx:107
+#: src/app/[lang]/articles/[...slug]/page.tsx:115
 msgid "جدیدترین مقالات"
 msgstr "Latest Articles"
 
@@ -622,7 +633,7 @@ msgstr "Search among agencies"
 msgid "جمع کل اقلام"
 msgstr "Total Items"
 
-#: src/app/[lang]/contact-us/page.tsx:82
+#: src/app/[lang]/contact-us/page.tsx:83
 msgid "جهت ارتباط مستقیم با شرکت فرم زیر را تکمیل فرمایید"
 msgstr "To contact the company directly, please fill out the form below"
 
@@ -671,10 +682,10 @@ msgstr "Activity Area"
 
 #: src/components/ui/navbar.tsx:84
 #: src/components/ui/navbar.tsx:248
+#: src/components/shared/page-hero.tsx:68
 #: src/components/products/detail-header.tsx:60
-#: src/app/[lang]/products/[...slug]/page.tsx:77
+#: src/app/[lang]/products/[...slug]/page.tsx:90
 #: src/app/[lang]/careers/[...slug]/page.tsx:53
-#: src/app/[lang]/articles/[...slug]/page.tsx:51
 msgid "خانه"
 msgstr "Home"
 
@@ -752,8 +763,8 @@ msgid "خیر"
 msgstr "No"
 
 #. placeholder {0}: settings.name
-#: src/app/[lang]/news/page.tsx:140
-#: src/app/[lang]/articles/page.tsx:91
+#: src/app/[lang]/news/page.tsx:94
+#: src/app/[lang]/articles/page.tsx:92
 msgid "در {0} چه اتفاقی می افتد؟"
 msgstr "What's happening in {0}?"
 
@@ -783,6 +794,7 @@ msgid "درباره این موقعیت شغلی"
 msgstr "About this position"
 
 #: src/components/ui/navbar.tsx:133
+#: src/app/[lang]/about-us/page.tsx:126
 msgid "درباره ما"
 msgstr "About Us"
 
@@ -814,7 +826,7 @@ msgstr "Your request encountered an error. Please try again."
 msgid "درخواست شما با موفقیت ارسال شد"
 msgstr "Your request was sent successfully"
 
-#: src/app/[lang]/representatives/apply/page.tsx:49
+#: src/app/[lang]/representatives/apply/page.tsx:51
 msgid "درخواست نمایندگی"
 msgstr "Representative Application"
 
@@ -823,7 +835,8 @@ msgid "درصد"
 msgstr "Percent"
 
 #: src/components/ui/navbar.tsx:105
-#: src/app/[lang]/representatives/apply/page.tsx:16
+#: src/app/[lang]/representatives/apply/page.tsx:15
+#: src/app/[lang]/representatives/apply/page.tsx:37
 msgid "دریافت نمایندگی"
 msgstr "Become an Agent"
 
@@ -966,7 +979,7 @@ msgstr "Payment Method"
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:262
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:272
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:280
-#: src/app/[lang]/products/[...slug]/page.tsx:112
+#: src/app/[lang]/products/[...slug]/page.tsx:153
 #: src/app/[lang]/(payment)/payment/page.tsx:100
 msgid "ریال"
 msgstr "Rial"
@@ -1017,7 +1030,7 @@ msgstr "Other"
 msgid "سایر فیس ها"
 msgstr "Other Variants"
 
-#: src/app/[lang]/products/[...slug]/page.tsx:146
+#: src/app/[lang]/products/[...slug]/page.tsx:192
 msgid "سایز"
 msgstr "Size"
 
@@ -1069,11 +1082,11 @@ msgstr "Work Experience"
 msgid "سوابق کاری اختیاری هستند. اگر عنوان شغل را خالی بگذارید، آن سابقه در فرم نهایی درج نخواهد شد."
 msgstr "Work experiences are optional. If you leave the job title empty, it will not be included in the final form."
 
-#: src/app/[lang]/representatives/apply/page.tsx:60
+#: src/app/[lang]/representatives/apply/page.tsx:64
 msgid "شخص حقوقی"
 msgstr "Legal Entity"
 
-#: src/app/[lang]/representatives/apply/page.tsx:55
+#: src/app/[lang]/representatives/apply/page.tsx:61
 msgid "شخص حقیقی"
 msgstr "Individual"
 
@@ -1255,6 +1268,7 @@ msgid "فراموشی رمز عبور"
 msgstr "Forgot Password"
 
 #: src/components/ui/navbar.tsx:101
+#: src/app/[lang]/careers/page.tsx:83
 msgid "فرصت های شغلی"
 msgstr "Career Opportunities"
 
@@ -1314,6 +1328,10 @@ msgstr "Total Price (Rial)"
 #: src/components/cart/cart-item.tsx:141
 msgid "قیمت واحد"
 msgstr "Unit Price"
+
+#: src/app/[lang]/catalog/page.tsx:79
+msgid "کاتالوگ"
+msgstr "Catalog"
 
 #: src/components/ui/navbar.tsx:125
 msgid "کاتالوگ محصولات"
@@ -1490,6 +1508,10 @@ msgstr "Please select an image file."
 msgid "لغو شده"
 msgstr "Cancelled"
 
+#: src/app/[lang]/products/[...slug]/page.tsx:101
+msgid "لیست محصولات"
+msgstr "Product List"
+
 #: src/components/products/kashef-search.tsx:234
 msgid "لینک مستقیم تصویر"
 msgstr "Direct image URL"
@@ -1568,9 +1590,13 @@ msgstr "Product removed successfully."
 #: src/components/ui/navbar.tsx:93
 #: src/components/products/detail-header.tsx:60
 #: src/app/[lang]/profile/favorite/page.tsx:35
-#: src/app/[lang]/products/[...slug]/page.tsx:77
+#: src/app/[lang]/products/page.tsx:81
 msgid "محصولات"
 msgstr "Products"
+
+#: src/components/home/sections/factory-projects-section.tsx:59
+msgid "محصولات تولید شده در شرکت کاشی و سرامیک باستان"
+msgstr "Products manufactured by Bastan Tile and Ceramic Company"
 
 #: src/components/products/product-content.tsx:16
 #: src/components/products/product-content.tsx:69
@@ -1622,6 +1648,10 @@ msgstr "Previous Step"
 msgid "مزایای کار در این شرکت"
 msgstr "Benefits of working at this company"
 
+#: src/components/home/sections/factory-projects-section.tsx:52
+msgid "مشارکت در تولید"
+msgstr "Participate in Production"
+
 #: src/app/[lang]/(payment)/payment/page.tsx:141
 msgid "مشاهده سفارشات"
 msgstr "View Orders"
@@ -1630,8 +1660,8 @@ msgstr "View Orders"
 msgid "مشخصات شما با موفقیت ارسال شد."
 msgstr "Your information has been sent successfully."
 
-#: src/app/[lang]/news/[...slug]/page.tsx:116
-#: src/app/[lang]/articles/[...slug]/page.tsx:134
+#: src/app/[lang]/news/[...slug]/page.tsx:131
+#: src/app/[lang]/articles/[...slug]/page.tsx:139
 msgid "مطالب مرتبط"
 msgstr "Related Content"
 
@@ -1665,7 +1695,8 @@ msgid "معدل نمی‌تواند منفی باشد"
 msgstr "GPA cannot be negative"
 
 #: src/components/ui/navbar.tsx:119
-#: src/app/[lang]/articles/[...slug]/page.tsx:54
+#: src/app/[lang]/articles/page.tsx:83
+#: src/app/[lang]/articles/[...slug]/page.tsx:56
 msgid "مقالات"
 msgstr "Articles"
 
@@ -1852,6 +1883,7 @@ msgid "نمایندگی جهت شهر*:"
 msgstr "Agency for City*:"
 
 #: src/components/ui/navbar.tsx:88
+#: src/app/[lang]/representatives/page.tsx:64
 msgid "نمایندگی ها"
 msgstr "Agencies"
 
@@ -1859,7 +1891,7 @@ msgstr "Agencies"
 msgid "نماینده"
 msgstr "Representative"
 
-#: src/app/[lang]/products/[...slug]/page.tsx:135
+#: src/app/[lang]/products/[...slug]/page.tsx:181
 msgid "نوع محصول"
 msgstr "Product type"
 
@@ -1867,6 +1899,10 @@ msgstr "Product type"
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:259
 msgid "هزینه ارسال"
 msgstr "Shipping Cost"
+
+#: src/components/home/sections/brands-section.tsx:22
+msgid "همراهان ما"
+msgstr "Our Partners"
 
 #: src/components/careers/resume-form.tsx:592
 msgid "همسر"
