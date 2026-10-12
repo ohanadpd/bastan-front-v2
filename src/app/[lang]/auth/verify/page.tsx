@@ -24,7 +24,7 @@ export default async function VerifyPage({ params }: PageProps) {
     const i18n = initLingui(lang);
 
     return (
-        <AuthWrapper>
+        <AuthWrapper lang={lang}>
             <AuthVerifyForm />
         </AuthWrapper>
     );

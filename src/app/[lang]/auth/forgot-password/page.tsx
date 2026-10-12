@@ -17,7 +17,7 @@ export default async function ForgotPasswordPage({ params }: PageProps) {
     const { lang } = await params;
     const i18n = initLingui(lang);
     return (
-        <AuthWrapper>
+        <AuthWrapper lang={lang}>
             <AuthForgotPasswordForm />
         </AuthWrapper>
     );
