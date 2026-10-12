@@ -74,6 +74,7 @@ msgstr "آدرس های من"
 msgid "آدرسی وجود ندارد!"
 msgstr "آدرسی وجود ندارد!"
 
+#: src/components/home/sections/home-album.tsx:92
 #: src/app/[lang]/about-us/page.tsx:186
 msgid "آلبوم تصاویر"
 msgstr "آلبوم تصاویر"
@@ -278,6 +279,7 @@ msgstr "باز کردن منو"
 msgid "بازگشت به صفحه اول سایت"
 msgstr "بازگشت به صفحه اول سایت"
 
+#: src/components/home/sections/home-album.tsx:99
 #: src/app/[lang]/about-us/page.tsx:190
 msgid "باستان از لنز دوربین"
 msgstr "باستان از لنز دوربین"
@@ -342,6 +344,10 @@ msgstr "برند های همراه باستان"
 msgid "بستن منو"
 msgstr "بستن منو"
 
+#: src/components/home/sections/home-album.tsx:246
+msgid "بستن ویدئو"
+msgstr "بستن ویدئو"
+
 #: src/components/products/kashef-search.tsx:121
 msgid "بگرد و کشف کن"
 msgstr "بگرد و کشف کن"
@@ -363,6 +369,7 @@ msgstr "بله"
 msgid "به سبد خرید اضافه شد."
 msgstr "به سبد خرید اضافه شد."
 
+#: src/components/home/sections/home-album.tsx:207
 #: src/components/home/pages/home.tsx:55
 msgid "بیشتر بدانید"
 msgstr "بیشتر بدانید"
@@ -378,6 +385,11 @@ msgstr "پاکت"
 #: src/components/careers/resume-form.tsx:616
 msgid "پایان خدمت"
 msgstr "پایان خدمت"
+
+#: src/components/home/sections/home-album.tsx:116
+#: src/components/home/sections/home-album.tsx:149
+msgid "پخش ویدئو"
+msgstr "پخش ویدئو"
 
 #: src/components/careers/resume-form.tsx:590
 msgid "پدر"
@@ -445,6 +457,10 @@ msgstr "تخفیف"
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:168
 msgid "تخفیف(ریال)"
 msgstr "تخفیف(ریال)"
+
+#: src/components/home/sections/home-album.tsx:62
+msgid "تصاویر باستان"
+msgstr "تصاویر باستان"
 
 #: src/components/products/kashef-search.tsx:201
 msgid "تصویر را بکشید و رها کنید"
@@ -1244,6 +1260,10 @@ msgstr "عربی"
 msgid "عضویت"
 msgstr "عضویت"
 
+#: src/components/home/sections/home-album.tsx:135
+msgid "عکس‌ها و ویدئوهای آلبوم"
+msgstr "عکس‌ها و ویدئوهای آلبوم"
+
 #: src/components/careers/resume-form.tsx:826
 #: src/components/careers/resume-form.tsx:827
 msgid "علت قطع همکاری"
@@ -1865,6 +1885,10 @@ msgstr "نسبت الزامی است"
 msgid "نسبت خود را انتخاب کنید"
 msgstr "نسبت خود را انتخاب کنید"
 
+#: src/components/home/sections/home-album.tsx:150
+msgid "نمایش تصویر"
+msgstr "نمایش تصویر"
+
 #: src/components/representatives/apply-legal-form.tsx:263
 #: src/components/representatives/apply-legal-form.tsx:274
 #: src/components/representatives/apply-form.tsx:161
@@ -1971,6 +1995,10 @@ msgstr "وضعیت نظام وظیفه الزامی است"
 #: src/components/careers/resume-form.tsx:613
 msgid "وضعیت نظام وظیفه خود را انتخاب کنید"
 msgstr "وضعیت نظام وظیفه خود را انتخاب کنید"
+
+#: src/components/home/sections/home-album.tsx:62
+msgid "ویدئوی باستان"
+msgstr "ویدئوی باستان"
 
 #: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:14
 #: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:40

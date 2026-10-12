@@ -74,6 +74,7 @@ msgstr ""
 msgid "آدرسی وجود ندارد!"
 msgstr ""
 
+#: src/components/home/sections/home-album.tsx:92
 #: src/app/[lang]/about-us/page.tsx:186
 msgid "آلبوم تصاویر"
 msgstr ""
@@ -278,6 +279,7 @@ msgstr ""
 msgid "بازگشت به صفحه اول سایت"
 msgstr ""
 
+#: src/components/home/sections/home-album.tsx:99
 #: src/app/[lang]/about-us/page.tsx:190
 msgid "باستان از لنز دوربین"
 msgstr ""
@@ -342,6 +344,10 @@ msgstr ""
 msgid "بستن منو"
 msgstr ""
 
+#: src/components/home/sections/home-album.tsx:246
+msgid "بستن ویدئو"
+msgstr ""
+
 #: src/components/products/kashef-search.tsx:121
 msgid "بگرد و کشف کن"
 msgstr ""
@@ -363,6 +369,7 @@ msgstr ""
 msgid "به سبد خرید اضافه شد."
 msgstr ""
 
+#: src/components/home/sections/home-album.tsx:207
 #: src/components/home/pages/home.tsx:55
 msgid "بیشتر بدانید"
 msgstr ""
@@ -377,6 +384,11 @@ msgstr ""
 
 #: src/components/careers/resume-form.tsx:616
 msgid "پایان خدمت"
+msgstr ""
+
+#: src/components/home/sections/home-album.tsx:116
+#: src/components/home/sections/home-album.tsx:149
+msgid "پخش ویدئو"
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:590
@@ -444,6 +456,10 @@ msgstr ""
 
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:168
 msgid "تخفیف(ریال)"
+msgstr ""
+
+#: src/components/home/sections/home-album.tsx:62
+msgid "تصاویر باستان"
 msgstr ""
 
 #: src/components/products/kashef-search.tsx:201
@@ -1244,6 +1260,10 @@ msgstr ""
 msgid "عضویت"
 msgstr ""
 
+#: src/components/home/sections/home-album.tsx:135
+msgid "عکس‌ها و ویدئوهای آلبوم"
+msgstr ""
+
 #: src/components/careers/resume-form.tsx:826
 #: src/components/careers/resume-form.tsx:827
 msgid "علت قطع همکاری"
@@ -1865,6 +1885,10 @@ msgstr ""
 msgid "نسبت خود را انتخاب کنید"
 msgstr ""
 
+#: src/components/home/sections/home-album.tsx:150
+msgid "نمایش تصویر"
+msgstr ""
+
 #: src/components/representatives/apply-legal-form.tsx:263
 #: src/components/representatives/apply-legal-form.tsx:274
 #: src/components/representatives/apply-form.tsx:161
@@ -1970,6 +1994,10 @@ msgstr ""
 
 #: src/components/careers/resume-form.tsx:613
 msgid "وضعیت نظام وظیفه خود را انتخاب کنید"
+msgstr ""
+
+#: src/components/home/sections/home-album.tsx:62
+msgid "ویدئوی باستان"
 msgstr ""
 
 #: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:14

@@ -90,7 +90,7 @@ export default async function ArticlesDetailPage({ params }: PageProps) {
         </div>
         <div className="w-full xl:max-w-[266px] shrink-0">
           <div className="flex flex-col gap-2 sticky top-[100px]">
-            <div className="bg-white p-5 rounded-[10px]">
+            <div className="bg-white border-[0.5px] border-[#F2F2F2] p-5 rounded-[10px]">
               <h3 className="text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]">
                 <Trans>جدیدترین اخبار</Trans>
               </h3>
@@ -110,7 +110,7 @@ export default async function ArticlesDetailPage({ params }: PageProps) {
                 ))}
               </ul>
             </div>
-            <div className="bg-white p-5 rounded-[10px]">
+            <div className="bg-white p-5 border-[0.5px] border-[#F2F2F2] rounded-[10px]">
               <h3 className="text-sm font-bold pb-2 border-b-[0.6px] border-[#9C9C9C]">
                 <Trans>جدیدترین مقالات</Trans>
               </h3>

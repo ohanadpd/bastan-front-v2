@@ -84,6 +84,7 @@ msgstr "عناويني"
 msgid "آدرسی وجود ندارد!"
 msgstr "لا يوجد عنوان!"
 
+#: src/components/home/sections/home-album.tsx:92
 #: src/app/[lang]/about-us/page.tsx:186
 msgid "آلبوم تصاویر"
 msgstr "معرض الصور"
@@ -288,6 +289,7 @@ msgstr "فتح القائمة"
 msgid "بازگشت به صفحه اول سایت"
 msgstr "العودة إلى الصفحة الرئيسية"
 
+#: src/components/home/sections/home-album.tsx:99
 #: src/app/[lang]/about-us/page.tsx:190
 msgid "باستان از لنز دوربین"
 msgstr "باستان بعدسة الكاميرا"
@@ -352,6 +354,10 @@ msgstr "العلامات التجارية الشريكة لباستان"
 msgid "بستن منو"
 msgstr "إغلاق القائمة"
 
+#: src/components/home/sections/home-album.tsx:246
+msgid "بستن ویدئو"
+msgstr "إغلاق الفيديو"
+
 #: src/components/products/kashef-search.tsx:121
 msgid "بگرد و کشف کن"
 msgstr "استكشف واكتشف"
@@ -373,6 +379,7 @@ msgstr "نعم"
 msgid "به سبد خرید اضافه شد."
 msgstr "تمت الإضافة إلى السلة."
 
+#: src/components/home/sections/home-album.tsx:207
 #: src/components/home/pages/home.tsx:55
 msgid "بیشتر بدانید"
 msgstr "اعرف المزيد"
@@ -388,6 +395,11 @@ msgstr "حزمة"
 #: src/components/careers/resume-form.tsx:616
 msgid "پایان خدمت"
 msgstr "إنهاء الخدمة"
+
+#: src/components/home/sections/home-album.tsx:116
+#: src/components/home/sections/home-album.tsx:149
+msgid "پخش ویدئو"
+msgstr "تشغيل الفيديو"
 
 #: src/components/careers/resume-form.tsx:590
 msgid "پدر"
@@ -455,6 +467,10 @@ msgstr "خصم"
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:168
 msgid "تخفیف(ریال)"
 msgstr "خصم(ريال)"
+
+#: src/components/home/sections/home-album.tsx:62
+msgid "تصاویر باستان"
+msgstr "صور باستان"
 
 #: src/components/products/kashef-search.tsx:201
 msgid "تصویر را بکشید و رها کنید"
@@ -1254,6 +1270,10 @@ msgstr "العربية"
 msgid "عضویت"
 msgstr "اشتراك"
 
+#: src/components/home/sections/home-album.tsx:135
+msgid "عکس‌ها و ویدئوهای آلبوم"
+msgstr "صور وفيديوهات المعرض"
+
 #: src/components/careers/resume-form.tsx:826
 #: src/components/careers/resume-form.tsx:827
 msgid "علت قطع همکاری"
@@ -1875,6 +1895,10 @@ msgstr "القرابة مطلوبة"
 msgid "نسبت خود را انتخاب کنید"
 msgstr "اختر قرابتك"
 
+#: src/components/home/sections/home-album.tsx:150
+msgid "نمایش تصویر"
+msgstr "عرض الصورة"
+
 #: src/components/representatives/apply-legal-form.tsx:263
 #: src/components/representatives/apply-legal-form.tsx:274
 #: src/components/representatives/apply-form.tsx:161
@@ -1981,6 +2005,10 @@ msgstr "حالة الخدمة العسكرية مطلوبة"
 #: src/components/careers/resume-form.tsx:613
 msgid "وضعیت نظام وظیفه خود را انتخاب کنید"
 msgstr "اختر حالتك في الخدمة العسكرية"
+
+#: src/components/home/sections/home-album.tsx:62
+msgid "ویدئوی باستان"
+msgstr "فيديو باستان"
 
 #: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:14
 #: src/app/[lang]/profile/(profile)/addresses/[id]/page.tsx:40
