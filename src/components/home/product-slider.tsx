@@ -101,7 +101,7 @@ export default function HomeProductSlider({
             el: ".home-products-desktop-pagination",
             type: "bullets",
             bulletClass: "size-[5px] rounded-full cursor-pointer",
-            bulletActiveClass: "!bg-primary-dark !w-10",
+            bulletActiveClass: "!bg-primary !w-10",
             renderBullet: (_index, bulletClass) =>
               `<span class="bg-[#D9D9D9] ${bulletClass}"></span>`,
           }}
