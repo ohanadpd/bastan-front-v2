@@ -1,206 +1,264 @@
-'use client'
-import { Trans, useLingui } from '@lingui/react/macro';
-import * as React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import { Button } from '@/components/ui/button';
-import { default as Link } from '@/components/localized-link';
-import { useAuthStore } from '@/store/authStore';
-import { notFound, useRouter } from 'next/navigation';
-import { verifyOtp } from '@/lib/services/account.services';
-import { toast } from 'sonner';
-import { msg } from '@lingui/core/macro';
-import { useState } from 'react';
+"use client";
 
+import {
+  useId,
+  useRef,
+  useState,
+  type ClipboardEvent,
+  type FormEvent,
+  type KeyboardEvent,
+} from "react";
+import { Trans, useLingui } from "@lingui/react/macro";
+import { ChevronLeft } from "lucide-react";
 
+import Link from "@/components/localized-link";
+import { useAuthStore } from "@/store/authStore";
 
-// Initial form values
-const initialValues = {
-    verificationCode: ''
-};
+const CODE_LENGTH = 5;
+
+function normalizeDigits(value: string) {
+  return value
+    .replace(/[۰-۹]/g, (digit) =>
+      String("۰۱۲۳۴۵۶۷۸۹".indexOf(digit)),
+    )
+    .replace(/[٠-٩]/g, (digit) =>
+      String("٠١٢٣٤٥٦٧٨٩".indexOf(digit)),
+    )
+    .replace(/\D/g, "");
+}
 
 export default function AuthVerifyForm() {
-    const { i18n } = useLingui();
+  const { t } = useLingui();
+  const errorId = useId();
 
-    const phoneNumber = useAuthStore((state) => state.phone);
-    const otpType = useAuthStore((state) => state.otpType);
-    const setOtpType = useAuthStore((state) => state.setOtpType);
-    const setPhoneNumber = useAuthStore((state) => state.setPhone);
-    const setForgotPasswordToken = useAuthStore((state) => state.setForgotPasswordToken);
-    const setRegisterToken = useAuthStore((state) => state.setRegisterToken);
+  const phoneNumber = useAuthStore((state) => state.phone);
 
-    const [inputRefs] = useState(() => Array.from({ length: 4 }, () => React.createRef<HTMLInputElement>()));
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-    const router = useRouter()
+  const [digits, setDigits] = useState<string[]>(
+    () => Array(CODE_LENGTH).fill(""),
+  );
 
-    if (!phoneNumber && !otpType)
-        notFound()
+  const [hasError, setHasError] = useState(false);
 
-    // Validation schema using Yup
-    const validationSchema = Yup.object({
-        verificationCode: Yup.string()
-            .required(i18n._(msg`کد تایید الزامی است`))
-            .length(4, i18n._(msg`کد تایید باید 4 رقم باشد`))
-            .matches(/^[0-9]{4}$/, i18n._(msg`کد تایید باید شامل 4 رقم باشد`))
+  function fillDigits(index: number, value: string) {
+    const normalized = normalizeDigits(value);
+
+    if (!normalized) return;
+
+    const startIndex =
+      normalized.length >= CODE_LENGTH ? 0 : index;
+
+    const incoming = normalized.slice(
+      0,
+      CODE_LENGTH - startIndex,
+    );
+
+    setDigits((previous) => {
+      const next = [...previous];
+
+      for (let offset = 0; offset < incoming.length; offset++) {
+        next[startIndex + offset] = incoming[offset];
+      }
+
+      return next;
     });
 
-    const handleSubmit = async (values: typeof initialValues, { setSubmitting }: any) => {
-        try {
-            console.log('Verification code submitted:', values);
-            if (phoneNumber)
-                verifyOtp({ mobile_number: phoneNumber, code: values.verificationCode }).then(res => {
-                    if (otpType === 1) {
-                        setForgotPasswordToken(res.data.token)
-                        toast.success(<Trans>کد تایید با موفقیت وارد شد!</Trans>);
-                        setTimeout(() => {
-                            router.replace('/auth/password-confirmation');
-                            // setOtpType(null);
-                            // setPhoneNumber(null);
-                        }, 1000)
-                    } else if (otpType === 2) {
-                        setRegisterToken(res.data.token)
-                        toast.success(<Trans>کد تایید با موفقیت وارد شد!</Trans>);
-                        setTimeout(() => {
-                            router.replace('/auth/register-complete');
-                        }, 1000)
-                    }
-                }).catch(() => {
-                    toast.error(<Trans>خطا در تایید کد. لطفا دوباره تلاش کنید.</Trans>);
-                })
-        } catch (error) {
-            console.error('Verification error:', error);
-            toast.error(<Trans>خطا در تایید کد. لطفا دوباره تلاش کنید.</Trans>);
-        } finally {
-            setSubmitting(false);
-        }
-    };
+    setHasError(false);
 
-    const handleInputChange = (index: number, value: string, setFieldValue: any, values: any) => {
-        // Only allow single digits
-        if (value.length > 1) {
-            value = value.slice(-1);
-        }
+    inputRefs.current[
+      Math.min(startIndex + incoming.length, CODE_LENGTH - 1)
+    ]?.focus();
+  }
 
-        // Only allow numbers
-        if (!/^\d*$/.test(value)) {
-            return;
-        }
+  function handleChange(index: number, value: string) {
+    if (value === "") {
+      setDigits((previous) => {
+        const next = [...previous];
+        next[index] = "";
+        return next;
+      });
 
-        // Update the verification code
-        const newCode = values.verificationCode.split('');
-        newCode[index] = value;
-        const updatedCode = newCode.join('');
-        setFieldValue('verificationCode', updatedCode);
+      setHasError(false);
+      return;
+    }
 
-        // Move to next input if value is entered
-        if (value && index < 3 && inputRefs[index + 1]) {
-            inputRefs[index + 1].current?.focus();
-        }
-    };
+    fillDigits(index, value);
+  }
 
-    const handleKeyDown = (index: number, e: React.KeyboardEvent, setFieldValue: any, values: any) => {
-        // Handle backspace
-        if (e.key === 'Backspace') {
-            const newCode = values.verificationCode.split('');
-            newCode[index] = '';
-            const updatedCode = newCode.join('');
-            setFieldValue('verificationCode', updatedCode);
+  function handlePaste(
+    index: number,
+    event: ClipboardEvent<HTMLInputElement>,
+  ) {
+    event.preventDefault();
+    fillDigits(index, event.clipboardData.getData("text"));
+  }
 
-            // Move to previous input if current is empty
-            if (index > 0) {
-                inputRefs[index - 1].current?.focus();
-            }
-        }
-        // Handle paste
-        else if (e.key === 'v' && (e.ctrlKey || e.metaKey)) {
-            e.preventDefault();
-            navigator.clipboard.readText().then(text => {
-                const digits = text.replace(/\D/g, '').slice(0, 5);
-                setFieldValue('verificationCode', digits);
+  function handleKeyDown(
+    index: number,
+    event: KeyboardEvent<HTMLInputElement>,
+  ) {
+    if (event.key === "Backspace") {
+      event.preventDefault();
 
-                // Focus the last filled input or the first empty one
-                const focusIndex = Math.min(digits.length, 3);
-                if (inputRefs[focusIndex]) {
-                    inputRefs[focusIndex].current?.focus();
+      const targetIndex =
+        digits[index] || index === 0 ? index : index - 1;
+
+      setDigits((previous) => {
+        const next = [...previous];
+        next[targetIndex] = "";
+        return next;
+      });
+
+      setHasError(false);
+      inputRefs.current[targetIndex]?.focus();
+    }
+
+    if (event.key === "ArrowLeft" && index > 0) {
+      event.preventDefault();
+      inputRefs.current[index - 1]?.focus();
+    }
+
+    if (
+      event.key === "ArrowRight" &&
+      index < CODE_LENGTH - 1
+    ) {
+      event.preventDefault();
+      inputRefs.current[index + 1]?.focus();
+    }
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (digits.some((digit) => !digit)) {
+      setHasError(true);
+
+      const emptyIndex = digits.findIndex((digit) => !digit);
+      inputRefs.current[emptyIndex]?.focus();
+      return;
+    }
+
+    setHasError(false);
+
+    // اتصال به API در مرحله بعد اضافه می‌شود.
+  }
+
+  return (
+    <div
+      className="
+        flex min-h-[420px] w-full flex-col items-center
+        rounded-[10px] border border-[#D2D2D2]
+        bg-[#FAFAFA] px-5 py-8
+        xl:min-h-[550px] xl:w-[46%] xl:max-w-[540px]
+        xl:border-[#E5E5E5] xl:px-10 xl:py-12
+      "
+    >
+      <h1 className="text-center text-[20px] font-bold text-black xl:text-[22px]">
+        <Trans>کد یکبار مصرف</Trans>
+      </h1>
+
+      <p className="mt-3 text-center text-[14px] text-[#353535]">
+        <Trans>برای ورود به سامانه، کد را وارد کنید.</Trans>
+      </p>
+
+      <Link
+        href="/auth/login"
+        className="mt-4 inline-flex items-center justify-center gap-1 text-[12px] text-[#353535] hover:text-primary"
+      >
+        <ChevronLeft
+          size={14}
+          aria-hidden="true"
+          className="rtl:rotate-180"
+        />
+        <Trans>ویرایش شماره موبایل</Trans>
+      </Link>
+
+      <form
+        onSubmit={handleSubmit}
+        className="mt-14 flex w-full max-w-[380px] flex-1 flex-col xl:mt-20"
+      >
+        <p className="text-center text-[12px] leading-6 text-[#595959]">
+          {phoneNumber ? (
+            <Trans>
+              کد یکبار مصرف به شماره موبایل{" "}
+              <bdi dir="ltr">{phoneNumber}</bdi> ارسال شده است.
+            </Trans>
+          ) : (
+            <Trans>
+              کد یکبار مصرف ارسال‌شده به شماره موبایل خود را وارد کنید.
+            </Trans>
+          )}
+        </p>
+
+        <div
+          role="group"
+          aria-label={t`کد یکبار مصرف`}
+          dir="ltr"
+          className="mt-4 flex items-center justify-center gap-2"
+        >
+          {digits.map((digit, index) => (
+            <input
+              key={index}
+              ref={(element) => {
+                inputRefs.current[index] = element;
+              }}
+              type="text"
+              inputMode="numeric"
+              autoComplete={
+                index === 0 ? "one-time-code" : "off"
+              }
+              maxLength={CODE_LENGTH}
+              value={digit}
+              aria-label={t`رقم ${index + 1} کد تایید`}
+              aria-required="true"
+              aria-invalid={hasError}
+              aria-describedby={hasError ? errorId : undefined}
+              onFocus={(event) => event.target.select()}
+              onChange={(event) =>
+                handleChange(index, event.target.value)
+              }
+              onPaste={(event) => handlePaste(index, event)}
+              onKeyDown={(event) => handleKeyDown(index, event)}
+              className={`
+                h-[48px] w-[44px] rounded-[5px] border
+                bg-white text-center text-[20px]
+                text-[#353535] outline-none
+                transition-colors focus:border-primary
+                sm:h-[52px] sm:w-[48px]
+                ${
+                  hasError
+                    ? "border-red-500"
+                    : "border-[#EEEEEE]"
                 }
-            });
-        }
-    };
-
-    return (
-        <div className='flex flex-col items-center gap-8 xl:gap-10 w-full max-w-[508px] px-4 py-6 xl:p-12 border-[1px] border-[#D2D2D2] rounded-[10px]'>
-            <div className='flex flex-col items-center gap-2'>
-                <h1 className='font-bold text-primary text-2xl xl:text-[32px]'>
-                    <Trans>
-                        تایید شماره موبایل
-                    </Trans>
-                </h1>
-                <p className='text-sm xl:text-base text-center text-[#231F20]'>
-                    <Trans>
-                        کد تایید به شماره موبایل {phoneNumber} ارسال شد
-                    </Trans>
-                </p>
-            </div>
-
-            <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={handleSubmit}
-            >
-                {({ isSubmitting, errors, touched, setFieldValue, values }) => (
-                    <Form className='w-full max-w-[356px] flex flex-col gap-6'>
-                        <div className='flex flex-col gap-3 xl:gap-4'>
-                            <label htmlFor="verificationCode" className='text-[#4D4D4D] font-semibold'>
-                                <Trans>کد تایید:</Trans>
-                            </label>
-                            <div dir='ltr' className='flex items-center justify-center gap-2'>
-                                {Array.from({ length: 4 }).map((_, index) => (
-                                    <input
-                                        key={index}
-                                        ref={inputRefs[index]}
-                                        type="text"
-                                        inputMode="numeric"
-                                        maxLength={1}
-                                        value={values.verificationCode[index] || ''}
-                                        onChange={(e) => handleInputChange(index, e.target.value, setFieldValue, values)}
-                                        onKeyDown={(e) => handleKeyDown(index, e, setFieldValue, values)}
-                                        className={`bg-white text-center text-lg font-semibold w-[42px] h-12 px-2 py-3 border-[1px] rounded-[5px] focus:ring-[1px] focus:ring-primary focus:border-primary transition-all duration-300 focus:outline-none ${errors.verificationCode && touched.verificationCode
-                                            ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                                            : 'border-gray-300'
-                                            }`}
-                                    />
-                                ))}
-                            </div>
-                            {errors.verificationCode && touched.verificationCode && (
-                                <div className="text-red-500 text-sm text-center">
-                                    {errors.verificationCode}
-                                </div>
-                            )}
-                        </div>
-
-                        <div className='w-full flex flex-col items-center gap-2'>
-                            <Button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className='h-10 xl:h-12 w-full max-w-[285px] disabled:opacity-50 disabled:cursor-not-allowed'
-                            >
-                                {isSubmitting ? (
-                                    <span className="flex justify-center items-center gap-2">
-                                        لطفا صبر کنید...
-                                    </span>
-                                ) : (
-                                    <Trans>ثبت و ادامه</Trans>
-                                )}
-                            </Button>
-                            <p className='text-sm text-[#231F20]'>
-                                <Trans>
-                                    شماره موبایل اشتباه است؟ <Link href={`/auth/register`} className='text-primary'>ویرایش</Link> کنید
-                                </Trans>
-                            </p>
-                        </div>
-                    </Form>
-                )}
-            </Formik>
+              `}
+            />
+          ))}
         </div>
-    );
+
+        {hasError && (
+          <p
+            id={errorId}
+            role="alert"
+            className="mt-3 text-center text-[12px] text-red-600"
+          >
+            <Trans>کد تایید باید شامل ۵ رقم باشد.</Trans>
+          </p>
+        )}
+
+        <button
+          type="submit"
+          className="
+            mx-auto mt-16 flex h-12 w-full max-w-[285px]
+            items-center justify-center rounded-[5px]
+            bg-primary text-[14px] text-white
+            transition-colors hover:bg-[#820008]
+            xl:mt-20
+          "
+        >
+          <Trans>ورود</Trans>
+        </button>
+      </form>
+    </div>
+  );
 }

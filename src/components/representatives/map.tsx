@@ -55,11 +55,12 @@ export default function AgenciesMap({ selectedAgency, initialData }: { selectedA
     return (
         <div className="w-full h-full rounded-[10px] overflow-hidden">
             <MapContainer
+            
                 center={center as LatLngTuple}
                 zoom={5}
                 scrollWheelZoom={true}
                 style={{ height: '100%', width: '100%' }}
-                className="z-0"
+                className="z-0 w-full h-full"
                 preferCanvas={true}
                 zoomControl={true}
                 doubleClickZoom={false}

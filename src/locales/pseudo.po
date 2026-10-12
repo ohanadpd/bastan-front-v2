@@ -316,8 +316,12 @@ msgstr ""
 msgid "برای عضویت در خبر نامه شماره موبایل خود را وارد کنید"
 msgstr ""
 
-#: src/components/auth/login-form.tsx:50
+#: src/components/auth/login-form.tsx:58
 msgid "برای ورود به سامانه، شماره موبایل خود را وارد کنید."
+msgstr ""
+
+#: src/components/auth/verify-form.tsx:162
+msgid "برای ورود به سامانه، کد را وارد کنید."
 msgstr ""
 
 #: src/components/products/product-content.tsx:14
@@ -434,7 +438,6 @@ msgstr ""
 msgid "تاریخ ثبت سفارش"
 msgstr ""
 
-#: src/components/auth/verify-form.tsx:134
 #: src/app/[lang]/auth/verify/page.tsx:12
 msgid "تایید شماره موبایل"
 msgstr ""
@@ -593,7 +596,6 @@ msgstr ""
 msgid "ثبت نام"
 msgstr ""
 
-#: src/components/auth/verify-form.tsx:192
 #: src/components/auth/forgot-password-form.tsx:110
 msgid "ثبت و ادامه"
 msgstr ""
@@ -637,7 +639,7 @@ msgstr ""
 msgid "جست و جو با لینک"
 msgstr ""
 
-#: src/components/representatives/map-wrapper.tsx:37
+#: src/components/representatives/map-wrapper.tsx:55
 msgid "جست و جو بین نمایندگان"
 msgstr ""
 
@@ -732,11 +734,6 @@ msgstr ""
 msgid "خطا در برقراری ارتباط"
 msgstr ""
 
-#: src/components/auth/verify-form.tsx:68
-#: src/components/auth/verify-form.tsx:72
-msgid "خطا در تایید کد. لطفا دوباره تلاش کنید."
-msgstr ""
-
 #: src/components/auth/password-confirmation-form.tsx:57
 #: src/components/auth/password-confirmation-form.tsx:64
 msgid "خطا در تغییر رمز عبور. لطفا دوباره تلاش کنید."
@@ -778,6 +775,10 @@ msgstr ""
 msgid "خیر"
 msgstr ""
 
+#: src/app/[lang]/catalog/page.tsx:107
+msgid "دانلود کاتالوگ"
+msgstr ""
+
 #. placeholder {0}: settings.name
 #: src/app/[lang]/news/page.tsx:94
 #: src/app/[lang]/articles/page.tsx:92
@@ -793,6 +794,10 @@ msgstr ""
 #: src/components/representatives/apply-form.tsx:255
 #: src/components/careers/resume-form.tsx:890
 msgid "در حال ارسال..."
+msgstr ""
+
+#: src/components/contact-us/map-wrapper.tsx:15
+msgid "در حال بارگذاری نقشه..."
 msgstr ""
 
 #: src/components/profile/order-card.tsx:11
@@ -905,6 +910,11 @@ msgstr ""
 
 #: src/components/careers/resume-form.tsx:655
 msgid "رشته تحصیلی*"
+msgstr ""
+
+#. placeholder {0}: index + 1
+#: src/components/auth/verify-form.tsx:213
+msgid "رقم {0} کد تایید"
 msgstr ""
 
 #: src/components/profile/change-password-form.tsx:70
@@ -1161,13 +1171,9 @@ msgstr ""
 #: src/components/profile/address-form.tsx:113
 #: src/components/careers/resume-form.tsx:561
 #: src/components/auth/register-form.tsx:83
-#: src/components/auth/login-form.tsx:75
+#: src/components/auth/login-form.tsx:85
 #: src/components/auth/forgot-password-form.tsx:79
 msgid "شماره موبایل"
-msgstr ""
-
-#: src/components/auth/verify-form.tsx:196
-msgid "شماره موبایل اشتباه است؟ <0>ویرایش</0> کنید"
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:562
@@ -1182,7 +1188,7 @@ msgstr ""
 #: src/components/careers/resume-form.tsx:34
 #: src/components/careers/resume-form.tsx:37
 #: src/components/auth/register-form.tsx:30
-#: src/components/auth/login-form.tsx:27
+#: src/components/auth/login-form.tsx:35
 #: src/components/auth/forgot-password-form.tsx:30
 msgid "شماره موبایل الزامی است"
 msgstr ""
@@ -1191,7 +1197,7 @@ msgstr ""
 msgid "شماره موبایل باید حداقل ۸ کاراکتر باشد"
 msgstr ""
 
-#: src/components/auth/login-form.tsx:30
+#: src/components/auth/login-form.tsx:38
 msgid "شماره موبایل را به‌صورت 09xxxxxxxxx وارد کنید"
 msgstr ""
 
@@ -1400,34 +1406,13 @@ msgstr ""
 msgid "کد پستی:"
 msgstr ""
 
-#: src/components/auth/verify-form.tsx:42
-msgid "کد تایید الزامی است"
-msgstr ""
-
 #: src/components/auth/register-form.tsx:42
 #: src/components/auth/forgot-password-form.tsx:42
 msgid "کد تایید با موفقیت ارسال شد."
 msgstr ""
 
-#: src/components/auth/verify-form.tsx:54
-#: src/components/auth/verify-form.tsx:62
-msgid "کد تایید با موفقیت وارد شد!"
-msgstr ""
-
-#: src/components/auth/verify-form.tsx:43
-msgid "کد تایید باید 4 رقم باشد"
-msgstr ""
-
-#: src/components/auth/verify-form.tsx:44
-msgid "کد تایید باید شامل 4 رقم باشد"
-msgstr ""
-
-#: src/components/auth/verify-form.tsx:139
-msgid "کد تایید به شماره موبایل {phoneNumber} ارسال شد"
-msgstr ""
-
-#: src/components/auth/verify-form.tsx:154
-msgid "کد تایید:"
+#: src/components/auth/verify-form.tsx:245
+msgid "کد تایید باید شامل ۵ رقم باشد."
 msgstr ""
 
 #: src/components/cart/cart-submit-page.tsx:240
@@ -1468,6 +1453,19 @@ msgstr ""
 
 #: src/components/cart/cart-submit-page.tsx:263
 msgid "کد نامعتبر"
+msgstr ""
+
+#: src/components/auth/verify-form.tsx:158
+#: src/components/auth/verify-form.tsx:196
+msgid "کد یکبار مصرف"
+msgstr ""
+
+#: src/components/auth/verify-form.tsx:188
+msgid "کد یکبار مصرف ارسال‌شده به شماره موبایل خود را وارد کنید."
+msgstr ""
+
+#: src/components/auth/verify-form.tsx:183
+msgid "کد یکبار مصرف به شماره موبایل <0>{phoneNumber}</0> ارسال شده است."
 msgstr ""
 
 #: src/components/careers/resume-form.tsx:619
@@ -1936,7 +1934,7 @@ msgstr ""
 msgid "همکاری با ما"
 msgstr ""
 
-#: src/components/representatives/map-wrapper.tsx:45
+#: src/components/representatives/map-wrapper.tsx:61
 msgid "همه نمایندگی ها"
 msgstr ""
 
@@ -1945,8 +1943,9 @@ msgid "واحد"
 msgstr ""
 
 #: src/components/ui/profile-button.tsx:171
-#: src/components/auth/login-form.tsx:46
-#: src/components/auth/login-form.tsx:135
+#: src/components/auth/verify-form.tsx:259
+#: src/components/auth/login-form.tsx:54
+#: src/components/auth/login-form.tsx:144
 #: src/app/[lang]/auth/login/page.tsx:19
 msgid "ورود"
 msgstr ""
@@ -2007,6 +2006,10 @@ msgstr ""
 
 #: src/components/cart/cart-submit-page.tsx:144
 msgid "ویرایش سبد خرید"
+msgstr ""
+
+#: src/components/auth/verify-form.tsx:174
+msgid "ویرایش شماره موبایل"
 msgstr ""
 
 #: src/components/products/kashef-search.tsx:205

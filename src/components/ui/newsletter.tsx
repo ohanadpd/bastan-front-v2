@@ -70,7 +70,7 @@ export default function FooterNewsletter() {
             <Button
                 type="submit"
                 disabled={formik.isSubmitting}
-                className='min-w-fit px-5 h-10 rounded-[5px]'
+                className='min-w-fit px-5 h-10 rounded-[5px] '
             >
                 <Trans>عضویت</Trans>
             </Button>

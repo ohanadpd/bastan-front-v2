@@ -31,7 +31,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const variants = {
       solid: `
         bg-primary text-white
-        hover:border-primary-dark hover:bg-primary-dark
+        hover:bg-[#820008] hover:border-[#820008]
       `,
       outline: `
         bg-white text-primary

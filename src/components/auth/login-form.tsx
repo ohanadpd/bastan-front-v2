@@ -1,9 +1,13 @@
 "use client";
 
+import type { ChangeEvent } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { msg } from "@lingui/core/macro";
+
+import { useAuthStore } from "@/store/authStore";
 
 const initialValues = {
   phone: "",
@@ -21,6 +25,10 @@ function normalizeDigits(value: string) {
 
 export default function AuthLoginForm() {
   const { i18n } = useLingui();
+  const router = useRouter();
+  const { lang } = useParams<{ lang: string }>();
+
+  const setPhone = useAuthStore((state) => state.setPhone);
 
   const validationSchema = Yup.object({
     phone: Yup.string()
@@ -33,20 +41,20 @@ export default function AuthLoginForm() {
 
   return (
     <div
-        className="
-            flex min-h-[420px] w-full flex-col items-center
-            rounded-[10px] border border-[#D2D2D2]
-            bg-[#FAFAFA] px-5 py-8
-            xl:border-[#E5E5E5]
-            xl:min-h-[550px] xl:w-[46%]
-            xl:max-w-[540px] xl:px-12 xl:py-12
-        "
-        >
+      className="
+        flex min-h-[420px] w-full flex-col items-center
+        rounded-[10px] border border-[#D2D2D2]
+        bg-[#FAFAFA] px-5 py-8
+        xl:min-h-[550px] xl:w-[46%]
+        xl:max-w-[540px] xl:border-[#E5E5E5]
+        xl:px-12 xl:py-12
+      "
+    >
       <h1 className="text-[20px] font-bold text-black xl:text-[22px]">
         <Trans>ورود</Trans>
       </h1>
 
-      <p className="mt-2 text-center text-[14px]  text-[#231F20] ">
+      <p className="mt-2 text-center text-[14px] text-[#231F20]">
         <Trans>
           برای ورود به سامانه، شماره موبایل خود را وارد کنید.
         </Trans>
@@ -55,7 +63,9 @@ export default function AuthLoginForm() {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={(_, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting }) => {
+          setPhone(values.phone);
+          router.push(`/${lang}/auth/verify`);
           setSubmitting(false);
         }}
       >
@@ -85,9 +95,7 @@ export default function AuthLoginForm() {
                 maxLength={11}
                 dir="ltr"
                 value={values.phone}
-                onChange={(
-                  event: React.ChangeEvent<HTMLInputElement>,
-                ) => {
+                onChange={(event: ChangeEvent<HTMLInputElement>) => {
                   setFieldValue(
                     "phone",
                     normalizeDigits(event.target.value),
@@ -129,7 +137,8 @@ export default function AuthLoginForm() {
                 items-center justify-center rounded-[5px]
                 bg-primary text-[14px] text-white
                 transition-colors hover:bg-primary-dark
-                disabled:opacity-50 xl:mt-20
+                disabled:cursor-not-allowed disabled:opacity-50
+                xl:mt-20
               "
             >
               <Trans>ورود</Trans>

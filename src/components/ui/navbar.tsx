@@ -282,7 +282,7 @@ export default function Navbar({
                 <span
                   dir="ltr"
                   className="
-                    whitespace-nowrap text-[10px] font-semibold
+                    whitespace-nowrap text-[10px] font-bold
                     xl:text-[12px]
                   "
                 >
@@ -292,7 +292,7 @@ export default function Navbar({
                 <Call
                   size={16}
                   color="currentColor"
-                  className="hidden shrink-0 xl:block"
+                  className="hidden shrink-0 xl:block "
                 />
               </a>
 
