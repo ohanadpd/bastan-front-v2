@@ -51,7 +51,7 @@ export default function BrandsSectionTheme3({ data }: { data: LogoBand[] }) {
               el: ".brands-pagination",
               type: "bullets",
               bulletClass: "size-[5px] rounded-full cursor-pointer",
-              bulletActiveClass: "!bg-primary-dark !w-10",
+              bulletActiveClass: "!bg-primary !w-10",
               renderBullet: (_index, className) =>
                 `<span class="bg-[#D9D9D9] ${className}"></span>`,
             }}

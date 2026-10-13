@@ -36,7 +36,7 @@ export default function HomeProductSlider({
             el: ".home-products-mobile-pagination",
             type: "bullets",
             bulletClass: "size-[5px] rounded-full cursor-pointer",
-            bulletActiveClass: "!bg-primary-dark !w-8",
+            bulletActiveClass: "!bg-primary !w-8",
             renderBullet: (_index, bulletClass) =>
               `<span class="bg-[#C4C4C4] ${bulletClass}"></span>`,
           }}

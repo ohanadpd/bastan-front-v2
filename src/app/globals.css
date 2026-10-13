@@ -13,8 +13,6 @@ html[dir="ltr"] body {
 
 :root {
   --primary: #A9020C;
-  --primary-light: #FFF6E0;
-  --primary-dark: #74560B;
   --popover: white;
 }
 
@@ -199,7 +197,7 @@ input[type=number] {
 
 .news-theme3-pagination .swiper-pagination-bullet-active {
   width: 30px;
-  background: var(--bastan1);
+  background: var(--primary);
 }
 
 .home-hero-pagination .home-hero-bullet {
