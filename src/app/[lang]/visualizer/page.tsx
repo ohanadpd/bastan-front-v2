@@ -39,10 +39,7 @@ function VisualizerContent() {
   const { step, error, room, perspectivePoints } = controller;
 
   function changeLanguage(nextLocale: string) {
-    if (
-      nextLocale === locale ||
-      !["fa", "en", "ar"].includes(nextLocale)
-    ) {
+    if (nextLocale === locale || !["fa", "en", "ar"].includes(nextLocale)) {
       return;
     }
 
@@ -89,18 +86,18 @@ function VisualizerContent() {
             </div>
 
             {/* LANGUAGE / BACK TO SITE */}
-<div className="flex items-center gap-3">
-  <I18nSwitcher />
+            <div className="flex items-center gap-3">
+              <I18nSwitcher />
 
-  <button
-    type="button"
-    onClick={() => window.history.back()}
-    className="flex h-10 items-center gap-2 rounded-xl border border-[#e5e7eb] bg-white px-4 text-sm font-medium text-[#555b65] transition hover:border-[#cfd3d9] hover:bg-[#f8f9fa] hover:text-black"
-  >
-    <span className="text-lg">←</span>
-    <Trans>بازگشت به سایت</Trans>
-  </button>
-</div>
+              <button
+                type="button"
+                onClick={() => router.push(`/${locale}`)}
+                className="flex h-10 items-center gap-2 rounded-xl border border-[#e5e7eb] bg-white px-4 text-sm font-medium text-[#555b65] transition hover:border-[#cfd3d9] hover:bg-[#f8f9fa] hover:text-black"
+              >
+                <span className="text-lg">←</span>
+                <Trans>بازگشت به سایت</Trans>
+              </button>
+            </div>
           </div>
         </header>
 
