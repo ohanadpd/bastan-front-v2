@@ -89,7 +89,7 @@ export default function HomeStyle({ data, lang }: HomeStyleProps) {
         </Reveal>
       )}
 
-      <HomeAlbum />
+      <HomeAlbum data={data.header_galleries ?? []} />
 
       {data.product_section?.cards?.length > 0 && (
         <ProductSection

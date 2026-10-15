@@ -8,73 +8,86 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Play, X } from "lucide-react";
 import { Trans, useLingui } from "@lingui/react/macro";
 
-type AlbumItem =
-  | {
-      id: string;
-      type: "image";
-      src: string;
+import { getMediaUrl } from "@/lib/utils";
+import type { HeaderGallery } from "@/types/home.types";
+
+type HomeAlbumProps = {
+  data: HeaderGallery[];
+};
+
+type ActiveVideo = {
+  item: HeaderGallery;
+  aparatId: string;
+};
+
+function getAparatId(link: string | null): string | null {
+  if (!link) return null;
+
+  try {
+    const url = new URL(link);
+
+    if (
+      url.hostname !== "aparat.com" &&
+      url.hostname !== "www.aparat.com"
+    ) {
+      return null;
     }
-  | {
-      id: string;
-      type: "video";
-      thumbnail: string;
-      aparatId: string;
-    };
 
-const albumItems: AlbumItem[] = [
-  {
-    id: "image-1",
-    type: "image",
-    src: "/images/allbum.jpg",
-  },
-  {
-    id: "video-1",
-    type: "video",
-    thumbnail: "/images/allbum.jpg",
-    aparatId: "3RchT",
-  },
-  ...Array.from(
-    { length: 8 },
-    (_, index): AlbumItem => ({
-      id: `image-${index + 2}`,
-      type: "image",
-      src: "/images/allbum.jpg",
-    }),
-  ),
-];
+    const match = url.pathname.match(
+      /^\/v\/([a-zA-Z0-9_-]+)\/?$/,
+    );
 
-const visibleItems = albumItems.slice(0, 6);
+    return match?.[1] ?? null;
+  } catch {
+    return null;
+  }
+}
 
-export default function HomeAlbum() {
+export default function HomeAlbum({ data }: HomeAlbumProps) {
   const { t, i18n } = useLingui();
-
-  const [selectedId, setSelectedId] = useState(visibleItems[0].id);
-
-  const [activeVideo, setActiveVideo] = useState<Extract<
-    AlbumItem,
-    { type: "video" }
-  > | null>(null);
-
   const reduceMotion = useReducedMotion();
+
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [activeVideo, setActiveVideo] = useState<ActiveVideo | null>(
+    null,
+  );
+
   const direction = i18n.locale === "en" ? "ltr" : "rtl";
 
-  const getItemTitle = (item: AlbumItem) =>
-    item.type === "video" ? t`ویدئوی باستان` : t`تصاویر باستان`;
+  const visibleItems = data
+    .filter((item) => item.publish && item.image)
+    .slice(0, 6);
 
   const selectedItem =
-    visibleItems.find((item) => item.id === selectedId) ?? visibleItems[0];
+    visibleItems.find((item) => item.id === selectedId) ??
+    visibleItems[0];
 
-  const selectedImage =
-    selectedItem.type === "image"
-      ? selectedItem.src
-      : selectedItem.thumbnail;
+  const selectedAparatId = selectedItem
+    ? getAparatId(selectedItem.link)
+    : null;
 
-  function selectItem(item: AlbumItem) {
+  function getItemTitle(item: HeaderGallery) {
+    return (
+      item.alt ||
+      item.title ||
+      (getAparatId(item.link)
+        ? t`ویدئوی باستان`
+        : t`تصاویر باستان`)
+    );
+  }
+
+  function selectItem(item: HeaderGallery) {
     setSelectedId(item.id);
 
-    if (item.type === "video") {
-      setActiveVideo(item);
+    const aparatId = getAparatId(item.link);
+
+    if (aparatId) {
+      setActiveVideo({ item, aparatId });
     }
+  }
+
+  if (!selectedItem) {
+    return null;
   }
 
   return (
@@ -86,6 +99,7 @@ export default function HomeAlbum() {
     >
       <section className="container mt-[110px]" dir={direction}>
         <div className="mx-auto w-full max-w-[1000px]">
+          {/* TITLE */}
           <div className="mb-8 flex flex-col items-center text-center">
             <div className="w-fit">
               <h2 className="text-center text-[17px] font-bold leading-[28px] text-[#252525] lg:text-[20px]">
@@ -100,21 +114,27 @@ export default function HomeAlbum() {
             </p>
           </div>
 
+          {/* SELECTED IMAGE / VIDEO POSTER */}
           <div className="relative aspect-[1.45/1] overflow-hidden rounded-[10px] bg-white sm:aspect-[2.3/1]">
             <Image
-              src={selectedImage}
+              src={getMediaUrl(selectedItem.image)}
               alt={getItemTitle(selectedItem)}
               fill
               sizes="(max-width: 1024px) 100vw, 1000px"
               className="object-cover"
             />
 
-            {selectedItem.type === "video" && (
+            {selectedAparatId && (
               <Dialog.Trigger asChild>
                 <button
                   type="button"
                   aria-label={t`پخش ویدئو`}
-                  onClick={() => setActiveVideo(selectedItem)}
+                  onClick={() =>
+                    setActiveVideo({
+                      item: selectedItem,
+                      aparatId: selectedAparatId,
+                    })
+                  }
                   className="absolute inset-0 flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
                 >
                   <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 shadow-lg transition-transform hover:scale-110 sm:h-16 sm:w-16">
@@ -129,6 +149,7 @@ export default function HomeAlbum() {
             )}
           </div>
 
+          {/* THUMBNAILS */}
           <div className="mt-2 flex items-center gap-2 rounded-[10px] border border-[#E0E0E0] bg-white p-2 sm:mt-4 sm:gap-4 sm:p-3">
             <div
               role="group"
@@ -136,18 +157,14 @@ export default function HomeAlbum() {
               className="grid min-w-0 flex-1 grid-cols-3 gap-1 sm:grid-cols-6 sm:gap-4"
             >
               {visibleItems.map((item, index) => {
-                const isActive = selectedId === item.id;
-
-                const thumbnail =
-                  item.type === "image" ? item.src : item.thumbnail;
+                const isActive = selectedItem.id === item.id;
+                const aparatId = getAparatId(item.link);
 
                 const thumbnailButton = (
                   <button
                     type="button"
                     aria-label={
-                      item.type === "video"
-                        ? t`پخش ویدئو`
-                        : t`نمایش تصویر`
+                      aparatId ? t`پخش ویدئو` : t`نمایش تصویر`
                     }
                     aria-pressed={isActive}
                     onClick={() => selectItem(item)}
@@ -156,7 +173,7 @@ export default function HomeAlbum() {
                     }`}
                   >
                     <Image
-                      src={thumbnail}
+                      src={getMediaUrl(item.image)}
                       alt={getItemTitle(item)}
                       fill
                       sizes="(max-width: 640px) 25vw, 140px"
@@ -170,7 +187,7 @@ export default function HomeAlbum() {
                       }`}
                     />
 
-                    {item.type === "video" && (
+                    {aparatId && (
                       <span
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-0 flex items-center justify-center"
@@ -187,7 +204,7 @@ export default function HomeAlbum() {
                   </button>
                 );
 
-                return item.type === "video" ? (
+                return aparatId ? (
                   <Dialog.Trigger key={item.id} asChild>
                     {thumbnailButton}
                   </Dialog.Trigger>
@@ -211,6 +228,7 @@ export default function HomeAlbum() {
         </div>
       </section>
 
+      {/* VIDEO MODAL */}
       <Dialog.Portal>
         <Dialog.Overlay asChild>
           <motion.div
@@ -237,7 +255,9 @@ export default function HomeAlbum() {
           >
             <div className="flex items-center justify-between gap-4 px-4 py-3 text-white">
               <Dialog.Title className="text-sm font-medium sm:text-base">
-                {activeVideo ? getItemTitle(activeVideo) : ""}
+                {activeVideo
+                  ? getItemTitle(activeVideo.item)
+                  : t`ویدئوی باستان`}
               </Dialog.Title>
 
               <Dialog.Close asChild>
@@ -254,9 +274,9 @@ export default function HomeAlbum() {
             <div className="relative aspect-video bg-black">
               {activeVideo && (
                 <iframe
-                  key={activeVideo.id}
+                  key={activeVideo.item.id}
                   src={`https://www.aparat.com/video/video/embed/videohash/${activeVideo.aparatId}/vt/frame`}
-                  title={getItemTitle(activeVideo)}
+                  title={getItemTitle(activeVideo.item)}
                   className="absolute inset-0 h-full w-full border-0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
