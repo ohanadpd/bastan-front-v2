@@ -10,6 +10,15 @@ export interface HeaderGallery {
     alt: string | null;
     publish: boolean;
 }
+export interface HomeBanner {
+  id: number;
+  banner_image: string;
+  banner_image_mobile?: string | null;
+  banner_image_tablet?: string | null;
+  link: string | null;
+  order: number;
+  publish: boolean;
+}
 
 export interface IntroductionText {
     id: number;
@@ -123,6 +132,7 @@ export interface HomePageData {
     page_description: string;
     page_keywords: string;
     canonical_link: string;
+    home_banners: HomeBanner[];
     meta_tags: [];
     show_terms_and_conditions: boolean;
     show_contact_us: boolean;

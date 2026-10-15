@@ -14,15 +14,40 @@ export type AlbumImage = {
   videoUrl?: string;
 };
 
+function getAparatId(link?: string): string | null {
+  if (!link) return null;
+
+  try {
+    const url = new URL(link);
+
+    if (
+      url.hostname !== "aparat.com" &&
+      url.hostname !== "www.aparat.com"
+    ) {
+      return null;
+    }
+
+    return (
+      url.pathname.match(/^\/v\/([a-zA-Z0-9_-]+)\/?$/)?.[1] ??
+      null
+    );
+  } catch {
+    return null;
+  }
+}
+
 export default function PhotoAlbum({
   images,
 }: {
   images: AlbumImage[];
 }) {
   const { t } = useLingui();
+
   const [activeVideo, setActiveVideo] = useState<AlbumImage | null>(
     null,
   );
+
+  const activeAparatId = getAparatId(activeVideo?.videoUrl);
 
   return (
     <Dialog.Root
@@ -121,18 +146,30 @@ export default function PhotoAlbum({
             </Dialog.Close>
           </div>
 
-          {activeVideo?.videoUrl && (
-            <video
-              key={activeVideo.id}
-              src={activeVideo.videoUrl}
-              poster={activeVideo.src}
-              controls
-              autoPlay
-              playsInline
-              aria-label={activeVideo.alt || t`ویدئوی باستان`}
-              className="block max-h-[65dvh] w-full bg-black object-contain"
-            />
-          )}
+          {activeVideo?.videoUrl &&
+            (activeAparatId ? (
+              <div className="relative aspect-video bg-black">
+                <iframe
+                  key={activeVideo.id}
+                  src={`https://www.aparat.com/video/video/embed/videohash/${activeAparatId}/vt/frame`}
+                  title={activeVideo.alt || t`ویدئوی باستان`}
+                  className="absolute inset-0 h-full w-full border-0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : (
+              <video
+                key={activeVideo.id}
+                src={activeVideo.videoUrl}
+                poster={activeVideo.src}
+                controls
+                autoPlay
+                playsInline
+                aria-label={activeVideo.alt || t`ویدئوی باستان`}
+                className="block max-h-[65dvh] w-full bg-black object-contain"
+              />
+            ))}
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

@@ -8,6 +8,13 @@ export interface Achivment {
     date: string;
     order: number;
 }
+export interface AboutGallery {
+  id: number;
+  link: string | null;
+  image: string;
+  alt: string | null;
+  publish: boolean;
+}
 
 interface AboutUsPageData {
     banner_image: string | null;
@@ -17,11 +24,13 @@ interface AboutUsPageData {
     about_text: string;
     image: string | null;
     manager_image: string;
+    
     manager_text_title: string;
     manager_text: string;
     video: string | null;
     content: string;
     achievements: Achivment[];
+    about_galleries: AboutGallery[];
     slug: string;
     page_display_status: number;
     page_title: string;
