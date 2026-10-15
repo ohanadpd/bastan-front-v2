@@ -35,7 +35,7 @@ msgstr ""
 msgid "آخرین مقطع تحصیلی*"
 msgstr ""
 
-#: src/components/ui/footer.tsx:234
+#: src/components/ui/footer.tsx:116
 #: src/components/ui/address-card.tsx:37
 #: src/components/representatives/agency-card.tsx:67
 #: src/components/profile/order-card.tsx:56
@@ -101,7 +101,7 @@ msgstr ""
 msgid "ارتباط با کارخانه..."
 msgstr ""
 
-#: src/components/ui/footer.tsx:186
+#: src/components/ui/footer.tsx:94
 msgid "ارتباط با ما"
 msgstr ""
 
@@ -210,7 +210,7 @@ msgstr ""
 msgid "انتخاب به عنوان ادرس پیش فرض"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:252
+#: src/components/products/kashef-search.tsx:249
 msgid "انتخاب تصویر"
 msgstr ""
 
@@ -219,7 +219,11 @@ msgstr ""
 msgid "انتخاب شهر الزامی است"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:242
+#: src/app/[lang]/visualizer/page.tsx:105
+msgid "انتخاب کاشی"
+msgstr ""
+
+#: src/components/products/kashef-search.tsx:239
 msgid "انتخاب کنید"
 msgstr ""
 
@@ -237,7 +241,7 @@ msgstr ""
 msgid "انگلیسی"
 msgstr ""
 
-#: src/components/ui/footer.tsx:220
+#: src/components/ui/footer.tsx:108
 #: src/components/profile/user-info-form.tsx:137
 #: src/components/profile/user-info-form.tsx:143
 msgid "ایمیل"
@@ -277,6 +281,10 @@ msgstr ""
 
 #: src/components/ui/navbar.tsx:227
 msgid "باز کردن منو"
+msgstr ""
+
+#: src/app/[lang]/visualizer/page.tsx:77
+msgid "بازگشت به سایت"
 msgstr ""
 
 #: src/app/[lang]/(payment)/payment/page.tsx:136
@@ -357,11 +365,11 @@ msgstr ""
 msgid "بستن ویدئو"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:127
+#: src/components/products/kashef-search.tsx:124
 msgid "بگرد و کشف کن"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:85
+#: src/components/products/kashef-search.tsx:86
 msgid "بگرد و کشف کن. با جست و جوی تصویری، محصول مورد نظرت رو پیدا کن."
 msgstr ""
 
@@ -427,7 +435,7 @@ msgstr ""
 msgid "پروفایل"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:198
+#: src/components/products/kashef-search.tsx:195
 msgid "پیش‌نمایش تصویر انتخاب‌شده"
 msgstr ""
 
@@ -475,8 +483,12 @@ msgstr ""
 msgid "تصاویر باستان"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:232
+#: src/components/products/kashef-search.tsx:229
 msgid "تصویر را بکشید و رها کنید"
+msgstr ""
+
+#: src/app/[lang]/visualizer/page.tsx:90
+msgid "تصویر محیط"
 msgstr ""
 
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:174
@@ -495,7 +507,7 @@ msgstr ""
 msgid "تعیین حوزه فعالیت الزامی است"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:222
+#: src/components/products/kashef-search.tsx:219
 msgid "تغییر تصویر"
 msgstr ""
 
@@ -538,7 +550,7 @@ msgstr ""
 msgid "تکمیل ثبت نام"
 msgstr ""
 
-#: src/components/ui/footer.tsx:206
+#: src/components/ui/footer.tsx:100
 #: src/components/representatives/agency-card.tsx:38
 msgid "تلفن تماس"
 msgstr ""
@@ -572,6 +584,10 @@ msgstr ""
 
 #: src/components/careers/resume-form.tsx:820
 msgid "تمام وقت"
+msgstr ""
+
+#: src/app/[lang]/visualizer/page.tsx:100
+msgid "تنظیم زاویه دید"
 msgstr ""
 
 #: src/components/representatives/apply-legal-form.tsx:336
@@ -637,15 +653,15 @@ msgid "جزییات سفارش"
 msgstr ""
 
 #: src/components/representatives/map-filter.tsx:170
-#: src/components/products/kashef-search.tsx:293
+#: src/components/products/kashef-search.tsx:290
 msgid "جست و جو"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:148
+#: src/components/products/kashef-search.tsx:145
 msgid "جست و جو با تصویر"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:169
+#: src/components/products/kashef-search.tsx:166
 msgid "جست و جو با لینک"
 msgstr ""
 
@@ -677,7 +693,7 @@ msgstr ""
 msgid "حذف آدرس"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:207
+#: src/components/products/kashef-search.tsx:204
 msgid "حذف تصویر"
 msgstr ""
 
@@ -1122,6 +1138,10 @@ msgstr ""
 msgid "سوابق کاری اختیاری هستند. اگر عنوان شغل را خالی بگذارید، آن سابقه در فرم نهایی درج نخواهد شد."
 msgstr ""
 
+#: src/app/[lang]/visualizer/page.tsx:58
+msgid "شبیه‌ساز کاشی"
+msgstr ""
+
 #: src/app/[lang]/representatives/apply/page.tsx:64
 msgid "شخص حقوقی"
 msgstr ""
@@ -1258,8 +1278,8 @@ msgstr ""
 msgid "صورت حساب"
 msgstr ""
 
-#: src/components/ui/footer.tsx:317
-msgid "طراحی و توسعه توسط<0>استودیو اوهانا</0>"
+#: src/components/ui/footer.tsx:154
+msgid "طراحی و توسعه توسط استودیو <0>اوهانا</0>"
 msgstr ""
 
 #: src/components/products/overview-section.tsx:30
@@ -1346,7 +1366,7 @@ msgstr ""
 msgid "قابل پرداخت"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:298
+#: src/components/products/kashef-search.tsx:295
 msgid "قدرت گرفته از"
 msgstr ""
 
@@ -1393,9 +1413,13 @@ msgstr ""
 msgid "کارشناسی ارشد و بالاتر"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:78
-#: src/components/products/kashef-search.tsx:300
+#: src/components/products/kashef-search.tsx:79
+#: src/components/products/kashef-search.tsx:302
 msgid "کاشف"
+msgstr ""
+
+#: src/app/[lang]/visualizer/page.tsx:50
+msgid "کاشی باستان"
 msgstr ""
 
 #: src/components/ui/navbar.tsx:129
@@ -1532,7 +1556,7 @@ msgstr ""
 msgid "لطفا وارد شوید"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:262
+#: src/components/products/kashef-search.tsx:259
 msgid "لطفاً یک فایل تصویر انتخاب کنید."
 msgstr ""
 
@@ -1545,7 +1569,7 @@ msgstr ""
 msgid "لیست محصولات"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:272
+#: src/components/products/kashef-search.tsx:269
 msgid "لینک مستقیم تصویر"
 msgstr ""
 
@@ -1610,6 +1634,10 @@ msgstr ""
 
 #: src/components/products/filter.tsx:243
 msgid "محدوده قیمت"
+msgstr ""
+
+#: src/app/[lang]/visualizer/page.tsx:95
+msgid "محدوده کف"
 msgstr ""
 
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:159
@@ -1886,6 +1914,10 @@ msgstr ""
 msgid "نام و نام خانوادگی الزامی است"
 msgstr ""
 
+#: src/app/[lang]/visualizer/page.tsx:110
+msgid "نتیجه نهایی"
+msgstr ""
+
 #: src/components/careers/resume-form.tsx:586
 msgid "نسبت"
 msgstr ""
@@ -2029,7 +2061,7 @@ msgstr ""
 msgid "ویرایش شماره موبایل"
 msgstr ""
 
-#: src/components/products/kashef-search.tsx:236
+#: src/components/products/kashef-search.tsx:233
 msgid "یا فایل را از سیستم"
 msgstr ""
 

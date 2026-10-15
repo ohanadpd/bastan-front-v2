@@ -16,6 +16,7 @@ import {
   Link2,
   SearchNormal,
 } from "iconsax-reactjs";
+import Link from "next/link";
 
 export default function KashefSearch() {
   const { t } = useLingui();
@@ -112,11 +113,7 @@ export default function KashefSearch() {
         </span>
       </button>
 
-      <div
-        id={panelId}
-        hidden={!isOpen}
-        className="px-2 pb-2 sm:px-4 sm:pb-4"
-      >
+      <div id={panelId} hidden={!isOpen} className="px-2 pb-2 sm:px-4 sm:pb-4">
         <div
           className="rounded-[5px] border border-[#EEEEEE] bg-[#FAFAFA] bg-repeat px-3 py-5 sm:px-5 md:px-8"
           style={{
@@ -296,9 +293,14 @@ export default function KashefSearch() {
           <div className="mt-5 flex w-full justify-end">
             <p dir="rtl" className="text-[10px] text-black">
               <Trans>قدرت گرفته از</Trans>{" "}
-              <span className="text-[#1298C6] underline">
+              <Link
+                href="https://kashefai.ir/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1298C6]  hover:!text-[#1298C6] underline"
+              >
                 <Trans>کاشف</Trans>
-              </span>
+              </Link>
             </p>
           </div>
         </div>

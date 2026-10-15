@@ -35,7 +35,7 @@ msgstr "Upload Resume*"
 msgid "آخرین مقطع تحصیلی*"
 msgstr "Latest Education Level*"
 
-#: src/components/ui/footer.tsx:234
+#: src/components/ui/footer.tsx:116
 #: src/components/ui/address-card.tsx:37
 #: src/components/representatives/agency-card.tsx:67
 #: src/components/profile/order-card.tsx:56
@@ -101,7 +101,7 @@ msgstr "Continue"
 msgid "ارتباط با کارخانه..."
 msgstr "Contact the factory..."
 
-#: src/components/ui/footer.tsx:186
+#: src/components/ui/footer.tsx:94
 msgid "ارتباط با ما"
 msgstr "Contact Us"
 
@@ -210,7 +210,7 @@ msgstr "Selecting a province is required"
 msgid "انتخاب به عنوان ادرس پیش فرض"
 msgstr "Set as Default Address"
 
-#: src/components/products/kashef-search.tsx:252
+#: src/components/products/kashef-search.tsx:249
 msgid "انتخاب تصویر"
 msgstr "Select Image"
 
@@ -219,7 +219,11 @@ msgstr "Select Image"
 msgid "انتخاب شهر الزامی است"
 msgstr "Selecting a city is required"
 
-#: src/components/products/kashef-search.tsx:242
+#: src/app/[lang]/visualizer/page.tsx:105
+msgid "انتخاب کاشی"
+msgstr "Select a tile"
+
+#: src/components/products/kashef-search.tsx:239
 msgid "انتخاب کنید"
 msgstr "Choose a file"
 
@@ -237,7 +241,7 @@ msgstr "Cancel"
 msgid "انگلیسی"
 msgstr "English"
 
-#: src/components/ui/footer.tsx:220
+#: src/components/ui/footer.tsx:108
 #: src/components/profile/user-info-form.tsx:137
 #: src/components/profile/user-info-form.tsx:143
 msgid "ایمیل"
@@ -278,6 +282,10 @@ msgstr "You have successfully logged in."
 #: src/components/ui/navbar.tsx:227
 msgid "باز کردن منو"
 msgstr "Open menu"
+
+#: src/app/[lang]/visualizer/page.tsx:77
+msgid "بازگشت به سایت"
+msgstr "Back to website"
 
 #: src/app/[lang]/(payment)/payment/page.tsx:136
 msgid "بازگشت به صفحه اول سایت"
@@ -357,11 +365,11 @@ msgstr "Close menu"
 msgid "بستن ویدئو"
 msgstr "Close Video"
 
-#: src/components/products/kashef-search.tsx:127
+#: src/components/products/kashef-search.tsx:124
 msgid "بگرد و کشف کن"
 msgstr "Explore and Discover"
 
-#: src/components/products/kashef-search.tsx:85
+#: src/components/products/kashef-search.tsx:86
 msgid "بگرد و کشف کن. با جست و جوی تصویری، محصول مورد نظرت رو پیدا کن."
 msgstr "Explore and discover. Find the product you're looking for with image search."
 
@@ -427,7 +435,7 @@ msgstr "Payment was unsuccessful"
 msgid "پروفایل"
 msgstr "Profile"
 
-#: src/components/products/kashef-search.tsx:198
+#: src/components/products/kashef-search.tsx:195
 msgid "پیش‌نمایش تصویر انتخاب‌شده"
 msgstr "Selected Image Preview"
 
@@ -475,9 +483,13 @@ msgstr "Discount (Rial)"
 msgid "تصاویر باستان"
 msgstr "Bastan Photos"
 
-#: src/components/products/kashef-search.tsx:232
+#: src/components/products/kashef-search.tsx:229
 msgid "تصویر را بکشید و رها کنید"
 msgstr "Drag and drop an image"
+
+#: src/app/[lang]/visualizer/page.tsx:90
+msgid "تصویر محیط"
+msgstr "Room image"
 
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:174
 msgid "تعداد"
@@ -495,7 +507,7 @@ msgstr "Total Items"
 msgid "تعیین حوزه فعالیت الزامی است"
 msgstr "Selecting activity area is required"
 
-#: src/components/products/kashef-search.tsx:222
+#: src/components/products/kashef-search.tsx:219
 msgid "تغییر تصویر"
 msgstr "Change image"
 
@@ -538,7 +550,7 @@ msgstr "Confirm New Password"
 msgid "تکمیل ثبت نام"
 msgstr "Complete Registration"
 
-#: src/components/ui/footer.tsx:206
+#: src/components/ui/footer.tsx:100
 #: src/components/representatives/agency-card.tsx:38
 msgid "تلفن تماس"
 msgstr "Phone Number"
@@ -573,6 +585,10 @@ msgstr "Contact Us"
 #: src/components/careers/resume-form.tsx:820
 msgid "تمام وقت"
 msgstr "Full-time"
+
+#: src/app/[lang]/visualizer/page.tsx:100
+msgid "تنظیم زاویه دید"
+msgstr "Adjust perspective"
 
 #: src/components/representatives/apply-legal-form.tsx:336
 #: src/components/representatives/apply-form.tsx:234
@@ -637,15 +653,15 @@ msgid "جزییات سفارش"
 msgstr "Order Details"
 
 #: src/components/representatives/map-filter.tsx:170
-#: src/components/products/kashef-search.tsx:293
+#: src/components/products/kashef-search.tsx:290
 msgid "جست و جو"
 msgstr "Search"
 
-#: src/components/products/kashef-search.tsx:148
+#: src/components/products/kashef-search.tsx:145
 msgid "جست و جو با تصویر"
 msgstr "Search by image"
 
-#: src/components/products/kashef-search.tsx:169
+#: src/components/products/kashef-search.tsx:166
 msgid "جست و جو با لینک"
 msgstr "Search by link"
 
@@ -677,7 +693,7 @@ msgstr "Delete"
 msgid "حذف آدرس"
 msgstr "Delete Address"
 
-#: src/components/products/kashef-search.tsx:207
+#: src/components/products/kashef-search.tsx:204
 msgid "حذف تصویر"
 msgstr "Remove Image"
 
@@ -1122,6 +1138,10 @@ msgstr "Work Experience"
 msgid "سوابق کاری اختیاری هستند. اگر عنوان شغل را خالی بگذارید، آن سابقه در فرم نهایی درج نخواهد شد."
 msgstr "Work experiences are optional. If you leave the job title empty, it will not be included in the final form."
 
+#: src/app/[lang]/visualizer/page.tsx:58
+msgid "شبیه‌ساز کاشی"
+msgstr "Tile visualizer"
+
 #: src/app/[lang]/representatives/apply/page.tsx:64
 msgid "شخص حقوقی"
 msgstr "Legal Entity"
@@ -1258,9 +1278,9 @@ msgstr "Page not found!"
 msgid "صورت حساب"
 msgstr "Invoice"
 
-#: src/components/ui/footer.tsx:317
-msgid "طراحی و توسعه توسط<0>استودیو اوهانا</0>"
-msgstr "Designed and developed by <0>Ohana Studio</0>"
+#: src/components/ui/footer.tsx:154
+msgid "طراحی و توسعه توسط استودیو <0>اوهانا</0>"
+msgstr "Designed and developed by <0>Ohana</0> Studio"
 
 #: src/components/products/overview-section.tsx:30
 #: src/components/products/overview-section.tsx:118
@@ -1346,7 +1366,7 @@ msgstr "Filters"
 msgid "قابل پرداخت"
 msgstr "Payable"
 
-#: src/components/products/kashef-search.tsx:298
+#: src/components/products/kashef-search.tsx:295
 msgid "قدرت گرفته از"
 msgstr "Powered by"
 
@@ -1393,10 +1413,14 @@ msgstr "Bachelor's Degree"
 msgid "کارشناسی ارشد و بالاتر"
 msgstr "Master's Degree and Higher"
 
-#: src/components/products/kashef-search.tsx:78
-#: src/components/products/kashef-search.tsx:300
+#: src/components/products/kashef-search.tsx:79
+#: src/components/products/kashef-search.tsx:302
 msgid "کاشف"
 msgstr "Kashef"
+
+#: src/app/[lang]/visualizer/page.tsx:50
+msgid "کاشی باستان"
+msgstr "Bastan Tile"
 
 #: src/components/ui/navbar.tsx:129
 msgid "کاشی نگار"
@@ -1532,7 +1556,7 @@ msgstr "Please select education level"
 msgid "لطفا وارد شوید"
 msgstr "Sign In"
 
-#: src/components/products/kashef-search.tsx:262
+#: src/components/products/kashef-search.tsx:259
 msgid "لطفاً یک فایل تصویر انتخاب کنید."
 msgstr "Please select an image file."
 
@@ -1545,7 +1569,7 @@ msgstr "Cancelled"
 msgid "لیست محصولات"
 msgstr "Product List"
 
-#: src/components/products/kashef-search.tsx:272
+#: src/components/products/kashef-search.tsx:269
 msgid "لینک مستقیم تصویر"
 msgstr "Direct image URL"
 
@@ -1611,6 +1635,10 @@ msgstr "Single"
 #: src/components/products/filter.tsx:243
 msgid "محدوده قیمت"
 msgstr "Price Range"
+
+#: src/app/[lang]/visualizer/page.tsx:95
+msgid "محدوده کف"
+msgstr "Floor area"
 
 #: src/app/[lang]/profile/orders/[...slug]/page.tsx:159
 msgid "محصول"
@@ -1886,6 +1914,10 @@ msgstr "First and Last Name"
 msgid "نام و نام خانوادگی الزامی است"
 msgstr "First and last name are required"
 
+#: src/app/[lang]/visualizer/page.tsx:110
+msgid "نتیجه نهایی"
+msgstr "Final result"
+
 #: src/components/careers/resume-form.tsx:586
 msgid "نسبت"
 msgstr "Relationship"
@@ -2029,7 +2061,7 @@ msgstr "Edit Cart"
 msgid "ویرایش شماره موبایل"
 msgstr "Edit Mobile Number"
 
-#: src/components/products/kashef-search.tsx:236
+#: src/components/products/kashef-search.tsx:233
 msgid "یا فایل را از سیستم"
 msgstr "Or select a file from your device"
 

@@ -27,7 +27,7 @@ export default function BlogsPostSlider({ className, data, type }: { className?:
         <>
             <Swiper
                 // install Swiper modules
-                modules={[Navigation, Pagination, Scrollbar]}
+                modules={[ Pagination, Scrollbar]}
                 spaceBetween={20}
                 slidesPerView={4}
                 breakpoints={{
