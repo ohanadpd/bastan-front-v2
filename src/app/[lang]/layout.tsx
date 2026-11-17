@@ -6,7 +6,7 @@ import { initLingui } from "@/initLingui";
 import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { allMessages } from "../../appRouterI18n";
 import { getI18nInstance } from "@/appRouterI18n";
-
+import FloatingIcon from "@/components/shared/floating-icon";
 import { Toaster } from "@/components/ui/sonner";
 import { fetchSettingsData } from "@/lib/services/settigns.services";
 import { hasCatalogs } from "@/lib/services/catalogs.services";
@@ -132,12 +132,18 @@ export default async function RootLayout({
           >
             <ProgressBar>
               <Toaster position="top-right" />
-              <LayoutChrome
-                settings={settings}
-                showCatalog={showCatalog}
-              >
+              <LayoutChrome settings={settings} showCatalog={showCatalog}>
                 {children}
               </LayoutChrome>
+              <ProgressBar>
+                <Toaster position="top-right" />
+
+                <LayoutChrome settings={settings} showCatalog={showCatalog}>
+                  {children}
+                </LayoutChrome>
+
+                <FloatingIcon />
+              </ProgressBar>
             </ProgressBar>
           </LinguiClientProvider>
         </body>

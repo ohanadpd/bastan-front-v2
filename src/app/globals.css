@@ -13,6 +13,10 @@ html[dir="ltr"] body {
 
 :root {
   --primary: #A9020C;
+  --gray1:#BFBFBF;
+  --gray2:#707070;
+  --gray3: #353535;
+  --bastan-menu-active-bg:#F2D2D2;
   --popover: white;
 }
 
@@ -278,4 +282,8 @@ input[type=number] {
 
 .achievements-slider > .swiper-pagination.swiper-pagination-lock {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }

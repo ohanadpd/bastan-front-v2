@@ -218,7 +218,8 @@ export default function HomeAlbum({ data }: HomeAlbumProps) {
 
             <div className="flex shrink-0 items-center justify-center sm:px-2">
               <Link
-                href="/about-us"
+                 href="/about-us?scroll=gallery"
+                scroll={false}
                 className="flex h-[32px] items-center justify-center whitespace-nowrap rounded-[5px] border border-primary px-2 text-[11px] text-primary transition-colors hover:bg-primary hover:text-white sm:px-4 sm:text-sm"
               >
                 <Trans>بیشتر بدانید</Trans>

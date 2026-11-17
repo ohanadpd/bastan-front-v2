@@ -7,10 +7,8 @@ import AchievementsSlider from "@/components/about-us/achievements-slider";
 import { fetchAboutUsPage } from "@/lib/services/about-us.services";
 import { getMediaUrl } from "@/lib/utils";
 import PageHero from "@/components/shared/page-hero";
-import PhotoAlbum, {
-  type AlbumImage,
-} from "@/components/about-us/photo-album";
-
+import PhotoAlbum, { type AlbumImage } from "@/components/about-us/photo-album";
+import ScrollToGallery from "@/components/shared/scroll-to-gallery";
 export async function generateMetadata() {
   const { data } = await fetchAboutUsPage();
 
@@ -37,20 +35,21 @@ export default async function AboutUsPage({ params }: PageProps) {
 
   const i18n = initLingui(lang);
 
- const tallImageIndexes = new Set([0, 2, 5]);
+  const tallImageIndexes = new Set([0, 2, 5]);
 
-const albumImages: AlbumImage[] = (data.about_galleries ?? [])
-  .filter((item) => item.publish && item.image)
-  .map((item, index) => ({
-    id: String(item.id),
-    src: getMediaUrl(item.image),
-    alt: item.alt || i18n._(msg`تصاویر باستان`),
-    tall: tallImageIndexes.has(index % 9),
-    videoUrl: item.link?.trim() || undefined,
-  }));
+  const albumImages: AlbumImage[] = (data.about_galleries ?? [])
+    .filter((item) => item.publish && item.image)
+    .map((item, index) => ({
+      id: String(item.id),
+      src: getMediaUrl(item.image),
+      alt: item.alt || i18n._(msg`تصاویر باستان`),
+      tall: tallImageIndexes.has(index % 9),
+      videoUrl: item.link?.trim() || undefined,
+    }));
 
   return (
     <main className="pb-[155px]">
+      <ScrollToGallery />
       <PageHero
         bannerImage={data.banner_image}
         mobileBannerImage={data.banner_image_mobile}
@@ -113,7 +112,7 @@ const albumImages: AlbumImage[] = (data.about_galleries ?? [])
       </section>
 
       {albumImages.length > 0 && (
-        <section className="container mt-[114px]">
+        <section id="gallery" className="container mt-[114px] scroll-mt-28">
           <div className="flex flex-col items-center gap-2">
             <h2 className="w-fit border-b-2 border-primary pb-1 text-center text-[20px] font-bold text-black">
               <Trans>آلبوم تصاویر</Trans>
