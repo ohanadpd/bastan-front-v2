@@ -287,3 +287,129 @@ input[type=number] {
 html {
   scroll-behavior: smooth !important;
 }
+
+.floating-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+}
+
+/* هاله‌ی نورانی پشت آیکون */
+.floating-icon-glow {
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 40, 60, 0.45) 0%,
+    rgba(220, 0, 30, 0.2) 45%,
+    rgba(220, 0, 30, 0) 70%
+  );
+  filter: blur(14px);
+  pointer-events: none;
+  animation: icon-glow 2.5s ease-in-out infinite;
+}
+
+/* حلقه‌ی پالس روی زمین */
+.floating-icon-ring {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 70%;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 40, 60, 0.6);
+  pointer-events: none;
+  transform: translateX(-50%) scale(0.6);
+  opacity: 0;
+  animation: icon-ring 2.5s ease-out infinite;
+}
+
+.floating-icon-image {
+  position: relative;
+  z-index: 1;
+  will-change: transform, filter;
+  animation: icon-float 2.5s ease-in-out infinite;
+}
+
+.floating-icon-shadow {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 90%;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(190, 0, 20, 0.85) 0%,
+    rgba(220, 0, 30, 0.55) 40%,
+    rgba(220, 0, 30, 0) 75%
+  );
+  filter: blur(8px);
+  pointer-events: none;
+  animation: icon-shadow 2.5s ease-in-out infinite;
+}
+
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(-3px) rotate(-2deg) scale(1);
+    filter: drop-shadow(0 0 6px rgba(255, 40, 60, 0.35));
+  }
+  50% {
+    transform: translateY(-18px) rotate(2deg) scale(1.05);
+    filter: drop-shadow(0 0 16px rgba(255, 40, 60, 0.7));
+  }
+}
+
+@keyframes icon-shadow {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-50%) scale(0.7);
+  }
+}
+
+@keyframes icon-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes icon-ring {
+  0% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-icon-image,
+  .floating-icon-shadow,
+  .floating-icon-glow,
+  .floating-icon-ring {
+    animation: none;
+  }
+
+  .floating-icon-shadow {
+    transform: translateX(-50%);
+  }
+
+  .floating-icon-ring {
+    display: none;
+  }
+}
