@@ -1,6 +1,5 @@
 
-FROM node:22-bookworm-slim AS builder
-
+FROM public.ecr.aws/docker/library/node:22-bookworm-slim AS builder
 WORKDIR /app
 
 RUN apt-get update \
