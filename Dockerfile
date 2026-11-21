@@ -23,23 +23,32 @@ RUN set -eux; \
 COPY package.json package-lock.json ./
 
 # Configure SSH and install dependencies
+
 RUN --mount=type=secret,id=TILE_SSH_KEY_B64,required=true \
     --mount=type=tmpfs,target=/root/.ssh \
     set -eux; \
     chmod 700 /root/.ssh; \
     base64 -d /run/secrets/TILE_SSH_KEY_B64 > /root/.ssh/tile_key; \
     chmod 600 /root/.ssh/tile_key; \
+    ssh-keyscan -p 443 ssh.github.com > /root/.ssh/known_hosts; \
+    ssh-keygen -lf /root/.ssh/known_hosts | grep -F \
+      'SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU'; \
     printf '%s\n' \
-      'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' \
-      > /root/.ssh/known_hosts; \
-    git config --global \
-      url."ssh://git@github.com/ohanadpd/tile-visualizer".insteadOf \
-      "https://github.com/ohanadpd/tile-visualizer"; \
+      'Host github.com' \
+      '  HostName ssh.github.com' \
+      '  Port 443' \
+      '  User git' \
+      '  IdentityFile /root/.ssh/tile_key' \
+      '  IdentitiesOnly yes' \
+      '  StrictHostKeyChecking yes' \
+      '  UserKnownHostsFile /root/.ssh/known_hosts' \
+      > /root/.ssh/config; \
+    chmod 600 /root/.ssh/config; \
     export GIT_TERMINAL_PROMPT=0; \
-    export GIT_SSH_COMMAND="ssh -i /root/.ssh/tile_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -vv"; \
-    echo "Testing GitHub SSH access..."; \
+    export GIT_SSH_COMMAND="ssh -F /root/.ssh/config -o ConnectTimeout=20"; \
+    echo "Testing GitHub SSH over port 443..."; \
     git ls-remote ssh://git@github.com/ohanadpd/tile-visualizer.git HEAD; \
-    export GIT_SSH_COMMAND="ssh -i /root/.ssh/tile_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=20 -o ServerAliveInterval=15 -o ServerAliveCountMax=3"; \
+    echo "GitHub SSH connection successful."; \
     echo "Starting npm ci..."; \
     npm ci --verbose --fetch-retries=3 --fetch-timeout=120000
 
