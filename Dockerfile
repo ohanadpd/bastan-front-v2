@@ -2,24 +2,23 @@
 FROM public.ecr.aws/docker/library/node:22-bookworm-slim AS builder
 WORKDIR /app
 
+
 RUN set -eux; \
-    sed -i 's|http://deb.debian.org|https://deb.debian.org|g' \
-        /etc/apt/sources.list.d/debian.sources; \
     apt-get \
         -o Acquire::ForceIPv4=true \
-        -o Acquire::Retries=2 \
-        -o Acquire::http::Timeout=30 \
-        -o Acquire::https::Timeout=60 \
+        -o Acquire::Retries=3 \
+        -o Acquire::http::Timeout=60 \
         update; \
     apt-get \
         -o Acquire::ForceIPv4=true \
-        -o Acquire::Retries=2 \
+        -o Acquire::Retries=3 \
         install -y --no-install-recommends \
         git \
         openssh-client \
         ca-certificates; \
+    update-ca-certificates; \
     rm -rf /var/lib/apt/lists/*
-    
+
 COPY package.json package-lock.json ./
 
 RUN --mount=type=secret,id=TILE_SSH_KEY_B64,required=true \
