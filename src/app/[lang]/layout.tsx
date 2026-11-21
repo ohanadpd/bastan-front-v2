@@ -109,45 +109,39 @@ export default async function RootLayout({
   const primaryLightColor = process.env.PRIMARY_LIGHT_COLOR || "#FFF6E0";
   const primaryDarkColor = process.env.PRIMARY_DARK_COLOR || "#74560B";
   console.log(settings);
-  return (
-    <SessionProviderWrapper>
-      <SetSettings init={settings} />
-      <html
-        lang="en"
-        dir={lang === "en" ? "ltr" : "rtl"}
-        style={
-          {
-            "--primary": `${primaryColor}`,
-            "--primary-light": primaryLightColor,
-            "--primary-dark": primaryDarkColor,
-          } as React.CSSProperties
-        }
+  
+return (
+  <SessionProviderWrapper>
+    <SetSettings init={settings} />
+    <html
+      lang="en"
+      dir={lang === "en" ? "ltr" : "rtl"}
+      style={
+        {
+          "--primary": `${primaryColor}`,
+          "--primary-light": primaryLightColor,
+          "--primary-dark": primaryDarkColor,
+        } as React.CSSProperties
+      }
+    >
+      <body
+        className={`${yekanBakh.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <body
-          className={`${yekanBakh.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        <LinguiClientProvider
+          initialLocale={lang}
+          initialMessages={allMessages[lang]!}
         >
-          <LinguiClientProvider
-            initialLocale={lang}
-            initialMessages={allMessages[lang]!}
-          >
-            <ProgressBar>
-              <Toaster position="top-right" />
-              <LayoutChrome settings={settings} showCatalog={showCatalog}>
-                {children}
-              </LayoutChrome>
-              <ProgressBar>
-                <Toaster position="top-right" />
+          <ProgressBar>
+            <Toaster position="top-right" />
+            <LayoutChrome settings={settings} showCatalog={showCatalog}>
+              {children}
+            </LayoutChrome>
+            <FloatingIcon />
+          </ProgressBar>
+        </LinguiClientProvider>
+      </body>
+    </html>
+  </SessionProviderWrapper>
+);
 
-                <LayoutChrome settings={settings} showCatalog={showCatalog}>
-                  {children}
-                </LayoutChrome>
-
-                <FloatingIcon />
-              </ProgressBar>
-            </ProgressBar>
-          </LinguiClientProvider>
-        </body>
-      </html>
-    </SessionProviderWrapper>
-  );
 }
