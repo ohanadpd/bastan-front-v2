@@ -2,9 +2,19 @@
 FROM public.ecr.aws/docker/library/node:22-bookworm-slim AS builder
 WORKDIR /app
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends git openssh-client ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+RUN set -eux; \
+    apt-get -o Acquire::ForceIPv4=true \
+            -o Acquire::Retries=5 \
+            -o Acquire::http::Timeout=120 \
+            -o Acquire::https::Timeout=120 \
+            update; \
+    apt-get -o Acquire::ForceIPv4=true \
+            -o Acquire::Retries=5 \
+            install -y --no-install-recommends \
+            git \
+            openssh-client \
+            ca-certificates; \
+    rm -rf /var/lib/apt/lists/*
 
 COPY package.json package-lock.json ./
 
